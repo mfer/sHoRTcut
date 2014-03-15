@@ -2,7 +2,7 @@
 VERSION="6.17.3"
 RENPY="renpy-"$VERSION"-sdk"
 BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-GAME_NAME="game_test"
+GAME_NAME="esofteacher"
 
 # Tests if wxpython exists before attempting to install.
 if ! dpkg -s python-wxgtk2.8 > /dev/null; then
