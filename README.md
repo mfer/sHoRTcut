@@ -1,0 +1,4 @@
+sHoRTcut
+========
+
+Humility Respect Trust
