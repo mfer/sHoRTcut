@@ -1,7 +1,7 @@
 ﻿# novo tipo de transicao
 define rapTrans = Dissolve (.2)
 
-
+image bg ync = "ync.png"
 image bg lecturehall = "lecturehall.png"
 image castiga = "castiga.jpg"
 
@@ -16,7 +16,7 @@ image sylvie surprised = "sylvie2_surprised.png"
 # Declare characters used by this game.
 define e = Character('ESOFteacher', color="#c8ffc8")
 
-
+    
 # The game starts here.
 label start:
     

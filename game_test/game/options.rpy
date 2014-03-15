@@ -17,8 +17,8 @@ init -1 python hide:
 
     ## These control the width and height of the screen.
 
-    config.screen_width = 844
-    config.screen_height = 630
+    config.screen_width = 1280
+    config.screen_height = 720
 
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
@@ -72,13 +72,13 @@ init -1 python hide:
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
 
-        mm_root = "bus_factor.png",
+        mm_root = "school2.png",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
 
-        gm_root = "ync.png",
+        gm_root = "school1.png",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
@@ -189,9 +189,8 @@ init -1 python hide:
 
     ## Music that is played while the user is at the main menu.
 
-    config.main_menu_music = "teste_sound.mp3"
-
-
+    config.main_menu_music = "illurock.ogg"
+    
     #########################################
     ## Help.
 
@@ -276,7 +275,7 @@ init -1 python hide:
 
     ## Should we start in fullscreen mode?
 
-    config.default_fullscreen = False
+    config.default_fullscreen = True
 
     ## The default text speed in characters per second. 0 is infinite.
 
