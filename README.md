@@ -6,7 +6,7 @@ esofteacher
 ===========
 A Visual Novel to learn Requirements in Software Engineer.
 
-Go to https://github.com/mfer/esofteacher and download it!
+Link for download: https://github.com/mfer/esofteacher
 
 
 get started developing
