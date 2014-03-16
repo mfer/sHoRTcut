@@ -37,11 +37,11 @@ label start:
     show sylvie surprised at left
     with rapTrans
     
-    e "Menu funfou?"
+    e "Menu funcionou?"
     
     menu:
         with dissolve
-        "Yep":
+        "Sim":
             jump sim
         "Não":
             jump nao
@@ -60,6 +60,6 @@ label start:
                         e "=D"
                     else:
                         scene black
-                        e "Nao fiz nada aki! =3"
+                        e "Não fiz nada aqui! =3"
         
     return
