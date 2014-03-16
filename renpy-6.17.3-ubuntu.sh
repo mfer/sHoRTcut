@@ -1,7 +1,7 @@
 #!/bin/sh
 VERSION="6.17.3"
 RENPY="renpy-"$VERSION"-sdk"
-BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BASEDIR=`pwd`
 GAME_NAME="esofteacher"
 
 # Tests if wxpython exists before attempting to install.
