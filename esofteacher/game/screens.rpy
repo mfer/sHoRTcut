@@ -191,11 +191,11 @@ screen main_menu:
 
         has vbox
 
-        textbutton _("Start") action Start()
-        textbutton _("Load") action ShowMenu("load")
-        textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("Help") action Help()
-        textbutton _("Quit") action Quit(confirm=False)
+        textbutton _("Iniciar") action Start()
+        textbutton _("Carregar") action ShowMenu("load")
+        textbutton _("Preferências") action ShowMenu("preferences")
+        textbutton _("Ajuda") action Help()
+        textbutton _("Sair") action Quit(confirm=False)
 
 init -2:
 
@@ -225,13 +225,13 @@ screen navigation:
 
         has vbox
 
-        textbutton _("Return") action Return()
-        textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("Save Game") action ShowMenu("save")
-        textbutton _("Load Game") action ShowMenu("load")
-        textbutton _("Main Menu") action MainMenu()
-        textbutton _("Help") action Help()
-        textbutton _("Quit") action Quit()
+        textbutton _("Voltar") action Return()
+        textbutton _("Preferências") action ShowMenu("preferences")
+        textbutton _("Salvar Jogo") action ShowMenu("save")
+        textbutton _("Carregar Jogo") action ShowMenu("load")
+        textbutton _("Menu Principal") action MainMenu()
+        textbutton _("Ajuda") action Help()
+        textbutton _("Sair") action Quit()
 
 init -2:
 
@@ -263,20 +263,20 @@ screen file_picker:
         hbox:
             style_group "file_picker_nav"
 
-            textbutton _("Previous"):
+            textbutton _("Página Anterior"):
                 action FilePagePrevious()
 
-            textbutton _("Auto"):
+            textbutton _("Automáticos"):
                 action FilePage("auto")
 
-            textbutton _("Quick"):
+            textbutton _("Rápidos"):
                 action FilePage("quick")
 
             for i in range(1, 9):
                 textbutton str(i):
                     action FilePage(i)
 
-            textbutton _("Next"):
+            textbutton _("Pŕoxima Página "):
                 action FilePageNext()
 
         $ columns = 2
@@ -302,7 +302,7 @@ screen file_picker:
                     add FileScreenshot(i)
 
                     $ file_name = FileSlotName(i, columns * rows)
-                    $ file_time = FileTime(i, empty=_("Empty Slot."))
+                    $ file_time = FileTime(i, empty=_("Vazio."))
                     $ save_name = FileSaveName(i)
 
                     text "[file_name]. [file_time!t]\n[save_name!t]"
@@ -358,23 +358,23 @@ screen preferences:
                 style_group "pref"
                 has vbox
 
-                label _("Display")
-                textbutton _("Window") action Preference("display", "window")
-                textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                label _("Modo de Exibição")
+                textbutton _("Janela") action Preference("display", "window")
+                textbutton _("Tela cheia") action Preference("display", "fullscreen")
 
             frame:
                 style_group "pref"
                 has vbox
 
-                label _("Transitions")
-                textbutton _("All") action Preference("transitions", "all")
-                textbutton _("None") action Preference("transitions", "none")
+                label _("Transições")
+                textbutton _("Todas") action Preference("transitions", "all")
+                textbutton _("Nenhuma") action Preference("transitions", "none")
 
             frame:
                 style_group "pref"
                 has vbox
 
-                label _("Text Speed")
+                label _("Velocidade do Texto")
                 bar value Preference("text speed")
 
             frame:
@@ -389,51 +389,51 @@ screen preferences:
                 style_group "pref"
                 has vbox
 
-                label _("Skip")
-                textbutton _("Seen Messages") action Preference("skip", "seen")
-                textbutton _("All Messages") action Preference("skip", "all")
+                label _("Pular mensagens")
+                textbutton _("Apenas as já vistas") action Preference("skip", "seen")
+                textbutton _("Todas") action Preference("skip", "all")
 
             frame:
                 style_group "pref"
                 has vbox
 
-                textbutton _("Begin Skipping") action Skip()
+                textbutton _("Pule mensagens agora") action Skip()
 
             frame:
                 style_group "pref"
                 has vbox
 
-                label _("After Choices")
-                textbutton _("Stop Skipping") action Preference("after choices", "stop")
-                textbutton _("Keep Skipping") action Preference("after choices", "skip")
+                label _("Após Escolhas")
+                textbutton _("Pare de pular mensagens") action Preference("after choices", "stop")
+                textbutton _("Continue pulando mensagens") action Preference("after choices", "skip")
 
             frame:
                 style_group "pref"
                 has vbox
 
-                label _("Auto-Forward Time")
+                label _("Atraso de auto-avanço")
                 bar value Preference("auto-forward time")
 
                 if config.has_voice:
-                    textbutton _("Wait for Voice") action Preference("wait for voice", "toggle")
+                    textbutton _("Esperar Voz") action Preference("wait for voice", "toggle")
 
         vbox:
             frame:
                 style_group "pref"
                 has vbox
 
-                label _("Music Volume")
+                label _("Volume de Música")
                 bar value Preference("music volume")
 
             frame:
                 style_group "pref"
                 has vbox
 
-                label _("Sound Volume")
+                label _("Volume de Som")
                 bar value Preference("sound volume")
 
                 if config.sample_sound:
-                    textbutton _("Test"):
+                    textbutton _("Testar"):
                         action Play("sound", config.sample_sound)
                         style "soundtest_button"
 
@@ -442,12 +442,12 @@ screen preferences:
                     style_group "pref"
                     has vbox
 
-                    label _("Voice Volume")
+                    label _("Volume de Voz")
                     bar value Preference("voice volume")
 
-                    textbutton _("Voice Sustain") action Preference("voice sustain", "toggle")
+                    textbutton _("Sustentar Voz") action Preference("voice sustain", "toggle")
                     if config.sample_voice:
-                        textbutton _("Test"):
+                        textbutton _("Testar"):
                             action Play("voice", config.sample_voice)
                             style "soundtest_button"
 
@@ -506,8 +506,8 @@ screen yesno_prompt:
             xalign 0.5
             spacing 100
 
-            textbutton _("Yes") action yes_action
-            textbutton _("No") action no_action
+            textbutton _("Sim") action yes_action
+            textbutton _("Não") action no_action
 
     # Right-click and escape answer "no".
     key "game_menu" action no_action
@@ -535,14 +535,14 @@ screen quick_menu:
         xalign 1.0
         yalign 1.0
 
-        textbutton _("Back") action Rollback()
-        textbutton _("Save") action ShowMenu('save')
-        textbutton _("Q.Save") action QuickSave()
-        textbutton _("Q.Load") action QuickLoad()
-        textbutton _("Skip") action Skip()
-        textbutton _("F.Skip") action Skip(fast=True, confirm=True)
-        textbutton _("Auto") action Preference("auto-forward", "toggle")
-        textbutton _("Prefs") action ShowMenu('preferences')
+        textbutton _("Voltar") action Rollback()
+        textbutton _("Salvar") action ShowMenu('save')
+        textbutton _("Salve R.") action QuickSave()
+        textbutton _("Carrege R.") action QuickLoad()
+        textbutton _("Pular") action Skip()
+        textbutton _("Pular Rápido") action Skip(fast=True, confirm=True)
+        textbutton _("Auto-Avanço") action Preference("auto-forward", "toggle")
+        textbutton _("Preferências") action ShowMenu('preferences')
 
 init -2:
     style quick_button:
