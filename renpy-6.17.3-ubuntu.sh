@@ -8,22 +8,24 @@ GAME_NAME="esofteacher"
 if ! dpkg -s python-wxgtk2.8 > /dev/null; then
     sudo apt-get install python-wxgtk2.8
 fi
+
 # Tests if python-tk exists before attempting to install.
 if ! dpkg -s python-tk > /dev/null; then
     sudo apt-get install python-tk
 fi
-# Changing to $HOME directory
-cd
+
 # Tests if renpy exists before attempting to download and extract.
-if [ ! -d $HOME/$RENPY ]
+if [ ! -d ../$RENPY ]
 then
     wget -c http://www.renpy.org/dl/$VERSION/$RENPY.tar.bz2
-    tar -jxvf $RENPY.tar.bz2
+    tar -C .. -jxvf $RENPY.tar.bz2
 fi
+
 # Changing to $RENPY directory
-cd $RENPY
+cd ../$RENPY
+
 # Remove and Create a symlink to the GAME
-rm -f $GAME_NAME
-ln -s $BASEDIR/$GAME_NAME .
+ln -sf $BASEDIR/$GAME_NAME .
+
 # Run renpy!
 ./renpy.sh
