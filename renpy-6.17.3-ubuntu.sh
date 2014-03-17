@@ -4,6 +4,10 @@ RENPY="renpy-"$VERSION"-sdk"
 BASEDIR=`pwd`
 GAME_NAME="esofteacher"
 
+# TO do: test if exists before install
+sudo apt-get install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
+sudo apt-get install libsdl1.2debian:i386
+
 # Tests if wxpython exists before attempting to install.
 if ! dpkg -s python-wxgtk2.8 > /dev/null; then
     sudo apt-get install python-wxgtk2.8
