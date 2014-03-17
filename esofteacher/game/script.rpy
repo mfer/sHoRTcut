@@ -25,14 +25,14 @@ label start:
     scene bg lecturehall
     
     ## movimentacao de personagem
-    ## show lucy:
-    ##    ypos 100 xpos 180
-    ##    linear 3 xpos 600
+    show lucy:
+        ypos 100 xpos 180
+        linear 3 xpos 600
     
     show sylvie normal at left
-    e "Introduzindo Engenharia de Requisitos"
+    e "Introduzindo Uma Inovação!"
 
-    e "Imagem de fundo incluída!"
+    e "Pelo JP deveria ser sobre Trânsito."
     # transicao entre sprites
     show sylvie surprised at left
     with rapTrans
