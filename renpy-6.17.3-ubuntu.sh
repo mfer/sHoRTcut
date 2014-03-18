@@ -4,40 +4,13 @@ RENPY="renpy-"$VERSION"-sdk"
 BASEDIR=`pwd`
 GAME_NAME="esofteacher"
 
-# Tests if libstdc++6:i386 exists before attempting to install.
-if ! dpkg -s libstdc++6:i386 > /dev/null; then
-    sudo apt-get install libstdc++6:i386
-fi
+PACKAGE_LIST="libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386 libsdl1.2debian:i386 python-wxgtk2.8 python-tk"
 
-# Tests if libgcc1:i386 exists before attempting to install.
-if ! dpkg -s libgcc1:i386 > /dev/null; then
-    sudo apt-get install libgcc1:i386
-fi
-
-# Tests if zlib1g:i386 exists before attempting to install.
-if ! dpkg -s zlib1g:i386 > /dev/null; then
-    sudo apt-get install zlib1g:i386
-fi
-
-# Tests if libncurses5:i386 exists before attempting to install.
-if ! dpkg -s libncurses5:i386 > /dev/null; then
-    sudo apt-get install libncurses5:i386
-fi
-
-# Tests if libsdl1.2debian:i386 exists before attempting to install.
-if ! dpkg -s libsdl1.2debian:i386 > /dev/null; then
-    sudo apt-get install libsdl1.2debian:i386
-fi
-
-# Tests if wxpython exists before attempting to install.
-if ! dpkg -s python-wxgtk2.8 > /dev/null; then
-    sudo apt-get install python-wxgtk2.8
-fi
-
-# Tests if python-tk exists before attempting to install.
-if ! dpkg -s python-tk > /dev/null; then
-    sudo apt-get install python-tk
-fi
+for pak in $PACKAGE_LIST ; do
+  if ! dpkg -s $pak > /dev/null; then
+      sudo apt-get install $pak
+  fi  
+done
 
 # Tests if renpy exists before attempting to download and extract.
 if [ ! -d ../$RENPY ]
