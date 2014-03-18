@@ -176,34 +176,20 @@ screen nvl:
 
 screen main_menu:
 
-    # This ensures that any other menu screen is replaced.
     tag menu
-
-    # The background of the main menu.
     window:
         style "mm_root"
+    
+    imagebutton idle "main_play_idle.png" hover "main_play_hover.png" xpos 450 ypos 340 focus_mask True activate_sound "click_sound.mp3" action Start()
+    imagebutton idle "main_load_idle.png" hover "main_load_hover.png" xpos 700 ypos 450 focus_mask True activate_sound "click_sound.mp3" action ShowMenu("load")
+    imagebutton idle "main_settings_idle.png" hover "main_settings_hover.png" xpos 190 ypos 450 focus_mask True activate_sound "click_sound.mp3" action ShowMenu("preferences")
+    imagebutton idle "main_quit_idle.png" hover "main_quit_hover.png" xpos 450 ypos 550 focus_mask True  activate_sound "click_sound.mp3" action Quit(confirm = False)
 
-    # The main menu buttons.
-    frame:
-        style_group "mm"
-        xalign .98
-        yalign .98
+init -2 python:
 
-        has vbox
-
-        textbutton _("Iniciar") action Start()
-        textbutton _("Carregar") action ShowMenu("load")
-        textbutton _("Preferências") action ShowMenu("preferences")
-        textbutton _("Ajuda") action Help()
-        textbutton _("Sair") action Quit(confirm=False)
-
-init -2:
-
-    # Make all the main menu buttons be the same size.
-    style mm_button:
-        size_group "mm"
-
-
+    # Make all the menu buttons the same size.
+    style.mm_button.size_group = "mm"
+    
 
 ##############################################################################
 # Navigation
