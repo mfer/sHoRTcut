@@ -19,5 +19,8 @@ esofteacher/tmp/*
 # renpy package
 *-sdk.tar.bz2
 
+# renpy dir
+renpy-6.17.3-sdk/*
+
 # Backup
 *~

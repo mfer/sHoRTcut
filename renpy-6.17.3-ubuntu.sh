@@ -13,17 +13,14 @@ for pak in $PACKAGE_LIST ; do
 done
 
 # Tests if renpy exists before attempting to download and extract.
-if [ ! -d ../$RENPY ]
+if [ ! -d $RENPY ]
 then
     wget -c http://www.renpy.org/dl/$VERSION/$RENPY.tar.bz2
-    tar -C .. -jxvf $RENPY.tar.bz2
+    tar -jxvf $RENPY.tar.bz2
 fi
 
 # Changing to $RENPY directory
-cd ../$RENPY
-
-# Remove and Create a symlink to the GAME
-ln -sf $BASEDIR/$GAME_NAME .
+cd $RENPY
 
 # Run renpy!
 ./renpy.sh
