@@ -8,7 +8,7 @@ PACKAGE_LIST="libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386 libsdl1.
 
 for pak in $PACKAGE_LIST ; do
   if ! dpkg -s $pak > /dev/null; then
-      sudo apt-get install $pak
+      sudo apt-get install -y $pak
   fi  
 done
 
