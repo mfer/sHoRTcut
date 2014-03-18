@@ -16,5 +16,8 @@ esofteacher/log.txt
 esofteacher/game/saves/*
 esofteacher/tmp/*
 
+# renpy package
+*-sdk.tar.bz2
+
 # Backup
 *~
