@@ -12,9 +12,11 @@ bin-release/
 *.save
 *.rpyb
 *.rpyc
+*.json
 esofteacher/log.txt
 esofteacher/game/saves/*
 esofteacher/tmp/*
+esofteacher-prototype-dists/*
 
 # renpy package
 *-sdk.tar.bz2
