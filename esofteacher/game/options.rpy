@@ -185,7 +185,7 @@ init -1 python hide:
 
     ## A sample sound that can be played to check the sound volume.
 
-    config.sample_sound = "teste_sound.mp3"
+    config.sample_sound = "test_sound.mp3"
 
     ## Music that is played while the user is at the main menu.
 
@@ -201,7 +201,7 @@ init -1 python hide:
     ## - A file name relative to the base directory, which is opened in a
     ##   web browser.
     ## - None, to disable help.
-    config.help = "README.html"
+    ## config.help = "README.html"
 
 
     #########################################
