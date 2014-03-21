@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 22: expected 'name' not found.
-    scene "dig.jpg"
-          ^
+File "game/script.rpy", line 21: invalid syntax
+                        window_right_padding = 10
+                                            ^
+    
 
 Ren'Py Version: Ren'Py 6.17.3.327
