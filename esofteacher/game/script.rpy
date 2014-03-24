@@ -4,7 +4,7 @@ define rapTrans = Dissolve (.2)
 image bg ync = "ync.png"
 image bg lecturehall = "lecturehall.png"
 image dig = "dig.jpg"
-image castiga = "castiga.jpg"
+image corredor = "corredor.png"
 
 image sylvie normal = "sylvie2_normal.png"
 image sylvie giggle = "sylvie2_giggle.png"
@@ -63,12 +63,11 @@ label start:
                     if menu_flag:
                         scene black
                         with blinds
-                        scene castiga
+                        scene corredor
                         e "=D"
                     else:
                         scene black
                         e "Não fiz nada aqui! =3"
-        
     return
 
 ## Quem for alterar a historia do help
