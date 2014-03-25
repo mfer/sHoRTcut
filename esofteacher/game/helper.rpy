@@ -1,4 +1,5 @@
 ## Cena do help
+
 label helps:
     
     stop music fadeout 1.0
