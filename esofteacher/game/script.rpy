@@ -3,7 +3,6 @@ define rapTrans = Dissolve (.2)
 
 image bg ync = "ync.png"
 image bg lecturehall = "lecturehall.png"
-image dig = "dig.jpg"
 image corredor = "corredor.png"
 
 image sylvie normal = "sylvie2_normal.png"
@@ -16,12 +15,7 @@ image sylvie surprised = "sylvie2_surprised.png"
 
 # Declare characters used by this game.
 define e = Character('ESOFteacher', color="#c8ffc8")
-define h = Character(
-                    window_left_padding = 15,
-                    window_right_padding = 10,
-                    window_top_padding = 30,
-                    what_slow_caps = 20,
-                    show_side_image = Image ("Helper.png", xalign = 0.01, yalign = 0.81))
+
 
 # The game starts here.
 label start:    

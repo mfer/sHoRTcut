@@ -1,5 +1,15 @@
 ## Cena do help
 
+define h = Character(
+                    window_left_padding = 15,
+                    window_right_padding = 10,
+                    window_top_padding = 30,
+                    what_slow_caps = 20,
+                    show_side_image = Image ("Helper.png", xalign = 0.01, yalign = 0.81))
+
+image dig = "dig.jpg"
+
+
 label helps:
     
     stop music fadeout 1.0
