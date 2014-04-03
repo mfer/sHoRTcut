@@ -1,0 +1,20 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 37, in script
+ValueError: unsupported format character '!' (0x21) at index 42
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "/home/junior/renpy-6.17.3-sdk/renpy/execution.py", line 294, in run
+    node.execute()
+  File "/home/junior/renpy-6.17.3-sdk/renpy/ast.py", line 464, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/exports.py", line 917, in say
+    what = what % tag_quoting_dict
+ValueError: unsupported format character '!' (0x21) at index 42
+
+Linux-3.11.0-18-generic-x86_64-with-debian-wheezy-sid
+Ren'Py 6.17.3.327
+ESofTeacher 0.0

@@ -31,7 +31,10 @@ label start:
     ##    linear 3 xpos 600
     
     show sylvie normal at left
-    e "Introduzindo Uma Inovação!"
+    
+    $ nome = renpy.input("Qual o seu nome?", length=20)
+
+    e "Estamos Introduzindo Uma Inovação, %(nome)s!"
 
     e "Pelo JP deveria ser sobre Trânsito."
     # transicao entre sprites
