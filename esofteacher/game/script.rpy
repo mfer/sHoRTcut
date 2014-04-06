@@ -1,5 +1,5 @@
 ﻿# novo tipo de transicao
-define rapTrans = Dissolve (.2)
+define fastDissolve = Dissolve (.2)
 
 image bg ync = "ync.png"
 image bg lecturehall = "lecturehall.png"
@@ -39,7 +39,7 @@ label start:
     e "Pelo JP deveria ser sobre Trânsito."
     # transicao entre sprites
     show sylvie surprised at left
-    with rapTrans
+    with fastDissolve
     
     e "Menu funcionou?"
     

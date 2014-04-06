@@ -17,44 +17,33 @@ label helps:
     scene dig                           # alterar
     
     show sylvie smile at left
-    h "Olá, eu me chamo Helper e irei lhe ensinar sobre o funcionamento do jogo ^-^"
+    h "{cps=40}Olá, eu me chamo Helper e irei lhe ensinar sobre o funcionamento do jogo ^-^{/cps}"
     show sylvie normal at left
-    with dissolve
-    h "Para avançar pelo jogo, use o botão esquerdo do mouse ou pressione as teclas espaço ou enter"
+    with fastDissolve
+    h "{cps=40}Para avançar pelo jogo, use o botão esquerdo do mouse ou pressione as teclas espaço ou enter{/cps}"
     
     label testMenu:
         show sylvie normal at left
-        with dissolve
-        h "Em um menu, use o botão esquerdo do mouse para fazer uma escolha, ou use as setas do teclado para escolher uma opção e pressione enter para ativá-la"
-        h "Vamos fazer um teste:"
+        with fastDissolve
+        h "{cps=40}Em um menu, use o botão esquerdo do mouse para fazer uma escolha, ou use as setas do teclado para escolher uma opção e pressione enter para ativá-la{/cps}"
+        h "{cps=40}Vamos fazer um teste{/cps}"
         
-        h "Você compreendeu o funcionamento?"
+        h "{cps=40}Você compreendeu o funcionamento?{/cps}"
         
         menu:
-            with dissolve
+            with fastDissolve
             "Sim":
-                jump yesHelp
+                h "{cps=40}Parabéns!!!{/cps}" 
                 
             "Não":
-                jump noHelp
-            
-                label yesHelp:
-                    $ menu_flag = True
-                    jump doneHelp
-                label noHelp:
-                    $ menu_flag = False
-                    jump doneHelp
-                label doneHelp:
-                    if menu_flag:
-                        h "Parabéns!!!"                        
-                    else:
-                        show sylvie surprised at left
-                        with dissolve
-                        h "Que pena, leia atentamente as instruções ^-^" 
-                        jump testMenu
+                show sylvie surprised at left
+                with dissolve
+                h "{cps=40}Que pena, leia atentamente as instruções ^-^{/cps}" 
+                jump testMenu
                         
-        h "Durante o jogo, use o botão direito do mouse ou pressione a tecla Esc para ir ao Menu de Jogo" 
-        h "O menu de jogo exibe as seguintes escolhas:"
+        h "{cps=40}Durante o jogo, use o botão direito do mouse ou pressione a tecla Esc para ir ao Menu de Jogo{/cps}" 
+        h "{cps=40}O menu de jogo exibe as seguintes escolhas{/cps}"
+        h "{cps=40}{b}Voltar:{/b} Retorna ao jogo.\n{b}Salvar Jogo:{/b} Permite que você salve o jogo.\n{b}Carregar Jogo:{/b} Permite que você carregue um jogo salvo anteriormente. Clicar em \"{i}Automáticos{/i}\" acessa os jogos salvos automaticamente{/cps}"
 
 
     return
