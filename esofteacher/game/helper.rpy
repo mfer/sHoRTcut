@@ -19,21 +19,22 @@ label helps:
     show sylvie smile at left
     h "Olá, eu me chamo Helper e irei lhe ensinar sobre o funcionamento do jogo ^-^"
     show sylvie normal at left
-    with rapTrans
+    with dissolve
     h "Para avançar pelo jogo, use o botão esquerdo do mouse ou pressione as teclas espaço ou enter"
     
     label testMenu:
         show sylvie normal at left
-        with rapTrans
+        with dissolve
         h "Em um menu, use o botão esquerdo do mouse para fazer uma escolha, ou use as setas do teclado para escolher uma opção e pressione enter para ativá-la"
         h "Vamos fazer um teste:"
         
         h "Você compreendeu o funcionamento?"
-
+        
         menu:
             with dissolve
             "Sim":
                 jump yesHelp
+                
             "Não":
                 jump noHelp
             
@@ -48,9 +49,12 @@ label helps:
                         h "Parabéns!!!"                        
                     else:
                         show sylvie surprised at left
-                        with rapTrans
-                        #Fazer transicao
-                        h "Que pena, leia atentamente as instruções ^-^" # mudar as figuras
+                        with dissolve
+                        h "Que pena, leia atentamente as instruções ^-^" 
                         jump testMenu
+                        
+        h "Durante o jogo, use o botão direito do mouse ou pressione a tecla Esc para ir ao Menu de Jogo" 
+        h "O menu de jogo exibe as seguintes escolhas:"
+
 
     return
