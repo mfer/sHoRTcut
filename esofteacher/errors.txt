@@ -2,11 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/helper.rpy", line 58: end of line expected.
-(Perhaps you left out a " at the end of the first line.)
-    h "{b}Voltar:{/b} Retorna ao jogo.\n
-               {b}Salvar Jogo:{/b} Permite que você salve o jogo.\n
-               {b}Carregar Jogo:{/b} Permite que você carregue um jogo salvo anteriormente. Clicar em "Automáticos" acessa os jogos salvos automaticamente."
-                                                                                                         ^
+File "game/helper.rpy", line 54: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Sim:"
+          ^
 
 Ren'Py Version: Ren'Py 6.17.3.327
