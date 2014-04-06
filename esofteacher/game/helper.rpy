@@ -13,35 +13,38 @@ image dig = "dig.jpg"
 label helps:
     
     stop music fadeout 1.0
-    play music "test_sound.mp3" fadein 1.0
-    scene dig
+    play music "bgmfum.wav" fadein 1.0 
+    scene dig                           # alterar
     
     show sylvie normal at left
     
-    h "Deseja iniciar o Jogo?"
-    menu:
-        with dissolve
-        "Sim":
-            jump yesHelp
-        "Não":
-            jump noHelp
+    h "Olá, eu me chamo Helper e irei lhe ensinar sobre o funcionamento do jogo ^-^"
+    h "Para avançar pelo jogo, use o botão esquerdo do mouse ou pressione as teclas espaço ou enter"
+    
+    label testMenu:
+        h "Em um menu, use o botão esquerdo do mouse para fazer uma escolha, ou use as setas do teclado para escolher uma opção e pressione enter para ativá-la"
+        h "Vamos fazer um teste:"
+        
+        h "Você compreendeu o funcionamento?"
+
+        menu:
+            with dissolve
+            "Sim":
+                jump yesHelp
+            "Não":
+                jump noHelp
             
-            label yesHelp:
-                $ menu_flag = True
-                jump doneHelp
-            label noHelp:
-                $ menu_flag = False
-                jump doneHelp
-            label doneHelp:
+                label yesHelp:
+                    $ menu_flag = True
+                    jump doneHelp
+                label noHelp:
+                    $ menu_flag = False
+                    jump doneHelp
+                label doneHelp:
                     if menu_flag:
-                        stop music fadeout 1.0
-                        scene black
-                        with blinds
-                        
-                        jump start
+                        h "Parabéns"                        
                     else:
-                        stop music fadeout 1.0
-                        scene black
-                        with blinds
+                        h "Que pena, leia atentamente as instruções ^-^" # mudar as figuras
+                        jump testMenu
 
     return
