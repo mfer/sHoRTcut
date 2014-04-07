@@ -2,7 +2,7 @@
 
 While running game code:
   File "game/script.rpy", line 26, in script
-ScriptError: could not find label 'scene1Zz'.
+ScriptError: could not find label 'scene1'.
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -13,7 +13,7 @@ Full traceback:
     rv = renpy.game.script.lookup(target)
   File "/home/junior/renpy-6.17.3-sdk/renpy/script.py", line 547, in lookup
     raise ScriptError("could not find label '%s'." % str(label))
-ScriptError: could not find label 'scene1Zz'.
+ScriptError: could not find label 'scene1'.
 
 Linux-3.11.0-19-generic-x86_64-with-debian-wheezy-sid
 Ren'Py 6.17.3.327

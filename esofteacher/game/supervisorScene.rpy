@@ -2,6 +2,8 @@
 
 label supervisorScene:
     
+    scene office
+    
     S "{cps=40}Olá, então você é o novo contratado?{/cps}"
     menu:
         
@@ -47,7 +49,7 @@ label supervisorScene:
 
         "Tradicional":
             S "{cps=40}Hmm, ok.{/cps}"
-            S "{cps=40}Entao, você é um lerdo.{/cps}"
+            S "{cps=40}Então, você é um lerdo.{/cps}"
             S "{cps=40}Temos muitos iguais a você.{/cps}" 
             S "{cps=40}Até resolvemos montar uma equipe para os seus semelhantes.{/cps}" 
             S "{cps=40}Vocês trabalharão com o projeto para a padaria {b}{i}Et part deux{/i}{/b}.{/cps}"      

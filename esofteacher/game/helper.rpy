@@ -17,6 +17,7 @@ label helps:
     scene dig                           # alterar
     
     show sylvie smile at left
+    
     h "{cps=40}Olá, eu me chamo Helper e irei lhe ensinar sobre o funcionamento do jogo. ^-^{/cps}"
     
     show sylvie normal at left

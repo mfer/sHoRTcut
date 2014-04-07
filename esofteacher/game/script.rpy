@@ -2,7 +2,7 @@
 define fastDissolve = Dissolve (.2)
 
 image bg ync = "ync.png"
-image bg lecturehall = "lecturehall.png"
+image office = "office.png"
 image corredor = "corredor.png"
 
 image sylvie normal = "sylvie2_normal.png"
@@ -23,7 +23,7 @@ label start:
     
     stop music fadeout 1.0
     
-    jump scene1
+    jump supervisorScene
     
 
     return
