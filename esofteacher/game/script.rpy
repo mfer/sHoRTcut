@@ -10,14 +10,14 @@ image sylvie giggle = "sylvie2_giggle.png"
 image sylvie smile = "sylvie2_smile.png"
 image sylvie surprised = "sylvie2_surprised.png" 
 
-image supervisor normal0 = "supervisor0.gif" 
-image supervisor normal1 = "supervisor1.gif"
-image supervisor anger = "supervisor2.gif"
-image supervisor lessanger = "supervisor3.gif"
-image supervisor pensive = "supervisor4.gif"
-image supervisor smile = "supervisor5.gif"
-image supervisor what = "supervisor6.gif"
-image supervisor shit = "supervisor7.gif"
+image supervisor normal0 = "supervisor0.png" 
+image supervisor normal1 = "supervisor1.png"
+image supervisor anger = "supervisor2.png"
+image supervisor normal3 = "supervisor3.png"
+image supervisor pensive = "supervisor4.png"
+image supervisor smile = "supervisor5.png"
+image supervisor6 = "supervisor6.png"
+image supervisor7 = "supervisor7.png"
 
 # Declare characters used by this game.
 define e = Character('ESOFteacher', color="#c8ffc8")
