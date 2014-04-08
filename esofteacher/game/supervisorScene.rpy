@@ -68,24 +68,47 @@ label supervisorScene:
 
     menu:
         "Ágil":
+            show supervisor pensive at right
+            with fastDissolve
             S "{cps=40}Que sorte a sua.{/cps}"
+            show supervisor normal3 at right
+            with fastDissolve
             S "{cps=40}Estamos desenvolvendo um projeto com esta metodologia.{/cps}"
             S "{cps=40}Se trata de um software para a padaria {b}{i}Mestre do Bolo{/i}{/b}.{/cps}"
+            show supervisor pensive at right
+            with fastDissolve
             S "{cps=40}O cliente é muito exigente e muda de ideia a todo momento.{/cps}"
             S "{cps=40}Então abrace as mudanças.{w=2} Dedique-se a entregas contínuas.{/cps}"
 
         "Tradicional":
+            show supervisor pensive at right
+            with fastDissolve
             S "{cps=40}Hmm, ok.{/cps}"
             S "{cps=40}Então, você é {b}{i}lerdo{/i}{/b}?!{w=2} Brincadeira...{/cps}"
+            show supervisor smile at right
+            with fastDissolve
             S "{cps=40}Temos muitos iguais a você.{/cps}" 
             S "{cps=40}Até resolvemos montar uma equipe para os seus semelhantes.{/cps}" 
+            show supervisor normal3 at right
+            with fastDissolve
             S "{cps=40}Vocês trabalharão com o projeto para a padaria {b}{i}Et part deux{/i}{/b}.{/cps}"      
             S "{cps=40}O cliente sabe exatamente o que ele quer.{/cps}"
+            show supervisor pensive at right
+            with fastDissolve
             S "{cps=40}Então não se preocupe com as mudanças.{w=2} Dediquem-se ao levantamento de requisitos eficiente.{/cps}"
 
+    show supervisor normal3 at right
+    with fastDissolve
     S "{cps=40}Meu caro, {color=ff0000}{b}[nome]{/color}{/b}.{w=2} Adotar essas duas abordagens de desenvolvimento, Tradicional e Ágil, trouxe-nos muitas vantagens como você irá perceber.{/cps}"
+    show supervisor pensive at right
+    with fastDissolve
     S "{cps=40}Por outro lado, um clima de competição (algumas vezes exagerado e não muito saudável) emergiu entre as duas equipes: {b}{i}PadaTout{/i}{/b} e {b}{i}PadaOne{/i}{/b}.{/cps}"
-    S "{cps=40}Então, esteja preparado!!!{/cps}" 
+    show supervisor smile at right
+    with fastDissolve
+    S "{cps=40}Então, esteja preparado!!!{/cps}"
+    
+    $ renpy.music.stop(channel="music",fadeout=1.0)
     show black
-    with square
+    
+    with blinds
     #transição proxima cena...

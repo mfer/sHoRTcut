@@ -13,7 +13,7 @@ image dig = "dig.jpg"
 label helps:
     
     stop music fadeout 1.0
-    play music "bgmfum.wav" fadein 1.0 
+    $ renpy.music.play("bgmfum.wav", channel="music", loop=True, fadein=1.0)
     scene dig                           # alterar
     
     show sylvie smile at left
@@ -37,17 +37,23 @@ label helps:
         menu:
             with fastDissolve
             "Sim":
+                show sylvie giggle at left
+                with fastDissolve
                 h "{cps=40}Parabéns!!!{/cps}" 
             "Não":
                 show sylvie surprised at left
                 with dissolve
                 h "{cps=40}Que pena, leia atentamente as instruções. ^-^{/cps}" 
                 jump testMenu
-                        
+                
+            
+        show sylvie normal at left
+        with fastDissolve                
         h "{cps=40}Durante o jogo, use o botão direito do mouse ou pressione a tecla Esc para ir ao Menu de Jogo.{/cps}" 
         h "{cps=40}O menu de jogo exibe as seguintes escolhas.{/cps}"
         "{cps=40}{b}Voltar:{/b} Retorna ao jogo.\n{b}Salvar Jogo:{/b} Permite que você salve o jogo.\n{b}Carregar Jogo:{/b} Permite que você carregue um jogo salvo anteriormente. Clicar em \"{i}Automáticos{/i}\" acessa os jogos salvos automaticamente\n{b}Preferências:{/b} Altera as preferências (opções/configuração) do jogo\n{b}Menu Principal:{/b} Volta ao menu principal, e termina o jogo atual.\n{b}Ajuda:{/b} Exibe esta tela.\n{b}Sair:{/b} Sai do jogo; o jogo será terminado.{/cps}"
-        
+        show sylvie smile at left
+        with fastDissolve
         h "{cps=40}Agora você pode começar a jogar e aprender sobre e engenharia de software. *-*{/cps}"
         h "{cps=40}Deseja começar a jogar?{/cps}"
         
@@ -57,5 +63,7 @@ label helps:
                 h "{cps=40}Até a próxima!!! =D{/cps}"
                 jump start
             "Não":
+                show sylvie giggle at left
+                with fastDissolve
                 h "{cps=40}Você será levado ao Menu Principal, até a próxima!!! =D{/cps}" 
     return
