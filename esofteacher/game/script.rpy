@@ -29,6 +29,9 @@ label start:
     
     stop music fadeout 1.0
     
+    $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)
+    
+    
     jump supervisorScene
     
 
