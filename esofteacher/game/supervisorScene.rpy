@@ -76,12 +76,12 @@ label supervisorScene:
 
         "Tradicional":
             S "{cps=40}Hmm, ok.{/cps}"
-            S "{cps=40}Então, você é um lerdo.{/cps}"
+            S "{cps=40}Então, você não é ágil.{/cps}"
             S "{cps=40}Temos muitos iguais a você.{/cps}" 
             S "{cps=40}Até resolvemos montar uma equipe para os seus semelhantes.{/cps}" 
             S "{cps=40}Vocês trabalharão com o projeto para a padaria {b}{i}Et part deux{/i}{/b}.{/cps}"      
             S "{cps=40}O cliente sabe exatamente o que ele quer.{/cps}"
-            S "{cps=40}Então não se preocupe com as mudanças.{w=2} Dediquem-se para fazer um bom levantamento de requisitos.{/cps}"
+            S "{cps=40}Então não se preocupe com as mudanças.{w=2} Dediquem-se ao levantamento de requisitos eficiente.{/cps}"
 
     S "{cps=40}Meu caro, {color=ff0000}{b}[nome]{/color}{/b}.{w=2} Veja bem. Adotar essas duas abordagens de desenvolvimento, Tradicional e Ágil, trouxe-nos muitas vantagens como você irá perceber.{/cps}"
     S "{cps=40}Por outro lado, um clima de competição (algumas vezes exagerado e não muito saudável) emergiu entre as duas equipes: {b}{i}PadaTout{/i}{/b} e {b}{i}PadaOne{/i}{/b}.{/cps}"
