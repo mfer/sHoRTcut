@@ -34,7 +34,7 @@ label supervisorScene:
             with fastDissolve
             S "{cps=40}Que bom, você ganhou um ponto comigo."
         "Não":
-            show supervisor7 at right
+            show supervisor disappointed at right
             with fastDissolve
             P "{cps=40}Quando digo metodologia tradicional, estou falando do UP – {i}{b}Unified Process{/b}{/i}, ou do IRUP – {i}{b}IBM Rational Unified process{/b}{/i}, da IBM.{/cps}"
             P "{cps=40}Se você quiser se dar bem aqui, sugiro que aprenda mais sobre o {i}{b}RUP{/b}{/i}.{/cps}"
@@ -49,7 +49,7 @@ label supervisorScene:
             with fastDissolve
             S "{cps=40}Estou gostando de ver. Vejo que vem da {b}UFMG{/b}. Você deve ter estudado com o Professor Rodolfo.{/cps}"
         "Não":
-            show supervisor7 at right
+            show supervisor disappointed at right
             with fastDissolve
             P "{cps=40}Então não poderá dizer que não aprendeu nada aqui.{/cps}"
             show supervisor pensive at right

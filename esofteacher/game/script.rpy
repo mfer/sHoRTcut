@@ -17,7 +17,7 @@ image supervisor normal3 = "supervisor3.png"
 image supervisor pensive = "supervisor4.png"
 image supervisor smile = "supervisor5.png"
 image supervisor6 = "supervisor6.png"
-image supervisor7 = "supervisor7.png"
+image supervisor disappointed = "supervisor7.png"
 
 # Declare characters used by this game.
 define e = Character('ESOFteacher', color="#c8ffc8")
