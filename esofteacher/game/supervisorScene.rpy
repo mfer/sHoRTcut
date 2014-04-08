@@ -47,7 +47,7 @@ label supervisorScene:
         "Sim":
             show supervisor smile at right
             with fastDissolve
-            S "{cps=40}Estou gostando de ver. Vejo que vem da {b}UFMG{/b}. Você deve ter estudado com o Professor Rodolfo.{/cps}"
+            S "{cps=40}Estou gostando de ver. Vejo que vem da {b}UFMG{/b}. Você deve ter estudado com o Professor {b}Rodolfo{b}.{/cps}"
         "Não":
             show supervisor disappointed at right
             with fastDissolve
@@ -76,7 +76,7 @@ label supervisorScene:
 
         "Tradicional":
             S "{cps=40}Hmm, ok.{/cps}"
-            S "{cps=40}Então, você é {i}lerdo{/i}?!{w=2} Brincadeira...{/cps}"
+            S "{cps=40}Então, você é {b}{i}lerdo{/i}{/b}?!{w=2} Brincadeira...{/cps}"
             S "{cps=40}Temos muitos iguais a você.{/cps}" 
             S "{cps=40}Até resolvemos montar uma equipe para os seus semelhantes.{/cps}" 
             S "{cps=40}Vocês trabalharão com o projeto para a padaria {b}{i}Et part deux{/i}{/b}.{/cps}"      
