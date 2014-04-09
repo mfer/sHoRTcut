@@ -28,9 +28,9 @@ label supervisorScene:
   
     show supervisor pensive at right
     with fastDissolve
-    S "{cps=40}Nossa empresa, {b}{i}PadaSoft{/i}{/b}, é referência no desenvolvimento de {b}{i}CRUDs{/i}{/b} para gerenciamento de Padarias.{/cps}"
-        
-    S "{cps=40}Somos uma empresa que seguia apenas a metodologia tradicional. Você entende do que eu estou falando?{/cps}"
+    S "{cps=40}Nossa empresa é referência no desenvolvimento de {b}{i}CRUDs{/i}{/b} para gerenciamento de Padarias.{/cps}"
+    
+    S "{cps=40}A {b}{i}PadaSoft{/i}{/b} é uma empresa que seguia apenas a metodologia tradicional. Você entende do que eu estou falando?{/cps}"
 
     menu:
         "Sim":
