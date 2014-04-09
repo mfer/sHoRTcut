@@ -41,7 +41,10 @@ label supervisorScene:
             show supervisor disappointed at right
             with fastDissolve
             P "{cps=40}Quando digo metodologia tradicional, estou falando do UP – {i}{b}Unified Process{/b}{/i}, ou do IRUP – {i}{b}IBM Rational Unified process{/b}{/i}, da IBM.{/cps}"
-            show rup at imagepos behind supervisor
+            show rup at imagepos behind supervisor:
+                alpha 0.0
+                time 0
+                linear 1.0 alpha 1.0
             P "{cps=40}Se você quiser se dar bem aqui, sugiro que aprenda mais sobre o {i}{b}RUP{/b}{/i}.{/cps}"
             hide rup            
 
@@ -60,7 +63,10 @@ label supervisorScene:
             P "{cps=40}Então não poderá dizer que não aprendeu nada aqui.{/cps}"
             show supervisor pensive at right
             with fastDissolve
-            show xp at imagepos behind supervisor
+            show xp at imagepos behind supervisor:
+                alpha 0.0
+                time 0
+                linear 1.0 alpha 1.0
             P "{cps=40}Basicamente, o {b}{i}XP{/i}{/b} auxilia a desenvolver software com requisitos vagos e em constante mudança.{/cps}"
             hide xp
 
