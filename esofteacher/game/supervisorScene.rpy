@@ -61,7 +61,7 @@ label supervisorScene:
     S "{cps=40}Sendo assim, a {b}{i}PadaSoft{/i}{/b} desenvolve produtos de qualidade nessas duas vertentes.{/cps}"
     show supervisor pensive at right
     with fastDissolve
-    S "{cps=40}No método ágil seguimos o processo {b}{i}PadaOne{/i}{/b}{image=sabre.png}, enquanto no tradicional, o processo é o {b}{i}PadaTout{/i}{/b}{image=sabre.png}.{/cps}"
+    S "{cps=40}No método ágil seguimos o processo {b}{i}PadaOne{/i}{/b}{image=sabre.png}, enquanto no tradicional, o processo é o {b}{i}PadaTout{/i}{/b}{image=baguette.png}.{/cps}"
     show supervisor normal3 at right
     with fastDissolve
     S "{cps=40}Com qual método você se identifica mais?{/cps}"
