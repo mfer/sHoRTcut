@@ -1,6 +1,10 @@
 #CenaDoSupervisor
 
+image xp = "Extreme_Programming.png"
+image rup = "Development-iterative.gif"
+
 label supervisorScene:
+    $ imagepos = Position(xpos=.25, xanchor=0, ypos=50, yanchor=0)
     
     scene office
     
@@ -37,7 +41,9 @@ label supervisorScene:
             show supervisor disappointed at right
             with fastDissolve
             P "{cps=40}Quando digo metodologia tradicional, estou falando do UP – {i}{b}Unified Process{/b}{/i}, ou do IRUP – {i}{b}IBM Rational Unified process{/b}{/i}, da IBM.{/cps}"
+            show rup at imagepos behind supervisor
             P "{cps=40}Se você quiser se dar bem aqui, sugiro que aprenda mais sobre o {i}{b}RUP{/b}{/i}.{/cps}"
+            hide rup            
 
     show supervisor pensive at right
     with fastDissolve
@@ -54,7 +60,9 @@ label supervisorScene:
             P "{cps=40}Então não poderá dizer que não aprendeu nada aqui.{/cps}"
             show supervisor pensive at right
             with fastDissolve
+            show xp at imagepos behind supervisor
             P "{cps=40}Basicamente, o {b}{i}XP{/i}{/b} auxilia a desenvolver software com requisitos vagos e em constante mudança.{/cps}"
+            hide xp
 
     show supervisor normal3 at right
     with fastDissolve
