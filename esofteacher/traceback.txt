@@ -1,22 +1,27 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/supervisorScene.rpy", line 110, in script
-  File "game/supervisorScene.rpy", line 110, in python
-NameError: name 'square' is not defined
+  File "game/supervisorScene.rpy", line 23, in script
+KeyError: u'nome'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "/home/junior/renpy-6.17.3-sdk/renpy/execution.py", line 294, in run
     node.execute()
-  File "/home/junior/renpy-6.17.3-sdk/renpy/ast.py", line 1156, in execute
-    trans = renpy.python.py_eval(self.expr)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/python.py", line 1392, in py_eval
-    return eval(py_compile(source, 'eval'), globals, locals)
-  File "game/supervisorScene.rpy", line 110, in <module>
-    with square
-NameError: name 'square' is not defined
+  File "/home/junior/renpy-6.17.3-sdk/renpy/ast.py", line 464, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/exports.py", line 925, in say
+    who(what, interact=interact)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/character.py", line 803, in __call__
+    what = what_pattern.replace("[what]", sub(what, translate=translate))
+  File "/home/junior/renpy-6.17.3-sdk/renpy/substitutions.py", line 223, in substitute
+    s = formatter.vformat(s, (), kwargs)
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 549, in vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 571, in _vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 632, in get_field
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 591, in get_value
+KeyError: u'nome'
 
 Linux-3.11.0-19-generic-x86_64-with-debian-wheezy-sid
 Ren'Py 6.17.3.327
