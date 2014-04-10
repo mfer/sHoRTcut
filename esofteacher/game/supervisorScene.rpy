@@ -20,7 +20,7 @@ label supervisorScene:
             $ nome = renpy.input("{b}{i}Por favor insira o seu nome:{/i}{/b}", "", length=20)
             show supervisor smile at right
             with fastDissolve
-            S "{cps=40}Muito prazer, {b}{color=ff0000}[nome]{/color}{/b}!\nSeja bem vindo! Não quero te assutar mas…{w=3} Temos muito trabalho por aqui. Vou explicar o que você vai fazer.{/cps}"
+            S "{cps=40}Muito prazer, {b}{color=ff0000}[nome]{/color}{/b}!\nSeja bem vindo! Não quero te assustar mas…{w=3} Temos muito trabalho por aqui. Vou explicar o que você vai fazer.{/cps}"
         "Não":
             show supervisor anger at right
             with fastDissolve
