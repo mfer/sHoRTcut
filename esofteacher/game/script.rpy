@@ -24,6 +24,11 @@ define e = Character('ESOFteacher', color="#c8ffc8")
 define S = Character('Supervisor', color="#c8ffc8")
 define P = Character('Player', color="#c8ffc8")
 
+init:
+    $ lv = 0 
+    $ stress = 0
+    $ stressMax = 40
+
 init python:
 
     def stats_frame(name, level, hp, maxhp, **properties):
@@ -49,9 +54,10 @@ init python:
 
         ui.close()
         ui.close()
+    
         
-label fight(nome, lv, hp, php=40):
-    $ stats_frame(nome, lv, hp, php, xalign=.02, yalign=.05)
+label fight(nome):
+    $ stats_frame(nome, lv, stress, stressMax, xalign=.02, yalign=.05)
     return
 
 # The game starts here.
@@ -59,10 +65,7 @@ label start:
     
     stop music fadeout 1.0
     
-    call fight("Claudio", 0, 40)
-    
     $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)
-    
     
     jump supervisorScene
     

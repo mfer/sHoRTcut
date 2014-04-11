@@ -39,34 +39,34 @@ init -1 python hide:
     ## The theme function takes a number of parameters that can
     ## customize the color scheme.
 
-    theme.tv(
-        ## Theme: TV
-        ## Color scheme: Dreamscape
+    theme.glow(
+        ## Theme: Glow
+        ## Color scheme: Grape Jelly
 
         ## The color of an idle widget face.
-        widget = "#77a493",
+        widget = "#c45693",
 
         ## The color of a focused widget face.
-        widget_hover = "#8accb3",
+        widget_hover = "#5e2862",
 
         ## The color of the text in a widget.
         widget_text = "#ffffff",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
-        widget_selected = "#c75f77",
+        widget_selected = "#e59eae",
 
         ## The color of a disabled widget face.
-        disabled = "#966077",
+        disabled = "#81859a",
 
         ## The color of disabled widget text.
-        disabled_text = "#c75f77",
+        disabled_text = "#5e2862",
 
         ## The color of informational labels.
-        label = "#fefab6",
+        label = "#ffffff",
 
         ## The color of a frame containing widgets.
-        frame = "#836177",
+        frame = "#8ea9b0",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
