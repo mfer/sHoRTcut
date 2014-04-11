@@ -28,6 +28,7 @@ init:
     $ lv = 0 
     $ stress = 0
     $ stressMax = 40
+    $ nome = ""
 
 init python:
 
@@ -69,6 +70,9 @@ label start:
     
     jump supervisorScene
     
+    label rSupervisorScene:
+        call fight(nome)     # Barra de stress e lv.
+        P "Teste"
 
     return
 

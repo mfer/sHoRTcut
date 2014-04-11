@@ -20,7 +20,6 @@ label supervisorScene:
             $ nome = renpy.input("{b}{i}Por favor insira o seu nome:{/i}{/b}", "", length=20)
             show supervisor smile at right
             with fastDissolve
-            call fight(nome)            
             S "{cps=40}Muito prazer, {b}{color=ff0000}[nome]{/color}{/b}!\nSeja bem vindo! Não quero te assustar mas…{w=3} Temos muito trabalho por aqui. Vou explicar o que você vai fazer.{/cps}"
         "Não":
             show supervisor anger at right
@@ -134,7 +133,8 @@ label supervisorScene:
     S "{cps=40}Então, esteja preparado!!!{/cps}"
     
     $ renpy.music.stop(channel="music",fadeout=1.0)
-    show black
+    #show black
     
-    with blinds
+    #with blinds
+    jump rSupervisorScene
     #transição proxima cena...
