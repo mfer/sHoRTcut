@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/options.rpy", line 192: invalid syntax
-    config.main_menu_music = "illurock.ogg" loop 
-                                                ^
+File "game/script.rpy", line 54: invalid syntax
+    stats_frame(nome, lv, hp, php xalign=.02, yalign=.05)
+                                        ^
     
 
 Ren'Py Version: Ren'Py 6.17.3.327

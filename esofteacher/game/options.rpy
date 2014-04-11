@@ -39,34 +39,34 @@ init -1 python hide:
     ## The theme function takes a number of parameters that can
     ## customize the color scheme.
 
-    theme.roundrect(
-        ## Theme: Roundrect
-        ## Color scheme: Cotton Candy
+    theme.tv(
+        ## Theme: TV
+        ## Color scheme: Dreamscape
 
         ## The color of an idle widget face.
-        widget = "#ECC7D0",
+        widget = "#77a493",
 
         ## The color of a focused widget face.
-        widget_hover = "#E1D4C9",
+        widget_hover = "#8accb3",
 
         ## The color of the text in a widget.
-        widget_text = "#805C40",
+        widget_text = "#ffffff",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
-        widget_selected = "#805C40",
+        widget_selected = "#c75f77",
 
         ## The color of a disabled widget face.
-        disabled = "#C8AFA1",
+        disabled = "#966077",
 
         ## The color of disabled widget text.
-        disabled_text = "#E1D4C9",
+        disabled_text = "#c75f77",
 
         ## The color of informational labels.
-        label = "#805C40",
+        label = "#fefab6",
 
         ## The color of a frame containing widgets.
-        frame = "#FCF5F2",
+        frame = "#836177",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
