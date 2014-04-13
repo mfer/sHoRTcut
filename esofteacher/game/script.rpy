@@ -42,7 +42,7 @@ init python:
         ui.text(nome, size=20)
 
         ui.hbox() # "HP" from bar
-        ui.text("Stress", size=20)
+        ui.text("Stress ", size=20)
         ui.bar(stressMax, stress,xmaximum=150)
 
         ui.close()
