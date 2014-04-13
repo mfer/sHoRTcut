@@ -57,7 +57,7 @@ init python:
         ui.close()
     
         
-label fight(nome):
+label stress(nome):
     $ stats_frame(nome, lv, stress, stressMax, xalign=.02, yalign=.05)
     return
 
@@ -71,7 +71,7 @@ label start:
     jump supervisorScene
     
     label rSupervisorScene:
-        call fight(nome)     # Barra de stress e lv.
+        call stress(nome)     # Barra de stress e lv.
         P "Teste"
 
     return
