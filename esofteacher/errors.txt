@@ -2,8 +2,6 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 72: expected 'name' not found.
-    hide 
-         ^
+File "game/script.rpy", line 59: non-keyword arg after keyword arg
 
 Ren'Py Version: Ren'Py 6.17.3.327

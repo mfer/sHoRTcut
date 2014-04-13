@@ -55,11 +55,9 @@ init python:
 
         ui.close()
         ui.close()
-    
         
-label stressBar(nome):
-    $ stats_frame(nome, lv, stress, stressMax, xalign=.02, yalign=.05)
-    return
+    renpy.define_screen("stressBar", stats_frame, modal="False")
+        
 
 # The game starts here.
 label start:    
@@ -68,10 +66,11 @@ label start:
     
     $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)
     
+    show screen stressBar(nome="[nome]",level=0,stress=0,stressMax=40)     # Barra de stress e lv.
+
     jump supervisorScene
     
     label rSupervisorScene:
-        call stressBar(nome)     # Barra de stress e lv.
         P "Teste"
 
     return
