@@ -1,5 +1,6 @@
 # Project Screen
 
+# Tentarei acrescentar o progresso tmb
 init:
     $ variable = False #Variavel q faz esta janela aparecer
     
