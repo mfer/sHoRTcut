@@ -5,11 +5,6 @@ image bg ync = "ync.png"
 image office = "office.png"
 image corredor = "corredor.png"
 
-image sylvie normal = "sylvie2_normal.png"
-image sylvie giggle = "sylvie2_giggle.png"
-image sylvie smile = "sylvie2_smile.png"
-image sylvie surprised = "sylvie2_surprised.png" 
-
 image supervisor normal0 = "supervisor0.png" 
 image supervisor normal1 = "supervisor1.png"
 image supervisor anger = "supervisor2.png"

@@ -1,5 +1,10 @@
 ## Cena do help
 
+image sylvie normal = "sylvie2_normal.png"
+image sylvie giggle = "sylvie2_giggle.png"
+image sylvie smile = "sylvie2_smile.png"
+image sylvie surprised = "sylvie2_surprised.png" 
+
 define h = Character(
                     window_left_padding = 15,
                     window_right_padding = 10,

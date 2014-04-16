@@ -2,6 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/projectScreen.rpy", line 31: indentation mismatch.
+File "game/projectScreen.rpy", line 27: Line is indented, but the preceding vbox statement does not expect a block. Please check this line's indentation.
+    xfill True
+    ^
 
 Ren'Py Version: Ren'Py 6.17.3.327

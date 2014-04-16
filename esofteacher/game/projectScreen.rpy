@@ -2,12 +2,14 @@
 
 # Tentarei acrescentar o progresso tmb
 init:
-    $ variable = False #Variavel q faz esta janela aparecer
+    $ variable = True #Variavel q faz esta janela aparecer
+    $ agileProgress = 0
+    $ tradProgress = 0
     
 screen button: 
     if variable:    
         vbox xalign 0.98 yalign 0.0:
-            textbutton "Escolha do Projeto" action ui.callsinnewcontext("label_call")
+            textbutton "Progresso dos Projetos" action ui.callsinnewcontext("label_call")
 
             imagebutton:
                 idle "button_idle.png"
@@ -17,26 +19,15 @@ screen button:
                 
 screen projects_screen:
     frame:
-        xfill True
-        xmargin 50
-        ypadding 25
-        xalign .50
-        yalign .50
+        has vbox
+        hbox:
+            label "{b}Ágil:           {/b}" xminimum 100
+            bar range 100 value agileProgress xmaximum 400
+        hbox:
+            label "{b}Tradicional: {/b}" xminimum 100
+            bar range 100 value tradProgress xmaximum 400
+        textbutton "{i}Return{/i}" action Return()
         
-        vbox:
-            xfill True
-            spacing 25
-            
-            text "Qual projeto vc quer fazer?": #arrumar
-                text_align 0.5
-                xalign 0.5
-        #has vbox
-            hbox:
-                spacing 10
-                xalign .5
-                textbutton "Ágil" action Return() #Alterar
-                textbutton "Tradicional" action Return() # Alterar
-                textbutton "Retornar" action Return()
 
 label label_call:
     call screen projects_screen
