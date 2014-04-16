@@ -33,8 +33,7 @@ label start:
     
     show screen stressBar(nome="[nome]",level=0,stress=0,stressMax=40)     # Barra de stress e lv.
 
-    show screen button # this will make the button show up on your screen
-
+    show screen button 
     
     jump supervisorScene
     

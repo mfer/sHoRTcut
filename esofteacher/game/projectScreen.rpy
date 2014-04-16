@@ -1,7 +1,7 @@
 # Project Screen
 
 init:
-    $ variable = False
+    $ variable = True #Variavel q faz esta janela aparecer
     
 screen button: 
     if variable:    
