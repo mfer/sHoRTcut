@@ -33,9 +33,14 @@ label start:
     
     show screen stressBar(nome="[nome]",level=0,stress=0,stressMax=40)     # Barra de stress e lv.
 
+    show screen button # this will make the button show up on your screen
+
+    
     jump supervisorScene
     
+    
     label rSupervisorScene:
+        $ variable = True
         P "Teste"
 
     return

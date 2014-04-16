@@ -1,3 +1,4 @@
+# Stress Bar
 init:
     $ lv = 0 
     $ stress = 0
