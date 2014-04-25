@@ -8,6 +8,9 @@ screen map:
 
 
 label mapScene:
+    
+    $ renpy.music.stop(channel="music",fadeout=1.0)
+
     show corredor
     show screen map
     P "E agora o q?" #alterar

@@ -1,9 +1,12 @@
 
 #background
-#music
 
 
 label mestreDoBoloScene:
+    
+    $ renpy.music.stop(channel="music",fadeout=1.0)    
+    $ renpy.music.play("Purple_Motion_-_Charts_overdrive.mp3", channel="music", loop=True, fadein=1.0) 
+    
     
     MB "{cps=40}Olá, {b}{i}[nome]!!!{/i}{/b}{w=2} Você é o novo contratado, não é?{/cps}"
     MB "{cps=40}Prazer em conhecê-lo!{/cps}" 

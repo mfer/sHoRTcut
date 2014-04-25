@@ -1,6 +1,10 @@
 
 
 label gerenteScene:
+    
+    
+    $ renpy.music.stop(channel="music",fadeout=1.0)    
+    
     GR "{cps=40}Seja bem vindo, {b}{i}[nome]!!!{/i}{/b}{w=2} Muito prazer, meu nome é NOME_DO_GERENTE.{/cps}"
     GR "{cps=40}Sou o gerente do projeto da padaria {i}{b}Et Part Deux{/b}{/i} e utilizaremos o processo PadaTout.{/cps}"
     GR "{cps=40}O PadaTout é um processo já bem maduro, tradicional e bem testado. {w=2} Utilizamos há anos com sucesso aqui.{/cps}"
