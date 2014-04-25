@@ -17,7 +17,9 @@ image supervisor disappointed = "supervisor7.png"
 # Declare characters used by this game.
 define e = Character('ESOFteacher', color="#c8ffc8")
 define S = Character('Supervisor', color="#c8ffc8")
-define P = Character('Player', color="#c8ffc8")     
+define P = Character('Player', color="#c8ffc8")  
+define MB = Character('Mestre do Bolo', color="#c8ffc8") #mestredobolo as mb
+define GR = Character ('Gerente', color="#c8ffc8") #define gerente as gr
 
 # The game starts here.
 label start:    
@@ -30,8 +32,9 @@ label start:
 
     show screen project 
     
-    jump supervisorScene
-    
+    #jump supervisorScene
+    #jump mestreDoBoloScene
+    jump gerenteScene
     
     label rSupervisorScene:
         $ variable = True
