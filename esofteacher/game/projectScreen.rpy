@@ -6,7 +6,7 @@ init:
     $ agileProgress = 0
     $ tradProgress = 0
     
-screen button: 
+screen project: 
     if variable:    
         vbox xalign 0.98 yalign 0.0:
             textbutton "Progresso dos Projetos" action ui.callsinnewcontext("label_call")
