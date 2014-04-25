@@ -32,9 +32,9 @@ label start:
 
     show screen project 
     
-    #jump supervisorScene
+    jump supervisorScene
     #jump mestreDoBoloScene
-    jump gerenteScene
+    #jump gerenteScene
     
     label rSupervisorScene:
         $ variable = True
