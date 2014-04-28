@@ -1,6 +1,18 @@
 
 #background
 
+image mb0 = "mb0.gif"
+image mb1 = "mb1.gif"
+image mb2 = "mb2.gif"
+image mb3 = "mb3.gif"
+image mb4 = "mb4.gif"
+image mb5 = "mb5.gif"
+image mb6 = "mb6.gif"
+image mb7 = "mb7.gif"
+image mb8 = "mb8.gif"
+image mb9 = "mb9.gif"
+image mb10 = "mb10.gif"
+image mb11 = "mb11.gif"
 
 label mestreDoBoloScene:
     
