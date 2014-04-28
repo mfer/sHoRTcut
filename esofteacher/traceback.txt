@@ -1,28 +1,23 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/gerenteScene.rpy", line 4, in script
-KeyError: u'NOME_DO_GERENTE'
+While executing init code:
+  File "game/projectScreen.rpy", line 5, in script
+  File "game/projectScreen.rpy", line 5, in python
+NameError: name 'FALSE' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "/home/junior/renpy-6.17.3-sdk/renpy/execution.py", line 294, in run
     node.execute()
-  File "/home/junior/renpy-6.17.3-sdk/renpy/ast.py", line 464, in execute
-    renpy.exports.say(who, what, interact=self.interact)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/exports.py", line 925, in say
-    who(what, interact=interact)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/character.py", line 803, in __call__
-    what = what_pattern.replace("[what]", sub(what, translate=translate))
-  File "/home/junior/renpy-6.17.3-sdk/renpy/substitutions.py", line 223, in substitute
-    s = formatter.vformat(s, (), kwargs)
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 549, in vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 571, in _vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 632, in get_field
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 591, in get_value
-KeyError: u'NOME_DO_GERENTE'
+  File "/home/junior/renpy-6.17.3-sdk/renpy/ast.py", line 732, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/python.py", line 1358, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/projectScreen.rpy", line 5, in <module>
+    $ variableProjectScreen = FALSE #Variavel q faz esta janela aparecer
+NameError: name 'FALSE' is not defined
 
-Linux-3.11.0-12-generic-x86_64-with-debian-wheezy-sid
+Linux-3.11.0-20-generic-x86_64-with-debian-wheezy-sid
 Ren'Py 6.17.3.327
 ESofTeacher 0.0

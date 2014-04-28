@@ -2,12 +2,12 @@
 
 # Tentarei acrescentar o progresso tmb
 init:
-    $ variable = True #Variavel q faz esta janela aparecer
+    $ variableProjectScreen = False #Variavel q faz esta janela aparecer
     $ agileProgress = 0
     $ tradProgress = 0
     
 screen project: 
-    if variable:    
+    if variableProjectScreen:    
         vbox xalign 0.98 yalign 0.0:
             textbutton "Progresso dos Projetos" action ui.callsinnewcontext("label_call")
 

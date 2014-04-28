@@ -11,8 +11,8 @@ init python:
 
         ui.frame(xfill=False, yminimum=None, **properties)
 
-        ui.hbox() # (name, "HP", bar) from (level, hp, maxhp)
-        ui.vbox() # name from ("HP", bar)
+        ui.hbox() # (name, "stress", bar) from (level, hp, maxhp)
+        ui.vbox() # name from ("stress", bar)
 
         ui.text(nome, size=20)
 
@@ -23,7 +23,7 @@ init python:
         ui.close()
         ui.close()
 
-        ui.vbox() # Level from (hp/maxhp)
+        ui.vbox() # Level from (stress/maxstress)
 
         ui.text("Lv. %d" % level, xalign=0.5, size=20)
         ui.text("%d/%d" % (stress, stressMax), xalign=0.5, size=20)
