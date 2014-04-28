@@ -1,13 +1,13 @@
 
 #background
 
-image gr0 = "gr0.gif"
-image gr1 = "gr1.gif"
-image gr2 = "gr2.gif"
-image gr3 = "gr3.gif"
-image gr4 = "gr4.gif"
-image gr5 = "gr5.gif"
-image gr6 = "gr6.gif"
+image gr0 = "gr0.png"
+image gr1 = "gr1.png"
+image gr2 = "gr2.png"
+image gr3 = "gr3.png"
+image gr4 = "gr4.png"
+image gr5 = "gr5.png"
+image gr6 = "gr6.png"
 
 
 
