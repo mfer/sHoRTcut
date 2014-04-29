@@ -1,8 +1,9 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/mestreDoBoloScene.rpy", line 53, in script
-Exception: Unknown text tag u'CPS=40'
+  File "game/mapScene.rpy", line 39, in script
+  File "game/mapScene.rpy", line 28, in python
+NameError: name 'gerenteScene' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -23,47 +24,29 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/home/junior/renpy-6.17.3-sdk/renpy/display/core.py", line 1993, in interact
     repeat, rv = self.interact_core(preloads=preloads, **kwargs)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/display/core.py", line 2311, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/display/core.py", line 1530, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 365, in renpy.display.render.render_screen (gen/renpy.display.render.c:5300)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/display/layout.py", line 536, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/display/layout.py", line 536, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/display/layout.py", line 536, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/display/screen.py", line 295, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/display/layout.py", line 536, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/display/layout.py", line 903, in render
-    st, at)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/display/layout.py", line 698, in render
-    surf = render(d, width - x, rh, cst, cat)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/text/text.py", line 1450, in render
-    layout = Layout(self, width, height, renders)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/text/text.py", line 491, in __init__
-    self.paragraphs = self.segment(text.tokens, style, renders)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/text/text.py", line 920, in segment
-    raise Exception("Unknown text tag %r" % text)
-Exception: Unknown text tag u'CPS=40'
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/core.py", line 2235, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/core.py", line 298, in visit_all
+    d.visit_all(callback)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/core.py", line 298, in visit_all
+    d.visit_all(callback)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/core.py", line 298, in visit_all
+    d.visit_all(callback)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/core.py", line 300, in visit_all
+    callback(self)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/core.py", line 2235, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/screen.py", line 166, in per_interact
+    self.update()
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/screen.py", line 266, in update
+    self.screen.function(**self.scope)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/screenlang.py", line 1236, in __call__
+    renpy.python.py_exec_bytecode(self.code.bytecode, locals=scope)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/python.py", line 1358, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/mapScene.rpy", line 28, in <module>
+    textbutton "Projeto 1" action Jump(gerenteScene) #alterar
+NameError: name 'gerenteScene' is not defined
 
 Linux-3.11.0-20-generic-x86_64-with-debian-wheezy-sid
 Ren'Py 6.17.3.327

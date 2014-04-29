@@ -14,6 +14,7 @@ image escritorioTrad = "office_room.png"
 
 label gerenteScene:
     
+    hide screen map
     
     $ renpy.music.stop(channel="music",fadeout=1.0)    
     $ renpy.music.play("Am - E7 Backing Track (Minor I - V)_2.mp3", channel="music", loop=True, fadein=1.0) 

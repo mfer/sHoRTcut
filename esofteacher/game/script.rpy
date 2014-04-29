@@ -32,12 +32,8 @@ label start:
     $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)
     
     show screen stressBar(nome="[nome]",level=0,stress=0,stressMax=40)     # Barra de stress e lv.
-
-    show screen project 
     
-    #jump supervisorScene
-    #jump mestreDoBoloScene
-    #jump gerenteScene
+    jump supervisorScene
     
     label rSupervisorScene:
         $ variableProjectScreen = True

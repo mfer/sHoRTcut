@@ -18,15 +18,15 @@ screen map:
             yalign .5
             spacing 30
         
-        text "O que irei fazer agora?!" xalign 0.5
+        text "{b}{i}O que irei fazer agora?!{/i}{/b}" xalign 0.5
         
         hbox:
             
             xalign 0.5
             spacing 100
 
-            textbutton "Projeto 1" action Return() #alterar
-            textbutton "Projeto 2" action Return() #alterar
+            textbutton "Projeto 1" action Jump("gerenteScene") #alterar
+            textbutton "Projeto 2" action Jump("mestreDoBoloScene") #alterar
 
 
 label mapScene:
