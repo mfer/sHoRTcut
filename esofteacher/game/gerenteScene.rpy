@@ -9,6 +9,7 @@ image gr4 = "gr4.png"
 image gr5 = "gr5.png"
 image gr6 = "gr6.png"
 
+image escritorioTrad = "office_room.png"
 
 
 label gerenteScene:
@@ -16,6 +17,9 @@ label gerenteScene:
     
     $ renpy.music.stop(channel="music",fadeout=1.0)    
     $ renpy.music.play("Am - E7 Backing Track (Minor I - V)_2.mp3", channel="music", loop=True, fadein=1.0) 
+    
+    scene escritorioTrad
+    
     show gr2 at left
     with fastDissolve
     GR "{cps=40}Seja bem vindo, {b}{i}[nome]!!!{/i}{/b}{w=2} Muito prazer, meu nome é NOME_DO_GERENTE.{/cps}"

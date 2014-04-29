@@ -1,22 +1,69 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While executing init code:
-  File "game/projectScreen.rpy", line 5, in script
-  File "game/projectScreen.rpy", line 5, in python
-NameError: name 'FALSE' is not defined
+While running game code:
+  File "game/mestreDoBoloScene.rpy", line 53, in script
+Exception: Unknown text tag u'CPS=40'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "/home/junior/renpy-6.17.3-sdk/renpy/execution.py", line 294, in run
     node.execute()
-  File "/home/junior/renpy-6.17.3-sdk/renpy/ast.py", line 732, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/python.py", line 1358, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/projectScreen.rpy", line 5, in <module>
-    $ variableProjectScreen = FALSE #Variavel q faz esta janela aparecer
-NameError: name 'FALSE' is not defined
+  File "/home/junior/renpy-6.17.3-sdk/renpy/ast.py", line 464, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/exports.py", line 925, in say
+    who(what, interact=interact)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/character.py", line 812, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/character.py", line 678, in do_display
+    **display_args)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/character.py", line 481, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/ui.py", line 237, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/core.py", line 1993, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/core.py", line 2311, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/core.py", line 1530, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 365, in renpy.display.render.render_screen (gen/renpy.display.render.c:5300)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/layout.py", line 536, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/layout.py", line 536, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/layout.py", line 536, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/screen.py", line 295, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/layout.py", line 536, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/layout.py", line 903, in render
+    st, at)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/display/layout.py", line 698, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2764)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2491)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/text/text.py", line 1450, in render
+    layout = Layout(self, width, height, renders)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/text/text.py", line 491, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders)
+  File "/home/junior/renpy-6.17.3-sdk/renpy/text/text.py", line 920, in segment
+    raise Exception("Unknown text tag %r" % text)
+Exception: Unknown text tag u'CPS=40'
 
 Linux-3.11.0-20-generic-x86_64-with-debian-wheezy-sid
 Ren'Py 6.17.3.327

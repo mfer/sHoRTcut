@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/mapScene.rpy", line 6: expected 'simple_expression' not found.
-    textbutton "Projeto 1" xalign 0.33 yalign 0.5 action return 
-                                                         ^
+File "game/mapScene.rpy", line 9: Line is indented, but the preceding vbox statement does not expect a block. Please check this line's indentation.
+    xalign .5
+    ^
 
 Ren'Py Version: Ren'Py 6.17.3.327

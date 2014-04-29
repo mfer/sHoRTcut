@@ -1,10 +1,32 @@
 #cena do mapa
 
 screen map:
-    fixed:
-         text "Qual projeto vc deseja fazer?" xalign 0.5 yalign 0.3
-         textbutton "Projeto 1" xalign 0.33 yalign 0.5 action Return() #alterar
-         textbutton "Projeto 2" xalign 0.66 yalign 0.5 action Return() #alterar
+    
+    modal True
+    
+    frame:
+        style_group "yesno"
+        
+        xmargin .05
+        ypos .3
+        xpos .3
+        yanchor 0
+        ypadding .05
+        
+        has vbox:
+            xalign .5
+            yalign .5
+            spacing 30
+        
+        text "O que irei fazer agora?!" xalign 0.5
+        
+        hbox:
+            
+            xalign 0.5
+            spacing 100
+
+            textbutton "Projeto 1" action Return() #alterar
+            textbutton "Projeto 2" action Return() #alterar
 
 
 label mapScene:
@@ -13,6 +35,7 @@ label mapScene:
 
     show corredor
     show screen map
-    P "E agora o q?" #alterar
+    
+    "" #alterar
     
     

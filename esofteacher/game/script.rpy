@@ -35,13 +35,13 @@ label start:
 
     show screen project 
     
-    jump supervisorScene
+    #jump supervisorScene
     #jump mestreDoBoloScene
     #jump gerenteScene
     
     label rSupervisorScene:
         $ variableProjectScreen = True
-        P "Teste"
+        jump mapScene
 
     return
 
