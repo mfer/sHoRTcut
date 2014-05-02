@@ -35,6 +35,7 @@ label mapScene:
 
     show corredor
     show screen map
+    show screen clock
     
     "" #alterar
     

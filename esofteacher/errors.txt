@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/mapScene.rpy", line 9: Line is indented, but the preceding vbox statement does not expect a block. Please check this line's indentation.
-    xalign .5
-    ^
+File "game/clock.rpy", line 34: Expected a screen language statement.
+    style "transparente"
+         ^
 
 Ren'Py Version: Ren'Py 6.17.3.327

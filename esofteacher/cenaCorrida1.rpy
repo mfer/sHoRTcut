@@ -1,4 +1,4 @@
-Momento1: Indo para o cliente
+"""Momento1: Indo para o cliente
 
 dp: Olá (NOMEJOGADOR). Vi você conversando com o (NOMEDOSCRUMMASTER) quando chegou. Meu nome é (NOMEDONODOPRODUTO).
 dp: (NOMESUPERVISOR) pediu para te acompanhar nesse projeto, já que você foi contratado há pouco tempo. Atuarei, junto com você, como dono do produto, para que você possa ir treinando, aprendendo e se acostumando com a empresa. 
@@ -202,3 +202,4 @@ Momento 5: Desenvolvimento
 
 Momento 6: Apresentação para o cliente
 
+"""

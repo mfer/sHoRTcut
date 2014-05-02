@@ -1,9 +1,9 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/mapScene.rpy", line 39, in script
-  File "game/mapScene.rpy", line 28, in python
-NameError: name 'gerenteScene' is not defined
+  File "game/mapScene.rpy", line 40, in script
+  File "game/clock.rpy", line 35, in python
+NameError: name 'a' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -44,9 +44,9 @@ Full traceback:
     renpy.python.py_exec_bytecode(self.code.bytecode, locals=scope)
   File "/home/junior/renpy-6.17.3-sdk/renpy/python.py", line 1358, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/mapScene.rpy", line 28, in <module>
-    textbutton "Projeto 1" action Jump(gerenteScene) #alterar
-NameError: name 'gerenteScene' is not defined
+  File "game/clock.rpy", line 35, in <module>
+    yalign 0.02 # Y placement on screen
+NameError: name 'a' is not defined
 
 Linux-3.11.0-20-generic-x86_64-with-debian-wheezy-sid
 Ren'Py 6.17.3.327
