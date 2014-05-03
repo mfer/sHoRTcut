@@ -1,5 +1,4 @@
-
-#background
+#cena gerente
 
 image gr0 = "gr0.png"
 image gr1 = "gr1.png"
