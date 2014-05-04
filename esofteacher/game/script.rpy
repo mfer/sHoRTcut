@@ -23,6 +23,8 @@ define P = Character('Jogador', color="#c8ffc8")
 define MB = Character('Mestre do Bolo', color="#c8ffc8") #mestredobolo as mb
 define GR = Character ('Gerente', color="#c8ffc8") #define gerente as gr
 
+define DP = Character ('Dono do Produto', color="#c8ffc8") 
+
 
 # The game starts here.
 label start:    
@@ -31,8 +33,9 @@ label start:
     
     $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)
     
-    show screen stressBar(nome="[nome]",level=0,stress=0,stressMax=40)     # Barra de stress e lv.
+    show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)     # Barra de stress e lv.
     
+    #jump corrida1SceneMomento1
     jump supervisorScene
     
     label rSupervisorScene:

@@ -1,9 +1,9 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/mapScene.rpy", line 40, in script
-  File "game/clock.rpy", line 35, in python
-NameError: name 'a' is not defined
+  File "game/cenaCorrida1.rpy", line 5, in script
+  File "game/stressBar.rpy", line 29, in python
+TypeError: %d format: a number is required, not str
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -40,13 +40,9 @@ Full traceback:
     self.update()
   File "/home/junior/renpy-6.17.3-sdk/renpy/display/screen.py", line 266, in update
     self.screen.function(**self.scope)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/screenlang.py", line 1236, in __call__
-    renpy.python.py_exec_bytecode(self.code.bytecode, locals=scope)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/python.py", line 1358, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/clock.rpy", line 35, in <module>
-    yalign 0.02 # Y placement on screen
-NameError: name 'a' is not defined
+  File "game/stressBar.rpy", line 29, in stats_frame
+    ui.text("%d/%d" % (stress, stressMax), xalign=0.5, size=20)
+TypeError: %d format: a number is required, not str
 
 Linux-3.11.0-20-generic-x86_64-with-debian-wheezy-sid
 Ren'Py 6.17.3.327

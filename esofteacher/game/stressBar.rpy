@@ -1,8 +1,8 @@
 # Stress Bar
 init:
     $ lv = 0 
-    $ stress = 0
-    $ stressMax = 40
+    $ strss = 0
+    $ strMax = 40
     $ nome = ""
     
 init python:

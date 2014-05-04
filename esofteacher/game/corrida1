@@ -1,36 +1,4 @@
-"""Momento1: Indo para o cliente
-
-dp: Olá (NOMEJOGADOR). Vi você conversando com o (NOMEDOSCRUMMASTER) quando chegou. Meu nome é (NOMEDONODOPRODUTO).
-dp: (NOMESUPERVISOR) pediu para te acompanhar nesse projeto, já que você foi contratado há pouco tempo. Atuarei, junto com você, como dono do produto, para que você possa ir treinando, aprendendo e se acostumando com a empresa. 
-dp: Não se assuste, então, se eu fizer alguns questionamentos para ver se está aprendendo mesmo. (NOMESUPERVISOR) que pediu para fazer isso, a culpa não é minha!
-dp: Como está trabalhando em outro projeto também, talvez terei que te substituir se em algum momento não puder trabalhar no projeto com a PadaOne.
-dp: Estamos indo para a confeitaria Mestre do Bolo agora para levantar o que precisam do primeiro módulo.
-dp: Você será responsável por escrever as histórias que conseguirmos levantar lá. Você sabe o que é uma história?
-[história.1] Frases que capturam o que o usuário faz ou precisa fazer no sistema, escritas de modo informal.
-[história.2] Frases que contam como o usuário deve interagir com o sistema, o que ele precisa que o sistema faça, escritas de modo formal, como um diagrama.
-[história.3] Não sei.
-
-[história.1]:
-dp: Exatamente!
-- pula para [história.fim].
-
-[história.2]:
-- aumenta stress em X
-dp: Quase isso…
-dp: As frases idealmente devem ser escritas de modo mais informal, para serem mais fáceis de serem entendidas pelo cliente.
-- pula para [história.fim]
-
-[história.3]:
-- aumenta stress em X
-dp: Queria ser assim tranquilo, que nem você…
-dp: Histórias são frases que capturam o que o usuário faz ou precisa fazer no sistema, escritas de modo informal.
-- pula para [história.fim]
-
-[história.fim]
-dp: A partir das histórias que você escrever é que vamos depois definir as tarefas para os programadores.
-dp: Vamos descer que nosso taxi já deve estar chegando.
-
-
+"""
 Momento 2: Levantando requisitos no cliente - montando histórias
 
 define cliente cl

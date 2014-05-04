@@ -2,8 +2,12 @@
 errors listed below, and try again.
 
 
-File "game/clock.rpy", line 34: Expected a screen language statement.
-    style "transparente"
-         ^
+File "game/cenaCorrida1.rpy", line 24: end of line expected.
+    show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax) with fastDissolve
+                                                                               ^
+
+File "game/cenaCorrida1.rpy", line 31: end of line expected.
+    show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax) with fastDissolve
+                                                                               ^
 
 Ren'Py Version: Ren'Py 6.17.3.327
