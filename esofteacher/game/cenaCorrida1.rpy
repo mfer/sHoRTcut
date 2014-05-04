@@ -47,87 +47,90 @@ label corrida1SceneMomento1:
 label momento2: #Levantando requisitos no cliente - montando histórias
 
     scene baker2
-    
+
     DP "{cps=40}Boa tarde, somos da empresa PadaSoft, conforme conversamos por telefone, viemos levantar os requisitos do primeiro módulo.{/cps}"
     DP "{cps=40}Eu sou o (NOMEDONOPRODUTO), esse aqui é o [nome].{/cps}"
     CL "{cps=40}Olá, sou o dono da confeitaria {i}{b}Mestre do Bolo{/b}{/i}, meu nome é (NOMECLIENTEAGIL).{/cps}"
     CL "{cps=40}Estamos querendo um software que possibilite um contato mais próximo com os nossos clientes.{/cps}"
 #    - pula para [options]
-
 #    
     label [options]:
         DP "{cps=40}Então, meu caro [nome]. {w=2}Você quer perguntar algo?{/cps}"
         
         menu:
             with fastDissolve
-            "(NOMECLIENTEAGIL), quais são as informações mais relevantes?":
-                jump [opetion.1]
-            "(NOMECLIENTEAGIL), quais são as informações mais relevantes?":
-                jump []
-            "Quais informações você quer que sejam armazenadas para cada cliente?":
-                jump []
-            "Quais campos serão de preenchimento obrigatório?":
-                jump []
-            "Como você gostaria de poder pesquisar por clientes?":
-                jump []
-            "(NOMECLIENTEAGIL), como vocês gostariam de inserir essas informações?": 
-                jump []
-            "(NOMECLIENTEAGIL), como esse software vai ajudar a melhorar a qualidade dos seus serviços?":
-                jump []
-            "Não, tudo bem por mim agora.":
-                jump []
+            "{b}(NOMECLIENTEAGIL), quais são as informações mais relevantes?{/b}":
+                jump [opetion1]
+            "{b}Quais informações você quer que sejam armazenadas para cada cliente?{/b}":
+                jump [option5]
+            "{b}Quais campos serão de preenchimento obrigatório?{/b}":
+                jump [option6]
+            "{b}Como você gostaria de poder pesquisar por clientes?{/b}":
+                jump [option7]
+            "{b}(NOMECLIENTEAGIL), como vocês gostariam de inserir essas informações?{/b}": 
+                jump [option2]
+            "{b}(NOMECLIENTEAGIL), como esse software vai ajudar a melhorar a qualidade dos seus serviços?{/b}":
+                jump [option3]
+            "{b}Não, tudo bem por mim agora.{/b}":
+                jump [option4]
 
-        label [option.1]:
+        label [option1]:
             CL "{cps=40}Apesar de sermos uma confeitaria renomada, ainda armazenamos as informações dos nossos clientes em arquivos de papel:{w=2} nomes, telefones, endereços, esse tipo de coisa...{/cps}"
             #img (http://www.arquivopublico.pr.gov.br/arquivos/Image/ArquivoSEOP3.jpg)
             CL "{cps=40}Queremos mudar essa cultura e utilizar um programa de computador.{/cps}" 
             CL "{cps=40}Ficará muito mais fácil fazer backup, encontrar e atualizar uma informação.{/cps}"
-            - aumentar a barra de escopo em X1
-            - setar flagOption1
+            #- aumentar a barra de escopo em X1
+            #- setar flagOption1
             jump [options]
             #- pula para options
 
-    [option.2]:
-    cl: Nós teremos um funcionário dentro da empresa que vai ficar responsável por isso. 
-    - aumentar a barra de escopo em X2
-    - setar flagOption2
-    - pula para options
+        label [option2]:
+            CL "{cps=40}Nós teremos um funcionário dentro da empresa que vai ficar responsável por isso.{/cps}"
+            #- aumentar a barra de escopo em X2
+            #- setar flagOption2
+            jump [options]
+            #- pula para options
 
-    [option.3]
-    cl: Ah! De diversas maneiras. Queremos, por exemplo, saber quais produtos mais vendidos. Quais clientes compram mais. 
-    - aumentar a barra de escopo em X3
-    - setar flagOption3
-    - pula para options
+        label [option3]:
+            CL "{cps=40}Ah! De diversas maneiras. Queremos, por exemplo, saber quais produtos mais vendidos. Quais clientes compram mais.{/cps}"
+            #- aumentar a barra de escopo em X3
+            #- setar flagOption3
+            jump [options]
+            #- pula para options
 
-    [option.4]:
-    - aumentar barra de stress de acordo com as flagOption’s que não foram setadas.
-    -pula para option.fim
+        label [option4]:
+            jump [optionfim]
+            #- aumentar barra de stress de acordo com as flagOption’s que não foram setadas.
+            #-pula para option.fim
 
-    [option.5]:
-    cl: Bom, é importante que tenha cadastrado o Nome, o CPF, o telefone e o endereço.
-    cl: Ah! Coloquem também data de nascimento! Não temos essa informação hoje no nosso arquivo, mas é legal saber quando o cliente está fazendo aniversário.
-    - aumentar a barra de escopo em X5
-    - setar flagOption5
-    - pula para options
+        label [option5]:
+            CL "{cps=40}Bom, é importante que tenha cadastrado o Nome, o CPF, o telefone e o endereço.{/cps}"
+            CL "{cps=40}Ah! Coloquem também data de nascimento! Não temos essa informação hoje no nosso arquivo, mas é legal saber quando o cliente está fazendo aniversário.{/cps}"
+            #- aumentar a barra de escopo em X5
+            #- setar flagOption5
+            jump [options]
+            #- pula para options
 
-    [option.6]:
-    cl: Hmm… Coloca só o Nome e o CPF. Nem sempre tenho as outras informações.
-    - aumentar a barra de escopo em X6
-    - setar flagOption6
-    - pula para options
+        label [option6]:
+            CL "{cps=40}Hmm… Coloca só o Nome e o CPF. Nem sempre tenho as outras informações.{/cps}"
+            #- aumentar a barra de escopo em X6
+            #- setar flagOption6
+            jump [options]
+            #- pula para options
 
-    [option.7]:
-    cl: Quero poder buscar por todas as informações, mas deixe que a pesquisa por Nome e CPF sejam a opção padrão, a escolha mais fácil. É o que mais vamos usar.
-    cl: Quero poder digitar tanto o nome quanto o CPF para encontrar o cliente.
-    cl: Ah, coloque também uma caixinha que me avise quem são os aniversariantes do dia!
-    - aumentar barra de escopo em X7
-    - setar flagOption7
-    - pula para options.
+        label [option7]:
+            CL "{cps=40}Quero poder buscar por todas as informações, mas deixe que a pesquisa por Nome e CPF sejam a opção padrão, a escolha mais fácil. É o que mais vamos usar.{/cps}"
+            CL "{cps=40}Quero poder digitar tanto o nome quanto o CPF para encontrar o cliente.{/cps}"
+            CL "{cps=40}Ah, coloque também uma caixinha que me avise quem são os aniversariantes do dia!{/cps}"
+            #- aumentar barra de escopo em X7
+            #- setar flagOption7
+            jump [options]
+            #- pula para options.
 
-    [option.fim]
-    jg: Ok, acho que esta informação o suficiente para definirmos a primeira entrega.    
-    dp: Obrigado pelas informações, (NOMECLIENTEAGIL).
-    cl: Por nada. Espero ver isso funcionando em breve!
+        label [optionfim]
+            JG "Ok, acho que esta informação o suficiente para definirmos a primeira entrega."    
+            DP "Obrigado pelas informações, (NOMECLIENTEAGIL)."
+            CL "Por nada. Espero ver isso funcionando em breve!"
 
         
         
