@@ -4,7 +4,8 @@ define fastDissolve = Dissolve (.2)
 image bg ync = "ync.png"
 image office = "office.png"
 image corredor = "corredor.png"
-image baker2 = "bakery2.jpg"
+image bakery2 = "bakery2.png"
+image bakery1 = "bakery1.png"
 image supervisor normal0 = "supervisor0.png" 
 image supervisor normal1 = "supervisor1.png"
 image supervisor anger = "supervisor2.png"
@@ -32,8 +33,6 @@ define CL = Character ('Confeiteiro da Mestre do Bolo', color="#c8ffc8")
 label start:    
     
     stop music fadeout 1.0
-    
-    $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)
     
     show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)     # Barra de stress e lv.
     

@@ -4,6 +4,9 @@ image xp = "Extreme_Programming.png"
 image rup = "Development-iterative.gif"
 
 label supervisorScene:
+    
+    $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)
+      
     $ imagepos = Position(xpos=.25, xanchor=0, ypos=50, yanchor=0)
     
     scene office

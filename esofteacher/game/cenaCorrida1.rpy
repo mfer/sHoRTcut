@@ -1,8 +1,16 @@
 #Momento1: Indo para o cliente
 
+
+init:
+    $ flagOption5 = False #Variavel q faz esta janela aparecer
+    $ flagOption6 = False
+    $ flagOption7 = False
+    
 label corrida1SceneMomento1:
     
     scene office
+    $ renpy.music.stop(channel="music",fadeout=1.0) 
+    $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)
     
     DP "{cps=40}Olá [nome].{w=2} Vi você conversando com o (NOMEDOSCRUMMASTER) quando chegou.{w=2} Meu nome é (NOMEDONODOPRODUTO).{/cps}"
     DP "{cps=40}(NOMESUPERVISOR) pediu para te acompanhar nesse projeto, já que você foi contratado há pouco tempo.{/cps}"
@@ -46,7 +54,9 @@ label corrida1SceneMomento1:
 
 label momento2: #Levantando requisitos no cliente - montando histórias
 
-    scene baker2
+    scene bakery2
+    $ renpy.music.stop(channel="music",fadeout=1.0)    
+    #Achar musica
 
     DP "{cps=40}Boa tarde, somos da empresa PadaSoft, conforme conversamos por telefone, viemos levantar os requisitos do primeiro módulo.{/cps}"
     DP "{cps=40}Eu sou o (NOMEDONOPRODUTO), esse aqui é o [nome].{/cps}"
@@ -128,8 +138,137 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             #- pula para options.
 
         label optionfim:
-            JG "Ok, acho que esta informação o suficiente para definirmos a primeira entrega."    
-            DP "Obrigado pelas informações, (NOMECLIENTEAGIL)."
-            CL "Por nada. Espero ver isso funcionando em breve!"
+            P "{cps=40}Ok, acho que esta informação o suficiente para definirmos a primeira entrega.{/cps}"    
+            DP "{cps=40}Obrigado pelas informações, (NOMECLIENTEAGIL).{/cps}"
+            CL "{cps=40}Por nada. Espero ver isso funcionando em breve!{/cps}"
+            show black
+            with blinds
+            jump momento3
+            
+label momento3:
+    
+    scene escritorioAgil
+    
+    $ renpy.music.stop(channel="music",fadeout=1.0)    
+    $ renpy.music.play("Purple_Motion_-_Charts_overdrive.mp3", channel="music", loop=True, fadein=1.0) 
+    
+    MB "{cps=40}Bom que já voltaram!{/cps}"
+    MB "{cps=40}(NOMEDONOPRODUTO) me falou que vocês levantaram como deve ser o módulo (PRIMEIROMODULO).{/cps}"
+    MB "{cps=40}Estamos indo planejar agora a primeira corrida. Você sabe o que é uma corrida?{/cps}"
+
+    menu:
+        with fastDissolve
+        "{b}{i}Chegar rápido de um lugar até outro?{/i}{/b}":
+            jump sprint1
+        "{b}{i}Uma tradução de sprint?{/i}{/b}":
+            jump sprint2
+        "{b}{i}Não sei.{/i}{/b}":
+            jump sprint3
+
+    label sprint1:
+        #- aumentar a barra de stress em X
+        MB "{cps=40}É… em outro contexto.{/cps}"
+        $ strss = strss + 5
+        show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax) #não consegui fazer atualizar automaticamente
+        with fastDissolve
+        #- Pula para sprint.explicacao
+        jump sprintExplicacao
+    
+    label sprint2:
+        MB "{cps=40}Isso! Mas o que é uma sprint?{/cps}"
+        menu:
+            with fastDissolve
+            "{i}{b}Não sei.{/i}{/b}":
+                jump sprint2_1
+            "{i}{b}Reunião de uma metodologia ágil.{/i}{/b}":
+                jump sprint2_2
+            "{i}{b}Unidade de tempo de desenvolvimento do projeto.{/i}{/b}":
+                jump sprint2_3
+       
+    label sprint3:
+        #- aumentar a barra de stress em X
+        MB "{cps=40}Não fique triste, irei te explicar agora…{/cps}"
+        $ strss = strss + 5
+        show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax) #não consegui fazer atualizar automaticamente
+        with fastDissolve
+        #- pula para sprint.explicacao
+        jump sprintExplicacao
+    
+    label sprint2_1:
+        #- aumentar a barra de stress em X
+        $ strss = strss + 5
+        show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax) #não consegui fazer atualizar automaticamente
+        with fastDissolve
+        #- pula para sprint.explicacao
+        jump sprintExplicacao
+    
+    label sprint2_2:
+        #- aumentar a barra de stress em X
+        $ strss = strss + 5
+        show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax) #não consegui fazer atualizar automaticamente
+        with fastDissolve
+        MB "{cps=40}Não, não é isso…{/cps}"
+        #- pula para sprint.explicacao
+        jump sprintExplicacao
+    
+    label sprint2_3:
+        MB "{cps=40}Isso!{/cps}"
+        #- pula para sprint.explicacao
+        jump sprintExplicacao
+    
+    label sprintExplicacao:
+        MB "{cps=40}A corrida é a unidade básica de desenvolvimento em Scrum. Corridas tendem a durar entre uma semana e um mês, e são um esforço dentro de uma faixa de tempo (ou seja, restrito a uma duração específica) de comprimento constante.{/cps}"
+        MB "{cps=40}O conjunto de funcionalidades que entram em uma corrida é um conjunto de prioridades de requisitos de alto nível definidos pelo Dono do Produto.{/cps}"
+        MB "{cps=40}Vamos então para a reunião.{/cps}"
+        show black
+        with blinds
+        jump momento3
+        
+label momento4:
+    
+    #scene sala de reunião
+    
+    DP "(NOMEJOGADOR), fale para a gente quais são as histórias levantadas com o cliente."
+#- se flagOption6 e flagOption7 iguais a 1, pula para [historiasCliente.full]
+#- se flagOption6 igual a 1, pula para [historiasCliente.obrigatórios]
+#- se flagOption7 igual a 1, pula para [historiasCliente GT.pesquisa]
+#- se flagOption5 igual a 1, pula para [historiasCliente.campos]
+#- pula para [historiasCliente.simples]
+
+#[historiasCliente.full]:
+#jg: Temos três histórias:
+#jg: “Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento, sendo que apenas Nome e CPF são obrigatórios.”
+#“Eu, como dono da empresa, quero encontrar meus clientes com base em qualquer campo, mas principalmente por Nome e CPF.”
+#“Eu, como dono da empresa, quero ser avisado de quais clientes fazem aniversário no dia.”
+#- pula para [historiasCliente.fim]
+
+#[historiasCliente.obrigatórios]:
+#jg: Temos duas histórias:
+#jg: “Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento, sendo que apenas Nome e CPF são obrigatórios.”
+#“Eu, como dono da empresa, quero pesquisar meus clientes cadastrados.”
+#- pula para [historiasCliente.fim]
+
+#[historiasCliente.pesquisa]:
+#jg: Temos três histórias:
+#jg: “Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento.”
+#“Eu, como dono da empresa, quero encontrar meus clientes com base em qualquer campo, mas principalmente por Nome e CPF.”
+#“Eu, como dono da empresa, quero ser avisado de quais clientes fazem aniversário no dia.”
+#- pula para [historiasCliente.fim]
+
+#[historiasCliente.campos]:
+#jg: Temos duas histórias:
+#jg: “Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento.”
+#“Eu, como dono da empresa, quero pesquisar meus clientes cadastrados.”
+#- pula para [historiasCliente.fim]
+
+#[historiasCliente.simples]:
+#jg: Temos duas histórias:
+#jg: “Eu, como dono da empresa, quero cadastrar clientes.”
+#“Eu, como dono da empresa, quero pesquisar meus clientes cadastrados.”
+#- pula para [historiasCliente.fim]
+
+#[historiasCliente.fim]:
+#dp: Ok. Quais serão implementadas nessa primeira sprint? 
+#dp: Lembre-se que o importante é termos software funcionando no prazo de até duas semanas.
 
         
