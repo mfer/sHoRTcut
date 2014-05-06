@@ -2,7 +2,11 @@
 
 
 init:
-    $ flagOption5 = False #Variavel q faz esta janela aparecer
+    $ flagOption1 = False 
+    $ flagOption2 = False
+    $ flagOption3 = False
+#    $ flagOption4 = False 
+    $ flagOption5 = False 
     $ flagOption6 = False
     $ flagOption7 = False
     
@@ -91,6 +95,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             CL "{cps=40}Ficará muito mais fácil fazer backup, encontrar e atualizar uma informação.{/cps}"
             #- aumentar a barra de escopo em X1
             #- setar flagOption1
+            $ flagOption = True
             jump options
             #- pula para options
 
@@ -98,6 +103,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             CL "{cps=40}Nós teremos um funcionário dentro da empresa que vai ficar responsável por isso.{/cps}"
             #- aumentar a barra de escopo em X2
             #- setar flagOption2
+            $ flagOption = True
             jump options
             #- pula para options
 
@@ -105,6 +111,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             CL "{cps=40}Ah! De diversas maneiras. Queremos, por exemplo, saber quais produtos mais vendidos. Quais clientes compram mais.{/cps}"
             #- aumentar a barra de escopo em X3
             #- setar flagOption3
+            $ flagOption = True
             jump options
             #- pula para options
 
@@ -118,6 +125,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             CL "{cps=40}Ah! Coloquem também data de nascimento! Não temos essa informação hoje no nosso arquivo, mas é legal saber quando o cliente está fazendo aniversário.{/cps}"
             #- aumentar a barra de escopo em X5
             #- setar flagOption5
+            $ flagOption5 = True
             jump options
             #- pula para options
 
@@ -125,6 +133,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             CL "{cps=40}Hmm… Coloca só o Nome e o CPF. Nem sempre tenho as outras informações.{/cps}"
             #- aumentar a barra de escopo em X6
             #- setar flagOption6
+            $ flagOption6 = True
             jump options
             #- pula para options
 
@@ -134,6 +143,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             CL "{cps=40}Ah, coloque também uma caixinha que me avise quem são os aniversariantes do dia!{/cps}"
             #- aumentar barra de escopo em X7
             #- setar flagOption7
+            $ flagOption7 = True
             jump options
             #- pula para options.
 
@@ -222,53 +232,75 @@ label momento3:
         MB "{cps=40}Vamos então para a reunião.{/cps}"
         show black
         with blinds
-        jump momento3
+        jump momento4
         
 label momento4:
     
-    #scene sala de reunião
+    $ renpy.music.stop(channel="music",fadeout=1.0)    
     
-    DP "(NOMEJOGADOR), fale para a gente quais são as histórias levantadas com o cliente."
-#- se flagOption6 e flagOption7 iguais a 1, pula para [historiasCliente.full]
-#- se flagOption6 igual a 1, pula para [historiasCliente.obrigatórios]
-#- se flagOption7 igual a 1, pula para [historiasCliente GT.pesquisa]
-#- se flagOption5 igual a 1, pula para [historiasCliente.campos]
-#- pula para [historiasCliente.simples]
+    #scene sala de reunião
+    DP "{cps=40}(NOMEJOGADOR), fale para a gente quais são as histórias levantadas com o cliente.{/cps}"
+    if (flagOption6 and flagOption7):
+        jump historiasClienteFull
+    #- se flagOption6 igual a 1, pula para [historiasCliente.obrigatórios]
+    if (flagOption6 and not flagOption7):
+        jump historiasClienteObrigatorias
+    #- se flagOption7 igual a 1, pula para [historiasCliente GT.pesquisa]
+    if (flagOption7 and not flagOption6):
+        jump historiasClienteCampos
+    #- se flagOption5 igual a 1, pula para [historiasCliente.campos]
+    jump historiasClienteSimples
+    #- pula para [historiasCliente.simples]
 
-#[historiasCliente.full]:
-#jg: Temos três histórias:
-#jg: “Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento, sendo que apenas Nome e CPF são obrigatórios.”
-#“Eu, como dono da empresa, quero encontrar meus clientes com base em qualquer campo, mas principalmente por Nome e CPF.”
-#“Eu, como dono da empresa, quero ser avisado de quais clientes fazem aniversário no dia.”
-#- pula para [historiasCliente.fim]
+    label historiasClienteFull:
+        P "{cps=40}Temos três histórias:"
+        P "{cps=40}“Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento, sendo que apenas Nome e CPF são obrigatórios.”{/cps}"
+        P "{cps=40}“Eu, como dono da empresa, quero encontrar meus clientes com base em qualquer campo, mas principalmente por Nome e CPF.”{/cps}"
+        P "{cps=40}“Eu, como dono da empresa, quero ser avisado de quais clientes fazem aniversário no dia.”{/cps}"
+        jump historiasClienteFim
 
-#[historiasCliente.obrigatórios]:
-#jg: Temos duas histórias:
-#jg: “Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento, sendo que apenas Nome e CPF são obrigatórios.”
-#“Eu, como dono da empresa, quero pesquisar meus clientes cadastrados.”
-#- pula para [historiasCliente.fim]
-
-#[historiasCliente.pesquisa]:
-#jg: Temos três histórias:
-#jg: “Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento.”
-#“Eu, como dono da empresa, quero encontrar meus clientes com base em qualquer campo, mas principalmente por Nome e CPF.”
-#“Eu, como dono da empresa, quero ser avisado de quais clientes fazem aniversário no dia.”
-#- pula para [historiasCliente.fim]
-
-#[historiasCliente.campos]:
-#jg: Temos duas histórias:
-#jg: “Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento.”
-#“Eu, como dono da empresa, quero pesquisar meus clientes cadastrados.”
-#- pula para [historiasCliente.fim]
-
-#[historiasCliente.simples]:
-#jg: Temos duas histórias:
-#jg: “Eu, como dono da empresa, quero cadastrar clientes.”
-#“Eu, como dono da empresa, quero pesquisar meus clientes cadastrados.”
-#- pula para [historiasCliente.fim]
-
-#[historiasCliente.fim]:
-#dp: Ok. Quais serão implementadas nessa primeira sprint? 
-#dp: Lembre-se que o importante é termos software funcionando no prazo de até duas semanas.
-
+    label historiasClienteObrigatorios:
+        P "{cps=40}Temos duas histórias:{/cps}"
+        P "{cps=40}“Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento, sendo que apenas Nome e CPF são obrigatórios.”{/cps}"
+        P "{cps=40}“Eu, como dono da empresa, quero pesquisar meus clientes cadastrados.”{/cps}"
+        jump historiasClienteFim
+            
+    label historiasClientePesquisa:
+        P "{cps=40}Temos três histórias:{/cps}"
+        P "{cps=40}“Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento.”{/cps}"
+        P "{cps=40}“Eu, como dono da empresa, quero encontrar meus clientes com base em qualquer campo, mas principalmente por Nome e CPF.”{/cps}"
+        P "{cps=40}“Eu, como dono da empresa, quero ser avisado de quais clientes fazem aniversário no dia.”{/cps}"
+        jump historiasClienteFim
         
+    label historiasClienteCampos:
+        P "{cps=40}Temos duas histórias:{/cps}"
+        P "{cps=40}“Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento.”{/cps}"
+        P "{cps=40}“Eu, como dono da empresa, quero pesquisar meus clientes cadastrados.”{/cps}"
+        jump historiasClienteFim
+
+    label historiasClienteSimples:
+        P "{cps=40}Temos duas histórias:{/cps}"
+        P "{cps=40}“Eu, como dono da empresa, quero cadastrar clientes.”{/cps}"
+        P "{cps=40}“Eu, como dono da empresa, quero pesquisar meus clientes cadastrados.”{/cps}"
+        jump historiasClienteFim
+
+    label historiasClienteFim:
+        DP "{cps=40}Ok.{w=2} Quais serão implementadas nessa primeira sprint?{/cps}" 
+        DP "{cps=40}Lembre-se que o importante é termos software funcionando no prazo de até duas semanas.{/cps}"
+        show black
+        with blinds
+        jump momento5
+        
+label momento5:
+    
+    $ renpy.music.stop(channel="music",fadeout=1.0)    
+    
+    
+    show black
+    with blinds
+    jump momento6
+    
+label momento6:
+    
+    $ renpy.music.stop(channel="music",fadeout=1.0)    
+    
