@@ -23,7 +23,6 @@ init:
     $ flagOption1 = False 
     $ flagOption2 = False
     $ flagOption3 = False
-#    $ flagOption4 = False 
     $ flagOption5 = False 
     $ flagOption6 = False
     $ flagOption7 = False
@@ -123,6 +122,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
 
     scene bakery2
     $ renpy.music.stop(channel="music",fadeout=1.0)    
+    $ renpy.music.play("School of Quirks.mp3", channel="music", loop=True, fadein=1.0)
     #Achar musica
 
     
@@ -282,6 +282,7 @@ label momento3:
     
     $ renpy.music.stop(channel="music",fadeout=1.0)    
     $ renpy.music.play("Purple_Motion_-_Charts_overdrive.mp3", channel="music", loop=True, fadein=1.0) 
+    
     show mb2 at left
     with fastDissolve
     MB "{cps=40}Bom que já voltaram!{/cps}"
@@ -387,7 +388,9 @@ label momento3:
         
 label momento4:
     
-    $ renpy.music.stop(channel="music",fadeout=1.0)    
+    $ renpy.music.stop(channel="music",fadeout=1.0) 
+    $ renpy.music.play("Teach_me_master.mp3", channel="music", loop=True, fadein=1.0)
+
     scene salaDeReuniao
     
     show donoDoProd6 at right

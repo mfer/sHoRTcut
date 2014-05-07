@@ -25,8 +25,8 @@ screen map:
             xalign 0.5
             spacing 100
 
-            textbutton "Projeto 1" action Jump("gerenteScene") #alterar
-            textbutton "Projeto 2" action Jump("mestreDoBoloScene") #alterar
+            textbutton "Tradicional" action Jump("gerenteScene") #alterar
+            textbutton "Ágil" action Jump("mestreDoBoloScene") #alterar
 
 
 label mapScene:

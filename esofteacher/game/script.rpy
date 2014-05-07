@@ -29,8 +29,8 @@ label start:
     
     show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)     # Barra de stress e lv.
     
-    jump corrida1SceneMomento1
-    #jump supervisorScene
+    #jump corrida1SceneMomento1
+    jump supervisorScene
     
     label rSupervisorScene:
         $ variableProjectScreen = True
