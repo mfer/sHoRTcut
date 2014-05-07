@@ -237,8 +237,8 @@ label momento3:
 label momento4:
     
     $ renpy.music.stop(channel="music",fadeout=1.0)    
+    scene salaDeReuniao
     
-    #scene sala de reunião
     DP "{cps=40}(NOMEJOGADOR), fale para a gente quais são as histórias levantadas com o cliente.{/cps}"
     if (flagOption6 and flagOption7):
         jump historiasClienteFull

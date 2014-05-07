@@ -4,6 +4,7 @@ define fastDissolve = Dissolve (.2)
 image bg ync = "ync.png"
 image office = "office.png"
 image corredor = "corredor.png"
+image salaDeReuniao = "meeting_room.png"
 image bakery2 = "bakery2.png"
 image bakery1 = "bakery1.png"
 image supervisor normal0 = "supervisor0.png" 
@@ -36,8 +37,8 @@ label start:
     
     show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)     # Barra de stress e lv.
     
-    #jump momento4
-    jump supervisorScene
+    jump momento4
+    #jump supervisorScene
     
     label rSupervisorScene:
         $ variableProjectScreen = True
