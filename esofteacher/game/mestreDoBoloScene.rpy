@@ -58,3 +58,8 @@ label mestreDoBoloScene:
     show mb7 at left
     with fastDissolve
     MB "{cps=40}Assim que estiver arrumado suas coisas, basta vir até a nossa equipe para colocarmos a {b}{i}“mão na massa”{/b}{/i}{/cps}"
+    hide mb7
+    
+    show black
+    with blinds
+    jump corrida1SceneMomento1
