@@ -31,6 +31,7 @@ label start:
     
     #jump corrida1SceneMomento1
     jump supervisorScene
+#    jump mapScene
     
     label rSupervisorScene:
         $ variableProjectScreen = True
