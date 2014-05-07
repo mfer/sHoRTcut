@@ -1,20 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 32, in script
-ScriptError: could not find label 'momento1'.
+  File "game/gerenteScene.rpy", line 51, in script
+ScriptError: could not find label 'mestreDoBolo'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/home/junior/renpy-6.17.3-sdk/renpy/execution.py", line 294, in run
+  File "/home/shortcut/sHoRTcut/renpy-6.17.3-sdk/renpy/execution.py", line 294, in run
     node.execute()
-  File "/home/junior/renpy-6.17.3-sdk/renpy/ast.py", line 1434, in execute
+  File "/home/shortcut/sHoRTcut/renpy-6.17.3-sdk/renpy/ast.py", line 1434, in execute
     rv = renpy.game.script.lookup(target)
-  File "/home/junior/renpy-6.17.3-sdk/renpy/script.py", line 547, in lookup
+  File "/home/shortcut/sHoRTcut/renpy-6.17.3-sdk/renpy/script.py", line 547, in lookup
     raise ScriptError("could not find label '%s'." % str(label))
-ScriptError: could not find label 'momento1'.
+ScriptError: could not find label 'mestreDoBolo'.
 
-Linux-3.11.0-20-generic-x86_64-with-debian-wheezy-sid
+Linux-3.13.0-24-generic-i686-athlon-with-debian-jessie-sid
 Ren'Py 6.17.3.327
 ESofTeacher 0.0

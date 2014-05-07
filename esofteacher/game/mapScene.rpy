@@ -1,5 +1,10 @@
 #cena do mapa
 
+
+init:
+    $ gerente = False
+    $ mestreDoBolo = False
+
 label mapScene:
 
     $ renpy.music.stop(channel="music",fadeout=1.0)
@@ -7,14 +12,31 @@ label mapScene:
 
     show corredor
 
+    if not gerente and not mestreDoBolo:
+        menu:
+            "Tradicional":
+                show black
+                with blinds
+                show screen clock
+                jump gerenteScene
+            "Ágil":
+                show black
+                with blinds
+                show screen clock
+                jump mestreDoBoloScene
 
-    menu:
-        "Tradicional":
-            show screen clock
-            jump gerenteScene
-        "Ágil":
-            show screen clock
-            jump mestreDoBoloScene
+    if gerente and mestreDoBolo:
+        menu:
+            "Tradicional":
+                show black
+                with blinds
+                show screen clock
+                #jump 
+            "Ágil":
+                show black 
+                with blinds
+                show screen clock
+                jump corrida1SceneMomento1
 
 
 

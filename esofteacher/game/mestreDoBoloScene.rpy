@@ -62,4 +62,10 @@ label mestreDoBoloScene:
     
     show black
     with blinds
-    jump corrida1SceneMomento1
+
+    $ mestreDoBolo = True
+
+    if not gerente:
+        jump gerenteScene
+
+    jump mapScene

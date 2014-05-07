@@ -1,5 +1,6 @@
 #cena gerente
 
+
 image gr0 = "gr0.png"
 image gr1 = "gr1.png"
 image gr2 = "gr2.png"
@@ -7,6 +8,7 @@ image gr3 = "gr3.png"
 image gr4 = "gr4.png"
 image gr5 = "gr5.png"
 image gr6 = "gr6.png"
+
 
 image escritorioTrad = "office_room.png"
 
@@ -42,3 +44,11 @@ label gerenteScene:
     with fastDissolve
     GR "{cps=40}Estou ciente de que está trabalhando em mais de um projeto, mas sua ajuda para a definição dos requisitos será de grande valia!{/cps}"
     hide gr4
+
+    $ gerente = True
+
+    if not mestreDoBolo:
+        
+        jump mestreDoBoloScene
+
+    jump mapScene
