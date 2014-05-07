@@ -3,6 +3,16 @@
 image xp = "Extreme_Programming.png"
 image rup = "Development-iterative.gif"
 
+image supervisor normal0 = "supervisor0.png" 
+image supervisor normal1 = "supervisor1.png"
+image supervisor anger = "supervisor2.png"
+image supervisor normal3 = "supervisor3.png"
+image supervisor pensive = "supervisor4.png"
+image supervisor smile = "supervisor5.png"
+image supervisor6 = "supervisor6.png"
+image supervisor disappointed = "supervisor7.png"
+
+
 label supervisorScene:
     
     $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)

@@ -28,14 +28,15 @@ label mestreDoBoloScene:
     show mb2 at left
     with fastDissolve
     MB "{cps=40}Olá, {b}{i}[nome]!!!{/i}{/b}{w=2} Você é o novo contratado, não é?{/cps}"
-        
+    hide mb2
     show mb4 at left
     with fastDissolve
     MB "{cps=40}Prazer em conhecê-lo!{/cps}"
-        
+    hide mb4
     show mb2 at left
     with fastDissolve
     MB "{cps=40}Sou o líder do processo PadaOne, que utiliza uma metodologia ágil.{/cps}"
+    hide mb2
     
         
     show mb1 at left

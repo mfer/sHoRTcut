@@ -7,14 +7,6 @@ image corredor = "corredor.png"
 image salaDeReuniao = "meeting_room.png"
 image bakery2 = "bakery2.png"
 image bakery1 = "bakery1.png"
-image supervisor normal0 = "supervisor0.png" 
-image supervisor normal1 = "supervisor1.png"
-image supervisor anger = "supervisor2.png"
-image supervisor normal3 = "supervisor3.png"
-image supervisor pensive = "supervisor4.png"
-image supervisor smile = "supervisor5.png"
-image supervisor6 = "supervisor6.png"
-image supervisor disappointed = "supervisor7.png"
 
 # Declare characters used by this game.
 define e = Character('ESOFteacher', color="#c8ffc8")
@@ -37,7 +29,7 @@ label start:
     
     show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)     # Barra de stress e lv.
     
-    jump momento4
+    jump corrida1SceneMomento1
     #jump supervisorScene
     
     label rSupervisorScene:

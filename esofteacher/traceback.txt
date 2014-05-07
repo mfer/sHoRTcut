@@ -1,8 +1,8 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/cenaCorrida1.rpy", line 252, in script
-ScriptError: could not find label 'historiasCienteSimples'.
+  File "game/script.rpy", line 32, in script
+ScriptError: could not find label 'momento1'.
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -13,7 +13,7 @@ Full traceback:
     rv = renpy.game.script.lookup(target)
   File "/home/junior/renpy-6.17.3-sdk/renpy/script.py", line 547, in lookup
     raise ScriptError("could not find label '%s'." % str(label))
-ScriptError: could not find label 'historiasCienteSimples'.
+ScriptError: could not find label 'momento1'.
 
 Linux-3.11.0-20-generic-x86_64-with-debian-wheezy-sid
 Ren'Py 6.17.3.327
