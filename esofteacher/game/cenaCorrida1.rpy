@@ -298,7 +298,7 @@ label momento3:
     hide mb2
     show mb4 at left
     with fastDissolve
-    MB "{cps=40} O Dono do Produto me falou que vocês levantaram como deve ser o módulo (PRIMEIROMODULO).{/cps}"
+    MB "{cps=40} O Dono do Produto me falou que vocês levantaram como deve ser o módulo CLIENTE.{/cps}"
     hide mb4
     show mb7 at left
     with fastDissolve
