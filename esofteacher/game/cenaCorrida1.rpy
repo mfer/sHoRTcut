@@ -271,7 +271,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             #- pula para options.
 
         label optionfim:
-            P "{cps=40}Ok, acho que esta informação o suficiente para definirmos a primeira entrega.{/cps}" 
+            P "{cps=40}Ok, acho que esta informação é suficiente para definirmos a primeira entrega.{/cps}" 
             show donoDoProd6 at right
             with fastDissolve
             DP "{cps=40}Obrigado pelas informações, caro Cliente.{/cps}"
