@@ -18,6 +18,9 @@ esofteacher/game/saves/*
 esofteacher/tmp/*
 esofteacher-prototype-dists/*
 
+# We dont need to keep the traceback because it's individual
+esofteacher/traceback.txt
+
 # renpy package
 *-sdk.tar.bz2
 
