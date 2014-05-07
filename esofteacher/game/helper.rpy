@@ -12,14 +12,14 @@ define h = Character(
                     what_slow_caps = 20,
                     show_side_image = Image ("Helper.png", xalign = 0.01, yalign = 0.81))
 
-image dig = "dig.jpg"
+image help = "help.jpg"
 
 
 label helps:
     
     stop music fadeout 1.0
     $ renpy.music.play("bgmfum.wav", channel="music", loop=True, fadein=1.0)
-    scene dig                           # alterar
+    scene help                           # alterar
     
     show sylvie smile at left
     
