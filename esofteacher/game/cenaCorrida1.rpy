@@ -65,13 +65,14 @@ label corrida1SceneMomento1:
     with fastDissolve
     DP "{cps=40}Você será responsável por escrever as histórias que conseguirmos levantar.{w=2} Você sabe o que é uma história?{/cps}"
     hide donoDoProd7
-    
+    $ minutes += 10
     menu:
         with fastDissolve
         "Frases que capturam o que o usuário faz ou precisa fazer no sistema, escritas de modo informal.":
             show donoDoProd3 at right
             with fastDissolve
             DP "{cps=40}Exatamente!!!"
+            $ minutes += 5
             hide donoDoProd3
             jump historia_fim1
         "Frases que contam como o usuário deve interagir com o sistema, o que ele precisa que o sistema faça, escritas de modo formal, como um diagrama.":
@@ -87,6 +88,7 @@ label corrida1SceneMomento1:
             with fastDissolve
             DP "{cps=40}As frases idealmente devem ser escritas de modo mais informal, para serem mais fáceis de serem entendidas pelo cliente.{/cps}"
             hide donoDoProd6
+            $ minutes += 5
             jump historia_fim1
         "Não sei.":
             # aumenta stress em X
@@ -101,6 +103,7 @@ label corrida1SceneMomento1:
             with fastDissolve
             DP "{cps=40}Histórias são frases que capturam o que o usuário faz ou precisa fazer no sistema, escritas de modo informal.{/cps}"
             hide donoDoProd7
+            $ minutes += 5
             jump historia_fim1
         
     label historia_fim1:
@@ -114,9 +117,9 @@ label corrida1SceneMomento1:
         hide donoDoProd6
         show black
         with blinds
+        $ minutes += 5
         jump momento2
         
-
 
 label momento2: #Levantando requisitos no cliente - montando histórias
 
@@ -186,6 +189,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             #- aumentar a barra de escopo em X1
             #- setar flagOption1
             $ flagOption = True
+            $ minutes += 10
             jump options
             #- pula para options
 
@@ -197,6 +201,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             #- aumentar a barra de escopo em X2
             #- setar flagOption2
             $ flagOption = True
+            $ minutes += 10
             jump options
             #- pula para options
 
@@ -208,6 +213,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             #- aumentar a barra de escopo em X3
             #- setar flagOption3
             $ flagOption = True
+            $ minutes += 10
             jump options
             #- pula para options
 
@@ -225,6 +231,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             with fastDissolve
             CL "{cps=40}Ah! Coloquem também data de nascimento! Não temos essa informação hoje no nosso arquivo, mas é legal saber quando o cliente está fazendo aniversário.{/cps}"
             hide cliente2
+            $ minutes += 10
             #- aumentar a barra de escopo em X5
             #- setar flagOption5
             $ flagOption5 = True
@@ -236,6 +243,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             with fastDissolve
             CL "{cps=40}Hmm… Coloca só o Nome e o CPF. Nem sempre tenho as outras informações.{/cps}"
             hide cliente5
+            $ minutes += 10
             #- aumentar a barra de escopo em X6
             #- setar flagOption6
             $ flagOption6 = True
@@ -258,6 +266,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             #- aumentar barra de escopo em X7
             #- setar flagOption7
             $ flagOption7 = True
+            $ minutes += 10
             jump options
             #- pula para options.
 
@@ -314,6 +323,7 @@ label momento3:
         $ strss = strss + 5
         show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax) #não consegui fazer atualizar automaticamente
         with fastDissolve
+        $ minutes += 5
         #- Pula para sprint.explicacao
         jump sprintExplicacao
     
@@ -341,6 +351,7 @@ label momento3:
         show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax) #não consegui fazer atualizar automaticamente
         with fastDissolve
         #- pula para sprint.explicacao
+        $ minutes += 5
         jump sprintExplicacao
     
     label sprint2_1:
@@ -349,6 +360,7 @@ label momento3:
         show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax) #não consegui fazer atualizar automaticamente
         with fastDissolve
         #- pula para sprint.explicacao
+        $ minutes += 5
         jump sprintExplicacao
     
     label sprint2_2:
@@ -360,6 +372,7 @@ label momento3:
         MB "{cps=40}Não, não é isso…{/cps}"
         hide mb5
         #- pula para sprint.explicacao
+        $ minutes += 5
         jump sprintExplicacao
     
     label sprint2_3:
@@ -367,6 +380,7 @@ label momento3:
         MB "{cps=40}Isso!{/cps}"
         hide mb9
         #- pula para sprint.explicacao
+        $ minutes += 5
         jump sprintExplicacao
     
     label sprintExplicacao:
@@ -384,6 +398,7 @@ label momento3:
         hide mb0
         show black
         with blinds
+        $ minutes += 5
         jump momento4
         
 label momento4:
