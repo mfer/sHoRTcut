@@ -24,7 +24,7 @@ label gerenteScene:
     
     show gr2 at left
     with fastDissolve
-    GR "{cps=40}Seja bem vindo, {b}{i}[nome]!!!{/i}{/b}{w=2} Muito prazer, meu nome é NOME_DO_GERENTE.{/cps}"
+    GR "{cps=40}Seja bem vindo, {b}{i}[nome]!!!{/i}{/b}{w=2} Muito prazer, eu sou o Gerente{/cps}"
     hide gr2
     show gr6 at left
     with fastDissolve
