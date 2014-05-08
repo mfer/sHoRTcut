@@ -14,10 +14,14 @@ image supervisor disappointed = "supervisor7.png"
 
 
 label supervisorScene:
-    
+
+
     $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)
       
     $ imagepos = Position(xpos=.25, xanchor=0, ypos=50, yanchor=0)
+
+    $ strss += 5
+    show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
     
     scene office
     
@@ -39,6 +43,9 @@ label supervisorScene:
             S "{cps=40}Então o que você está fazendo aqui?{/cps}"
             return
   
+    $ strss += 5
+    show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
+
     show supervisor pensive at right
     with fastDissolve
     S "{cps=40}Nossa empresa dedica-se ao desenvolvimento de {b}{i}CRUDs{/i}{/b} para gerenciamento de Padarias.{/cps}"
@@ -58,10 +65,14 @@ label supervisorScene:
 
     menu:
         "Sim":
+            $ strss = strss - 5
+            show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
             show supervisor smile at right
             with fastDissolve
-            S "{cps=40}Que bom, você ganhou um ponto comigo."
+            S "{cps=40}Que bom, você ganhou um ponto comigo."            
         "Não":
+            $ strss += 5
+            show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
             show supervisor disappointed at right
             with fastDissolve
             P "{cps=40}Quando digo metodologia Tradicional, estou falando do UP – {i}{b}Unified Process{/b}{/i}, ou do IRUP – {i}{b}IBM Rational Unified process{/b}{/i}, da IBM.{/cps}"
@@ -79,10 +90,14 @@ label supervisorScene:
     
     menu:
         "Sim":
+            $ strss = strss - 5
+            show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
             show supervisor smile at right
             with fastDissolve
             S "{cps=40}Estou gostando de ver. Vejo que formou-se na {b}UFMG{/b}. Você deve ter estudado com o Professor {b}Rodolfo{b}.{/cps}"
         "Não":
+            $ strss += 5
+            show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
             show supervisor disappointed at right
             with fastDissolve
             P "{cps=40}Então não poderá dizer que não aprendeu nada aqui.{/cps}"
@@ -109,11 +124,10 @@ label supervisorScene:
         "Ágil":
             show supervisor pensive at right
             with fastDissolve
-            S "{cps=40}Que sorte a sua.{/cps}"
+            S "{cps=40}Que sorte a sua!{/cps}"
             show supervisor normal3 at right
             with fastDissolve
-            S "{cps=40}A PadaOne está desenvolvendo um projeto incrível!{/cps}"
-            S "{cps=40}Trata-se de um software para a padaria {b}{i}Mestre do Bolo{/i}{/b}.{/cps}"
+            S "{cps=40}A PadaOne está desenvolvendo um projeto incrível!{w=2} Trata-se de um software para a padaria {b}{i}Mestre do Bolo{/i}{/b}.{/cps}"
             show supervisor pensive at right
             with fastDissolve
             S "{cps=40}O cliente é muito exigente e muda de ideia a todo momento.{/cps}"
@@ -129,10 +143,10 @@ label supervisorScene:
             S "{cps=40}A PadaTout está dedicando-se ao projeto para a padaria {b}{i}Et part deux{/i}{/b}.{/cps}"      
             show supervisor normal3 at right
             with fastDissolve
-            S "{cps=40}O cliente sabe exatamente o que ele quer.{/cps}"
+            S "{cps=40}O cliente sabe exatamente o que ele quer.{w=2} Então não se preocupe com as mudanças.{/cps}"
             show supervisor pensive at right
             with fastDissolve
-            S "{cps=40}Então não se preocupe com as mudanças.{w=2} Dediquem-se ao levantamento de requisitos eficiente.{/cps}"
+            S "{cps=40}Dediquem-se ao levantamento de requisitos eficiente.{w=2} E muito cuidado com os não-funcionais...{/cps}"
 
     show supervisor normal3 at right
     with fastDissolve
@@ -142,7 +156,10 @@ label supervisorScene:
     S "{cps=40}Por outro lado, um clima de competição saudável emergiu entre a {b}{i}PadaTout{/i}{/b} e a {b}{i}PadaOne{/i}{/b}.{/cps}"
     show supervisor smile at right
     with fastDissolve
-    S "{cps=40}Então, esteja preparado!!!{/cps}"
+    S "{cps=40}Esteja preparado!!! Você irá participar dos dois projetos...{/cps}"
+    show supervisor pensive at right
+    with fastDissolve
+    S "{cps=40}Peço que agora você decida com qual equipe começará.{w=5} Ah! {w=2}Estarei aqui para o que você precisar desde que não faça barulho enquanto come.{/cps}"
     
     $ renpy.music.stop(channel="music",fadeout=1.0)
     #show black

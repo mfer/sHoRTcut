@@ -14,12 +14,12 @@ label mapScene:
 
     if not gerente and not mestreDoBolo:
         menu:
-            "Tradicional":
+            "Tradicional - PadaTout":
                 show black
                 with blinds
                 show screen clock
                 jump gerenteScene
-            "Ágil":
+            "Ágil - PadaOne":
                 show black
                 with blinds
                 show screen clock
@@ -27,12 +27,12 @@ label mapScene:
 
     if gerente and mestreDoBolo:
         menu:
-            "Tradicional":
+            "Tradicional - PadaTout":
                 show black
                 with blinds
                 show screen clock
                 #jump 
-            "Ágil":
+            "Ágil - PadaOne":
                 show black 
                 with blinds
                 show screen clock
