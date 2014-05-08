@@ -66,6 +66,10 @@ label mestreDoBoloScene:
     $ mestreDoBolo = True
 
     if not gerente:
+        show mb7 at left
+        with fastDissolve
+        MB "{cps=40}Então é isso, peço que agora conheça o Líder da equipe Tradicional. Conhecido também por \"Dr. Engessadinho\"...{/cps}"
+        hide mb7
         jump gerenteScene
 
     jump mapScene

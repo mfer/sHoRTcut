@@ -33,12 +33,12 @@ label gerenteScene:
     hide gr6
     show gr5 at left
     with fastDissolve
-    GR "{cps=40}Seu papel inicial será ajudar no levantamento de requisitos e te adianto que será 3 módulos de CRUDs.{/cps}"  # ta certo isso?
+    GR "{cps=40}Seu papel inicial será ajudar no levantamento de requisitos. Adianto que serão três módulos de CRUDs.{/cps}"
     GR "{cps=40}Já temos um JAD marcado com o cliente em breve e sua participação nessa reunião será muito bem vinda!{/cps}"
     hide gr5
     show gr0 at left
     with fastDissolve
-    GR "{cps=40}Arrume suas coisas e volte aqui para que você possa ir junto com o {i}Analista de Requisitos Pleno{/i} da nossa equipe para a reunião.{/cps}" 
+    GR "{cps=40}Arrume suas coisas e volte aqui para ir junto com o {i}Analista de Requisitos Pleno{/i} da nossa equipe para a reunião.{/cps}" 
     hide gr0
     show gr4 at left
     with fastDissolve
@@ -48,7 +48,10 @@ label gerenteScene:
     $ gerente = True
 
     if not mestreDoBolo:
-        
+        show gr4 at left
+        with fastDissolve
+        GR "{cps=40}Sem mais, peço que agora conheça o Líder da equipe Ágil: também conhecido por \"Sr. Rapindinho\"...{/cps}"
+        hide gr4        
         jump mestreDoBoloScene
 
     jump mapScene

@@ -476,7 +476,6 @@ label momento5:
     
     $ renpy.music.stop(channel="music",fadeout=1.0)    
     
-    
     show black
     with blinds
     jump momento6

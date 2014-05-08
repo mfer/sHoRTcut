@@ -127,7 +127,7 @@ label supervisorScene:
             S "{cps=40}Que sorte a sua!{/cps}"
             show supervisor normal3 at right
             with fastDissolve
-            S "{cps=40}A PadaOne está desenvolvendo um projeto incrível!{w=2} Trata-se de um software para a padaria {b}{i}Mestre do Bolo{/i}{/b}.{/cps}"
+            S "{cps=40}A PadaOne está desenvolvendo um projeto incrível!{w=2} Trata-se de um software para a confeitaria {b}{i}Mestre do Bolo{/i}{/b}.{/cps}"
             show supervisor pensive at right
             with fastDissolve
             S "{cps=40}O cliente é muito exigente e muda de ideia a todo momento.{/cps}"
