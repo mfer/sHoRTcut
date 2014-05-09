@@ -19,7 +19,9 @@ esofteacher/tmp/*
 esofteacher-prototype-dists/*
 
 # We dont need to keep the traceback because it's individual
+# Nor the error file
 esofteacher/traceback.txt
+esofteacher/errors.txt
 
 # renpy package
 *-sdk.tar.bz2
