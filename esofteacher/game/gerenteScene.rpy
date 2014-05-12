@@ -51,7 +51,14 @@ label gerenteScene:
         show gr4 at left
         with fastDissolve
         GR "{cps=40}Sem mais, peço que agora conheça o Líder da equipe Ágil: também conhecido por \"Sr. Rapindinho\"...{/cps}"
-        hide gr4        
+        hide gr4 
+    
+        show black
+        with blinds
+       
         jump mestreDoBoloScene
+
+    show black
+    with blinds
 
     jump mapScene

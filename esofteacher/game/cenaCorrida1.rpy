@@ -20,13 +20,23 @@ image donoDoProd8 = "aoi8.png"
 
 
 init:
+    $ contador = 0
     $ flagOption1 = False 
     $ flagOption2 = False
     $ flagOption3 = False
     $ flagOption5 = False 
     $ flagOption6 = False
     $ flagOption7 = False
-    
+    $ perguntas = [[u'{b}Caro Cliente, quais são as informações mais relevantes?{/b}','option1', True], 
+                    [u'{b}Caro Cliente, como vocês gostariam de inserir essas informações?{/b}','option2', True],
+                    [u'{b}Caro Cliente, como esse software vai ajudar a melhorar a qualidade dos seus serviços?{/b}','option3', True],
+                    [u'{b}Quais informações você quer que sejam armazenadas para cada cliente?{/b}', 'option5', True],
+                    [u'{b}Quais campos serão de preenchimento obrigatório?{/b}', 'option6', True],
+                    [u'{b}Como você gostaria de poder pesquisar por clientes?{/b}', 'option7', True],
+                   
+                    ]
+
+
 label corrida1SceneMomento1:
     
     scene office
@@ -66,8 +76,11 @@ label corrida1SceneMomento1:
     DP "{cps=40}Você será responsável por escrever as histórias que conseguirmos levantar.{w=2} Você sabe o que é uma história?{/cps}"
     hide donoDoProd7
     $ minutes += 10
+
     menu:
         with fastDissolve
+
+        
         "Frases que capturam o que o usuário faz ou precisa fazer no sistema, escritas de modo informal.":
             show donoDoProd3 at right
             with fastDissolve
@@ -154,24 +167,43 @@ label momento2: #Levantando requisitos no cliente - montando histórias
         DP "{cps=40}Então, meu caro [nome]. {w=2}Você quer perguntar algo?{/cps}"
         hide donoDoProd7
         
-        menu:
-            with fastDissolve
-            "{b}Caro Cliente, quais são as informações mais relevantes?{/b}":
-                jump option1
-            "{b}Quais informações você quer que sejam armazenadas para cada cliente?{/b}":
-                jump option5
-            "{b}Quais campos serão de preenchimento obrigatório?{/b}":
-                jump option6
-            "{b}Como você gostaria de poder pesquisar por clientes?{/b}":
-                jump option7
-            "{b}Caro Cliente, como vocês gostariam de inserir essas informações?{/b}": 
-                jump option2
-            "{b}Caro Cliente, como esse software vai ajudar a melhorar a qualidade dos seus serviços?{/b}":
-                jump option3
-            "{b}Não, tudo bem por mim agora.{/b}":
-                jump option4
 
+        python:
+
+            if (contador > 3):
+                renpy.jump('optionfim')
+            p = filter(lambda x: x[2], perguntas)
+            print 
+            print "perguntas"
+            print perguntas
+            print
+            perguntas2 = [[x[0], x[1]] for x in perguntas if x[2]]
+            print "perguntas2"
+            print perguntas2
+            print
+
+            result = menu(perguntas2[:4] + [[u'{b}Não, tudo bem por mim agora.{/b}','option4']])
+             
+  
+        #     "{b}Quais informações você quer que sejam armazenadas para cada cliente?{/b}":
+        #         jump option5
+        #     "{b}Quais campos serão de preenchimento obrigatório?{/b}":
+        #         jump option6
+        #     "{b}Como você gostaria de poder pesquisar por clientes?{/b}":
+        #         jump option7
+        #     "{b}Caro Cliente, como vocês gostariam de inserir essas informações?{/b}": 
+        #         jump option2
+        #     "{b}Caro Cliente, como esse software vai ajudar a melhorar a qualidade dos seus serviços?{/b}":
+        #         jump option3
+        #     "{b}Não, tudo bem por mim agora.{/b}":
+        #         jump option4
+        
         label option1:
+            $ contador += 1
+            
+            $ perguntas[0][2] = False
+            $ print "entrou"
+
             hide cliente5
             show cliente1 at right
             with fastDissolve
@@ -194,6 +226,10 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             #- pula para options
 
         label option2:
+
+            $ contador += 1
+            $ perguntas[4][2] = False
+
             show cliente5 at right
             with fastDissolve
             CL "{cps=40}Nós teremos um funcionário dentro da empresa que vai ficar responsável por isso.{/cps}"
@@ -206,6 +242,11 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             #- pula para options
 
         label option3:
+
+            $ contador += 1
+
+            $ perguntas[5][2] = False
+
             show cliente2 at right
             with fastDissolve
             CL "{cps=40}Ah! De diversas maneiras. Queremos, por exemplo, saber quais produtos mais vendidos. Quais clientes compram mais.{/cps}"
@@ -218,11 +259,16 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             #- pula para options
 
         label option4:
+        
             jump optionfim
             #- aumentar barra de stress de acordo com as flagOption’s que não foram setadas.
             #-pula para option.fim
 
         label option5:
+            $ contador += 1
+
+            $ perguntas[1][2] = False
+
             show cliente3 at right
             with fastDissolve
             CL "{cps=40}Bom, é importante que tenha cadastrado o Nome, o CPF, o telefone e o endereço.{/cps}"
@@ -239,6 +285,10 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             #- pula para options
 
         label option6:
+
+            $ contador += 1
+            $ perguntas[2][2] = False
+
             show cliente5 at right
             with fastDissolve
             CL "{cps=40}Hmm… Coloca só o Nome e o CPF. Nem sempre tenho as outras informações.{/cps}"
@@ -251,6 +301,10 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             #- pula para options
 
         label option7:
+
+            $ contador += 1
+            $ perguntas[3][2] = False
+
             show cliente3 at right
             with fastDissolve
             CL "{cps=40}Quero poder buscar por todas as informações, mas deixe que a pesquisa por Nome e CPF sejam a opção padrão, a escolha mais fácil. É o que mais vamos usar.{/cps}"

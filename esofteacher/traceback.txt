@@ -1,20 +1,25 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/gerenteScene.rpy", line 51, in script
-ScriptError: could not find label 'mestreDoBolo'.
+  File "game/cenaCorrida1.rpy", line 170, in script
+  File "game/cenaCorrida1.rpy", line 178, in python
+ValueError: too many values to unpack
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/home/shortcut/sHoRTcut/renpy-6.17.3-sdk/renpy/execution.py", line 294, in run
+  File "/home/edu/sHoRTcut/renpy-6.17.3-sdk/renpy/execution.py", line 294, in run
     node.execute()
-  File "/home/shortcut/sHoRTcut/renpy-6.17.3-sdk/renpy/ast.py", line 1434, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/home/shortcut/sHoRTcut/renpy-6.17.3-sdk/renpy/script.py", line 547, in lookup
-    raise ScriptError("could not find label '%s'." % str(label))
-ScriptError: could not find label 'mestreDoBolo'.
+  File "/home/edu/sHoRTcut/renpy-6.17.3-sdk/renpy/ast.py", line 732, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/edu/sHoRTcut/renpy-6.17.3-sdk/renpy/python.py", line 1358, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/cenaCorrida1.rpy", line 178, in <module>
+    result = menu([perguntas2[:4], [u'{b}Não, tudo bem por mim agora.{/b}','option4']])
+  File "/home/edu/sHoRTcut/renpy-6.17.3-sdk/renpy/exports.py", line 737, in display_menu
+    choices = [ val for label, val in items ]
+ValueError: too many values to unpack
 
-Linux-3.13.0-24-generic-i686-athlon-with-debian-jessie-sid
+Linux-3.2.0-49-generic-x86_64-with-debian-wheezy-sid
 Ren'Py 6.17.3.327
 ESofTeacher 0.0

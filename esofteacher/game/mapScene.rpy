@@ -12,6 +12,8 @@ label mapScene:
 
     show corredor
 
+
+
     if not gerente and not mestreDoBolo:
         menu:
             "Tradicional - PadaTout":
@@ -40,7 +42,5 @@ label mapScene:
 
 
 
-
-    "" #alterar
 
 

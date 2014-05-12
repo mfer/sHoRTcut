@@ -75,14 +75,14 @@ label supervisorScene:
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
             show supervisor disappointed at right
             with fastDissolve
-            P "{cps=40}Quando digo metodologia Tradicional, estou falando do UP – {i}{b}Unified Process{/b}{/i}, ou do IRUP – {i}{b}IBM Rational Unified process{/b}{/i}, da IBM.{/cps}"
-            show rup at imagepos behind supervisor:
-                alpha 0.0
-                time 0
-                linear 1.0 alpha 1.0
+            P "{cps=40}Quando digo metodologia Tradicional, estou falando do modelo de desenvolvimento em cascata.{/cps}"
+            #show rup at imagepos behind supervisor:
+            #    alpha 0.0
+            #    time 0
+            #    linear 1.0 alpha 1.0
             show supervisor normal3 at right
-            P "{cps=40}Se você quiser se dar bem aqui, sugiro que aprenda mais sobre o {i}{b}RUP{/b}{/i}.{/cps}"
-            hide rup            
+            P "{cps=40}Se você quiser se dar bem aqui, sugiro que aprenda mais sobre ele.{/cps}"
+            #hide rup            
 
     show supervisor pensive at right
     with fastDissolve

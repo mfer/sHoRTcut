@@ -60,9 +60,6 @@ label mestreDoBoloScene:
     MB "{cps=40}Assim que tiver arrumado suas coisas, basta vir até a nossa equipe para colocarmos a {b}{i}“mão na massa”{/b}{/i}{/cps}"
     hide mb7
     
-    show black
-    with blinds
-
     $ mestreDoBolo = True
 
     if not gerente:
@@ -70,6 +67,12 @@ label mestreDoBoloScene:
         with fastDissolve
         MB "{cps=40}Então é isso, peço que agora conheça o Líder da equipe Tradicional. Conhecido também por \"Dr. Engessadinho\"...{/cps}"
         hide mb7
+        show black
+        with blinds
+
         jump gerenteScene
+
+    show black
+    with blinds
 
     jump mapScene
