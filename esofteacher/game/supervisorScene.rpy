@@ -1,7 +1,7 @@
 #CenaDoSupervisor
 
 image xp = "Extreme_Programming.png"
-image rup = "Development-iterative.gif"
+image waterfall = "800px-Waterfall_model.png"
 
 image supervisor normal0 = "supervisor0.png" 
 image supervisor normal1 = "supervisor1.png"
@@ -19,6 +19,7 @@ label supervisorScene:
     $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)
       
     $ imagepos = Position(xpos=.25, xanchor=0, ypos=50, yanchor=0)
+    $ imagepos2 = Position(xpos=.05, xanchor=0, ypos=50, yanchor=0)
 
     $ strss += 5
     show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
@@ -75,14 +76,15 @@ label supervisorScene:
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
             show supervisor disappointed at right
             with fastDissolve
-            P "{cps=40}Quando digo metodologia Tradicional, estou falando do modelo de desenvolvimento em cascata.{/cps}"
-            #show rup at imagepos behind supervisor:
-            #    alpha 0.0
-            #    time 0
-            #    linear 1.0 alpha 1.0
+            P "{cps=40}Quando digo metodologia Tradicional, estou falando do modelo de Desenvolvimento em Cascata.{/cps}"
+            show waterfall at imagepos2 behind supervisor:
+                alpha 0.0
+                time 0
+                linear 1.0 alpha 1.0
             show supervisor normal3 at right
-            P "{cps=40}Se você quiser se dar bem aqui, sugiro que aprenda mais sobre ele.{/cps}"
-            #hide rup            
+            P "{cps=40}No qual concepção, iniciação, análise, desenho, construção, teste, produção/implementação e manutenção ocorrem linearmente sem realimentações ou iterações.{/cps}"
+            P "{cps=40}Se você quiser se dar bem aqui, sugiro que aprenda mais sobre ele. Inclusive a controversa história de como ele surgiu!{/cps}"
+            hide waterfall
 
     show supervisor pensive at right
     with fastDissolve
