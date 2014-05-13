@@ -19,22 +19,21 @@ image donoDoProd7 = "aoi7.png"
 image donoDoProd8 = "aoi8.png"
 
 
-init:
-    $ contador = 0
-    $ flagOption1 = False 
-    $ flagOption2 = False
-    $ flagOption3 = False
-    $ flagOption5 = False 
-    $ flagOption6 = False
-    $ flagOption7 = False
-    $ perguntas = [[u'{b}Caro Cliente, quais são as informações mais relevantes?{/b}','option1', True], 
-                    [u'{b}Caro Cliente, como vocês gostariam de inserir essas informações?{/b}','option2', True],
-                    [u'{b}Caro Cliente, como esse software vai ajudar a melhorar a qualidade dos seus serviços?{/b}','option3', True],
-                    [u'{b}Quais informações você quer que sejam armazenadas para cada cliente?{/b}', 'option5', True],
-                    [u'{b}Quais campos serão de preenchimento obrigatório?{/b}', 'option6', True],
-                    [u'{b}Como você gostaria de poder pesquisar por clientes?{/b}', 'option7', True],
-                   
-                    ]
+init python:
+    contador = 0
+##    flagOption1 = False 
+##    flagOption2 = False
+##    flagOption3 = False
+##    flagOption5 = False 
+##    flagOption6 = False
+##    flagOption7 = False
+    perguntas = [   [u'{b}Caro Cliente, quais são as informações mais relevantes?{/b}','option0', True], 
+                    [u'{b}Caro Cliente, como vocês gostariam de inserir essas informações?{/b}','option1', True],
+                    [u'{b}Caro Cliente, como esse software vai ajudar a melhorar a qualidade dos seus serviços?{/b}','option2', True],
+                    [u'{b}Quais informações você quer que sejam armazenadas para cada cliente?{/b}', 'option3', True],
+                    [u'{b}Quais campos serão de preenchimento obrigatório?{/b}', 'option4', True],
+                    [u'{b}Como você gostaria de poder pesquisar por clientes?{/b}', 'option5', True],
+                ]
 
 
 label corrida1SceneMomento1:
@@ -161,6 +160,10 @@ label momento2: #Levantando requisitos no cliente - montando histórias
 #    - pula para [options]
 #    
     label options:
+    
+        python:
+            if (contador > 3):
+                renpy.jump('optionfim')
         
         show donoDoProd7
         with fastDissolve
@@ -169,22 +172,11 @@ label momento2: #Levantando requisitos no cliente - montando histórias
         
 
         python:
-
-            if (contador > 3):
-                renpy.jump('optionfim')
-            p = filter(lambda x: x[2], perguntas)
-            print 
-            print "perguntas"
-            print perguntas
-            print
-            perguntas2 = [[x[0], x[1]] for x in perguntas if x[2]]
-            print "perguntas2"
-            print perguntas2
-            print
-
-            result = menu(perguntas2[:4] + [[u'{b}Não, tudo bem por mim agora.{/b}','option4']])
+            perguntas2 = [x[:-1] for x in perguntas if x[2]]
+            result = menu(perguntas2[:4] + [[u'{b}Não, tudo bem por mim agora.{/b}','optionfim']])
+            contador += 1
+            renpy.jump(result)
              
-  
         #     "{b}Quais informações você quer que sejam armazenadas para cada cliente?{/b}":
         #         jump option5
         #     "{b}Quais campos serão de preenchimento obrigatório?{/b}":
@@ -198,11 +190,8 @@ label momento2: #Levantando requisitos no cliente - montando histórias
         #     "{b}Não, tudo bem por mim agora.{/b}":
         #         jump option4
         
-        label option1:
-            $ contador += 1
-            
+        label option0:
             $ perguntas[0][2] = False
-            $ print "entrou"
 
             hide cliente5
             show cliente1 at right
@@ -225,10 +214,8 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             jump options
             #- pula para options
 
-        label option2:
-
-            $ contador += 1
-            $ perguntas[4][2] = False
+        label option1:
+            $ perguntas[1][2] = False
 
             show cliente5 at right
             with fastDissolve
@@ -241,11 +228,8 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             jump options
             #- pula para options
 
-        label option3:
-
-            $ contador += 1
-
-            $ perguntas[5][2] = False
+        label option2:
+            $ perguntas[2][2] = False
 
             show cliente2 at right
             with fastDissolve
@@ -258,16 +242,9 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             jump options
             #- pula para options
 
-        label option4:
-        
-            jump optionfim
-            #- aumentar barra de stress de acordo com as flagOption’s que não foram setadas.
-            #-pula para option.fim
 
-        label option5:
-            $ contador += 1
-
-            $ perguntas[1][2] = False
+        label option3:
+            $ perguntas[3][2] = False
 
             show cliente3 at right
             with fastDissolve
@@ -284,10 +261,8 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             jump options
             #- pula para options
 
-        label option6:
-
-            $ contador += 1
-            $ perguntas[2][2] = False
+        label option4:
+            $ perguntas[4][2] = False
 
             show cliente5 at right
             with fastDissolve
@@ -300,10 +275,8 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             jump options
             #- pula para options
 
-        label option7:
-
-            $ contador += 1
-            $ perguntas[3][2] = False
+        label option5:
+            $ perguntas[5][2] = False
 
             show cliente3 at right
             with fastDissolve
@@ -324,6 +297,8 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             jump options
             #- pula para options.
 
+
+        # DEIXAR NO FINAL
         label optionfim:
             P "{cps=40}Ok, acho que esta informação é suficiente para definirmos a primeira entrega.{/cps}" 
             show donoDoProd6 at right
