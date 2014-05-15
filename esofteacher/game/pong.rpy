@@ -22,8 +22,8 @@
                 self.PADDLE_HEIGHT = 79
                 self.BALL_WIDTH = 15
                 self.BALL_HEIGHT = 15
-                self.COURT_TOP = 108
-                self.COURT_BOTTOM = 543
+                self.COURT_TOP = 90
+                self.COURT_BOTTOM = 643
 
                 # If the ball is stuck to the paddle.
                 self.stuck = True
@@ -37,7 +37,7 @@
 
                 # The position, dental-position, and the speed of the
                 # ball.
-                self.bx = 88
+                self.bx = 120
                 self.by = self.playery
                 self.bdx = .5
                 self.bdy = .5
@@ -133,8 +133,8 @@
                             self.bspeed *= 1.10
 
                 # Draw the two paddles.
-                paddle(68, self.playery, 68 + self.PADDLE_WIDTH)
-                paddle(724, self.computery, 724)
+                paddle(100, self.playery, 100 + self.PADDLE_WIDTH)
+                paddle(1164, self.computery, 1164)
 
                 # Draw the ball.
                 ball = renpy.render(self.ball, 800, 600, st, at)
@@ -165,7 +165,7 @@
                     # the winner.
                     renpy.timeout(0)
 
-                elif self.bx > 1000:
+                elif self.bx > 10000:
                     self.winner = "player"
                     renpy.timeout(0)
 
