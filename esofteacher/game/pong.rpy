@@ -158,14 +158,14 @@
 
 
                 # Check for a winner.
-                if self.bx < -200:
+                if self.bx < 30:
                     self.winner = "eileen"
 
                     # Needed to ensure that event is called, noticing
                     # the winner.
                     renpy.timeout(0)
 
-                elif self.bx > 10000:
+                elif self.bx > 1200:
                     self.winner = "player"
                     renpy.timeout(0)
 
