@@ -18,12 +18,12 @@
                 self.ctb = Text(_("Click to Begin"), size=36)
 
                 # The sizes of some of the images.
-                self.PADDLE_WIDTH = 8
+                self.PADDLE_WIDTH = 10
                 self.PADDLE_HEIGHT = 79
                 self.BALL_WIDTH = 15
                 self.BALL_HEIGHT = 15
-                self.COURT_TOP = 90
-                self.COURT_BOTTOM = 643
+                self.COURT_TOP = 125
+                self.COURT_BOTTOM = 610
 
                 # If the ball is stuck to the paddle.
                 self.stuck = True
@@ -87,14 +87,14 @@
                 # Handle bounces.
 
                 # Bounce off of top.
-                ball_top = self.COURT_TOP + self.BALL_HEIGHT / 2
+                ball_top = self.COURT_TOP - 33  + self.BALL_HEIGHT / 2
                 if self.by < ball_top:
                     self.by = ball_top + (ball_top - self.by)
                     self.bdy = -self.bdy
                     renpy.sound.play("pong_beep.wav", channel=0)
 
                 # Bounce off bottom.
-                ball_bot = self.COURT_BOTTOM - self.BALL_HEIGHT / 2
+                ball_bot = self.COURT_BOTTOM + 20 - self.BALL_HEIGHT / 2
                 if self.by > ball_bot:
                     self.by = ball_bot - (self.by - ball_bot)
                     self.bdy = -self.bdy
@@ -148,7 +148,7 @@
                 # Show Eileen's name.
                 eileen = renpy.render(self.eileen, 800, 600, st, at)
                 ew, eh = eileen.get_size()
-                r.blit(eileen, (790 - ew, 25))
+                r.blit(eileen, (990 - ew, 25))
 
                 # Show the "Click to Begin" label.
                 if self.stuck:
@@ -158,7 +158,7 @@
 
 
                 # Check for a winner.
-                if self.bx < 30:
+                if self.bx < 55:
                     self.winner = "eileen"
 
                     # Needed to ensure that event is called, noticing
@@ -190,7 +190,6 @@
                 y = max(y, self.COURT_TOP)
                 y = min(y, self.COURT_BOTTOM)
                 self.playery = y
-
                 # If we have a winner, return him or her. Otherwise, ignore
                 # the current event.
                 if self.winner:
@@ -202,6 +201,7 @@
 label demo_minigame_pong:
 
     window hide None
+    hide screen stressBar
 
     # Put up the pong background, in the usual fashion.
     scene bg pong field
