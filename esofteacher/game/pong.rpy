@@ -205,6 +205,7 @@ label pong:
     $ renpy.music.stop(channel="music",fadeout=1.0) 
 
     $ renpy.music.play("WaveAfterWave!v0_9.mp3", channel="music", loop=True, fadein=1.0)
+
    
     hide screen stressBar
 
