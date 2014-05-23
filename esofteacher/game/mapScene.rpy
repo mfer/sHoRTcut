@@ -5,13 +5,13 @@ init:
     $ gerente = False
     $ mestreDoBolo = False
 
-label mapScene:
+
+label mapScene0:
 
     $ renpy.music.stop(channel="music",fadeout=1.0)
     $ renpy.music.play("level1-step1-evil.wav", channel="music", loop=True, fadein=1.0)
 
     show corredor
-
 
     if not gerente and not mestreDoBolo:
         menu:
@@ -20,6 +20,7 @@ label mapScene:
                 with blinds
                 show screen clock
                 jump gerenteScene
+                
             "Ágil - PadaOne":
                 show black
                 with blinds
@@ -38,6 +39,13 @@ label mapScene:
                 with blinds
                 show screen clock
                 jump corrida1SceneMomento1
+
+label mapScene1:
+    
+    $ renpy.music.stop(channel="music",fadeout=1.0)
+    $ renpy.music.play("level1-step1-evil.wav", channel="music", loop=True, fadein=1.0)
+
+    show corredor
 
 
 

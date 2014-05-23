@@ -21,12 +21,9 @@ image donoDoProd8 = "aoi8.png"
 
 init python:
     contador = 0
-##    flagOption1 = False 
-##    flagOption2 = False
-##    flagOption3 = False
-##    flagOption5 = False 
-##    flagOption6 = False
-##    flagOption7 = False
+    flagOption5 = False
+    flagOption6 = False
+    flagOption7 = False
     perguntas = [   [u'{b}Caro Cliente, quais são as informações mais relevantes?{/b}','option0', True], 
                     [u'{b}Caro Cliente, como vocês gostariam de inserir essas informações?{/b}','option1', True],
                     [u'{b}Caro Cliente, como esse software vai ajudar a melhorar a qualidade dos seus serviços?{/b}','option2', True],
@@ -88,7 +85,6 @@ label corrida1SceneMomento1:
             hide donoDoProd3
             jump historia_fim1
         "Frases que contam como o usuário deve interagir com o sistema, o que ele precisa que o sistema faça, escritas de modo formal, como um diagrama.":
-            # aumenta stress em X
             $ strss = strss + 5
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
             with fastDissolve
@@ -103,7 +99,6 @@ label corrida1SceneMomento1:
             $ minutes += 5
             jump historia_fim1
         "Não sei.":
-            # aumenta stress em X
             $ strss = strss + 5
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax) #não consegui fazer atualizar automaticamente
             with fastDissolve
@@ -138,7 +133,6 @@ label momento2: #Levantando requisitos no cliente - montando histórias
     scene bakery2
     $ renpy.music.stop(channel="music",fadeout=1.0)    
     $ renpy.music.play("School of Quirks.mp3", channel="music", loop=True, fadein=1.0)
-    #Achar musica
 
     
     show donoDoProd8 at right
@@ -157,8 +151,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
     with fastDissolve
     CL "{cps=40}Estamos querendo um software que possibilite um contato mais próximo com os nossos clientes.{/cps}"
     hide cliente5
-#    - pula para [options]
-#    
+
     label options:
     
         python:
@@ -177,18 +170,6 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             contador += 1
             renpy.jump(result)
              
-        #     "{b}Quais informações você quer que sejam armazenadas para cada cliente?{/b}":
-        #         jump option5
-        #     "{b}Quais campos serão de preenchimento obrigatório?{/b}":
-        #         jump option6
-        #     "{b}Como você gostaria de poder pesquisar por clientes?{/b}":
-        #         jump option7
-        #     "{b}Caro Cliente, como vocês gostariam de inserir essas informações?{/b}": 
-        #         jump option2
-        #     "{b}Caro Cliente, como esse software vai ajudar a melhorar a qualidade dos seus serviços?{/b}":
-        #         jump option3
-        #     "{b}Não, tudo bem por mim agora.{/b}":
-        #         jump option4
         
         label option0:
             $ perguntas[0][2] = False
@@ -209,7 +190,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             hide cliente2
             #- aumentar a barra de escopo em X1
             #- setar flagOption1
-            $ flagOption = True
+            #$ flagOption = True
             $ minutes += 10
             jump options
             #- pula para options
@@ -223,7 +204,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             hide cliente5
             #- aumentar a barra de escopo em X2
             #- setar flagOption2
-            $ flagOption = True
+            #$ flagOption = True
             $ minutes += 10
             jump options
             #- pula para options
@@ -237,7 +218,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             hide cliente2
             #- aumentar a barra de escopo em X3
             #- setar flagOption3
-            $ flagOption = True
+            #$ flagOption = True
             $ minutes += 10
             jump options
             #- pula para options
@@ -255,11 +236,8 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             CL "{cps=40}Ah! Coloquem também data de nascimento! Não temos essa informação hoje no nosso arquivo, mas é legal saber quando o cliente está fazendo aniversário.{/cps}"
             hide cliente2
             $ minutes += 10
-            #- aumentar a barra de escopo em X5
-            #- setar flagOption5
             $ flagOption5 = True
             jump options
-            #- pula para options
 
         label option4:
             $ perguntas[4][2] = False
@@ -269,11 +247,8 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             CL "{cps=40}Hmm… Coloca só o Nome e o CPF. Nem sempre tenho as outras informações.{/cps}"
             hide cliente5
             $ minutes += 10
-            #- aumentar a barra de escopo em X6
-            #- setar flagOption6
             $ flagOption6 = True
             jump options
-            #- pula para options
 
         label option5:
             $ perguntas[5][2] = False
@@ -290,13 +265,9 @@ label momento2: #Levantando requisitos no cliente - montando histórias
             with fastDissolve
             CL "{cps=40}Ah, coloque também uma caixinha que me avise quem são os aniversariantes do dia!{/cps}"
             hide cliente5
-            #- aumentar barra de escopo em X7
-            #- setar flagOption7
             $ flagOption7 = True
             $ minutes += 10
             jump options
-            #- pula para options.
-
 
         # DEIXAR NO FINAL
         label optionfim:
@@ -445,10 +416,12 @@ label momento4:
     if (flagOption6 and flagOption7):
         jump historiasClienteFull
     #- se flagOption6 igual a 1, pula para [historiasCliente.obrigatórios]
-    if (flagOption6 and not flagOption7):
+    if (flagOption6):
         jump historiasClienteObrigatorias
     #- se flagOption7 igual a 1, pula para [historiasCliente GT.pesquisa]
-    if (flagOption7 and not flagOption6):
+    if (flagOption7):
+        jump historiasClientePesquisa
+    if (flagOption5):
         jump historiasClienteCampos
     #- se flagOption5 igual a 1, pula para [historiasCliente.campos]
     jump historiasClienteSimples

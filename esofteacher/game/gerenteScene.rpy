@@ -28,7 +28,7 @@ label gerenteScene:
     hide gr2
     show gr6 at left
     with fastDissolve
-    GR "{cps=40}Sou o gerente do projeto da padaria {i}{b}Et Part Deux{/b}{/i} e utilizaremos o processo PadaTout.{/cps}"
+    GR "{cps=40}Sou o responsável pelo projeto da padaria {i}{b}Et Part Deux{/b}{/i} e utilizaremos o processo PadaTout.{/cps}"
     GR "{cps=40}O PadaTout é um processo já bem maduro, tradicional e bem testado. {w=2} Utilizamos há anos com sucesso aqui.{/cps}"
     hide gr6
     show gr5 at left
@@ -61,4 +61,4 @@ label gerenteScene:
     show black
     with blinds
 
-    jump mapScene
+    jump mapScene0

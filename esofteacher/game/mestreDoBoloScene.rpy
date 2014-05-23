@@ -75,4 +75,4 @@ label mestreDoBoloScene:
     show black
     with blinds
 
-    jump mapScene
+    jump mapScene0

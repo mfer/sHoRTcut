@@ -33,11 +33,11 @@ label start:
     #jump supervisorScene
     #jump mestreDoBoloScene
     #jump options
-    jump demo_minigame_pong
+    jump pong
 
     label rSupervisorScene:
         $ variableProjectScreen = True
-        jump mapScene
+        jump mapScene0
 
     return
 
