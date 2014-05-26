@@ -10,11 +10,15 @@
 
                 renpy.Displayable.__init__(self)
 
+                # number o "bounces"
+                self.count = 0
+                self.aux = 0
                 # Some displayables we use.
                 self.paddle = Image("pong.png")
                 self.ball = Image("pong_ball.png")
                 self.player = Text(_("[nome]"), size=36)
-                self.eileen = Text(_("Chaos"), size=36)
+                self.showCount = Text(_(str(self.count)), size=36)
+                self.test = Text(_("Test Team"), size=36)
                 self.ctb = Text(_("Click to Begin"), size=36)
 
                 # The sizes of some of the images.
@@ -50,7 +54,7 @@
                 self.winner = None
 
             def visit(self):
-                return [ self.paddle, self.ball, self.player, self.eileen, self.ctb ]
+                return [ self.paddle, self.ball, self.player, self.test, self.ctb ]
 
             # Recomputes the position of the ball, handles bounces, and
             # draws the screen.
@@ -129,6 +133,10 @@
                             hit = True
 
                         if hit:
+                            self.aux += 1
+                            if(self.aux %2 == 0):
+                                self.count += 1
+                            #print(self.aux)
                             renpy.sound.play("pong_boop.wav", channel=1)
                             self.bspeed *= 1.10
 
@@ -141,31 +149,36 @@
                 r.blit(ball, (int(self.bx - self.BALL_WIDTH / 2),
                               int(self.by - self.BALL_HEIGHT / 2)))
 
-                # Show the player names.
-                player = renpy.render(self.player, 800, 600, st, at)
-                r.blit(player, (20, 25))
+                # Show Score
+                self.showCount = Text(_(str(self.count)), size=36)
+                count = renpy.render(self.showCount, 800, 600, st, at)
+                cow, coh = count.get_size()
+                r.blit(count, (650 - cow, 25))
 
                 # Show Eileen's name.
-                eileen = renpy.render(self.eileen, 800, 600, st, at)
+                eileen = renpy.render(self.test, 800, 600, st, at)
                 ew, eh = eileen.get_size()
-                r.blit(eileen, (990 - ew, 25))
+                r.blit(eileen, (1090 - ew, 25))
 
                 # Show the "Click to Begin" label.
                 if self.stuck:
                     ctb = renpy.render(self.ctb, 800, 600, st, at)
                     cw, ch = ctb.get_size()
-                    r.blit(ctb, (400 - cw / 2, 30))
-
+                    r.blit(ctb, (200 - cw / 2, 30))
+                else:
+                    self.ctb = Text(_("Development Team"), size=36)
+                    ctb = renpy.render(self.ctb, 800, 600, st, at)
+                    cw, ch = ctb.get_size()
+                    r.blit(ctb, (250 - cw / 2, 30))
 
                 # Check for a winner.
                 if self.bx < 55:
                     self.winner = "eileen"
-
                     # Needed to ensure that event is called, noticing
                     # the winner.
                     renpy.timeout(0)
 
-                elif self.bx > 1200:
+                elif self.count > 3 or self.bx > 1200:
                     self.winner = "player"
                     renpy.timeout(0)
 
@@ -205,7 +218,6 @@ label pong:
     $ renpy.music.stop(channel="music",fadeout=1.0) 
 
     $ renpy.music.play("WaveAfterWave!v0_9.mp3", channel="music", loop=True, fadein=1.0)
-
    
     hide screen stressBar
 
@@ -217,32 +229,19 @@ label pong:
         ui.add(PongDisplayable())
         winner = ui.interact(suppress_overlay=True, suppress_underlay=True)
 
-    scene bg washington
-    show eileen vhappy
+    #scene 
 
     window show None
 
 
     if winner == "eileen":
-
-        e "I win!"
+        "{cps=40}A equipe de Testes encontrou alguns {b}{i}defeitos{/b}{/i} no módulo!!!{/cps}"
 
     else:
-
-        e "You won! Congratulations."
-
-
-    show eileen happy
-
-    menu:
-        e "Would you like to play again?"
-
-        "Sure.":
-            jump demo_minigame_pong
-        "No thanks.":
-            pass
+        "{cps=40}Parabéns, o {i}{b}módulo{/b}{/i} desenvolvido passou em todos os testes de regressão!!!{/cps}"
 
 
-    e "Remember to be careful about putting minigames in a visual novel, since not every visual novel player wants to be good at arcade games."
+   # show eileen happy
 
+   
     return
