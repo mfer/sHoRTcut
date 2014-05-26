@@ -178,7 +178,7 @@
                     # the winner.
                     renpy.timeout(0)
 
-                elif self.count > 3 or self.bx > 1200:
+                elif self.count >= 3 or self.bx > 1200:
                     self.winner = "player"
                     renpy.timeout(0)
 
