@@ -1,7 +1,7 @@
 ﻿# novo tipo de transicao
 define fastDissolve = Dissolve (.2)
 
-image bg ync = "ync.png"
+#image bg ync = "ync.png"
 image office = "office.png"
 image corredor = "corredor.png"
 image salaDeReuniao = "meeting_room.png"

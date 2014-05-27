@@ -18,8 +18,8 @@ label supervisorScene:
 
     $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)
       
-    $ imagepos = Position(xpos=.25, xanchor=0, ypos=50, yanchor=0)
-    $ imagepos2 = Position(xpos=.05, xanchor=0, ypos=50, yanchor=0)
+    define imagepos = Position(xpos=.25, xanchor=0, ypos=50, yanchor=0)
+    define imagepos2 = Position(xpos=.05, xanchor=0, ypos=50, yanchor=0)
 
     $ strss += 5
     show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
@@ -70,7 +70,7 @@ label supervisorScene:
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
             show supervisor smile at right
             with fastDissolve
-            S "{cps=40}Que bom, você ganhou um ponto comigo."            
+            S "{cps=40}Que bom, você ganhou um ponto comigo.{/cps}"
         "Não":
             $ strss += 5
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
@@ -96,7 +96,7 @@ label supervisorScene:
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
             show supervisor smile at right
             with fastDissolve
-            S "{cps=40}Estou gostando de ver. Vejo que formou-se na {b}UFMG{/b}. Você deve ter estudado com o Professor {b}Rodolfo{b}.{/cps}"
+            S "{cps=40}Estou gostando de ver. Vejo que formou-se na {b}UFMG{/b}. Você deve ter estudado com o Professor {b}Rodolfo{/b}.{/cps}"
         "Não":
             $ strss += 5
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)  #não consegui fazer atualizar automaticamente
@@ -152,7 +152,7 @@ label supervisorScene:
 
     show supervisor normal3 at right
     with fastDissolve
-    S "{cps=40}Meu caro, {color=ff0000}{b}[nome]{/color}{/b}.{w=2} Adotar essas duas abordagens de desenvolvimento, Tradicional e Ágil, trouxe-nos muitas vantagens como você irá perceber.{/cps}"
+    S "{cps=40}Meu caro, {color=ff0000}{b}[nome]{/b}{/color}.{w=2} Adotar essas duas abordagens de desenvolvimento, Tradicional e Ágil, trouxe-nos muitas vantagens como você irá perceber.{/cps}"
     show supervisor pensive at right
     with fastDissolve
     S "{cps=40}Por outro lado, um clima de competição saudável emergiu entre a {b}{i}PadaTout{/i}{/b} e a {b}{i}PadaOne{/i}{/b}.{/cps}"

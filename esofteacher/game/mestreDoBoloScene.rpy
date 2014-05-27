@@ -20,8 +20,8 @@ label mestreDoBoloScene:
     
     hide screen map
     
-    $ renpy.music.stop(channel="music",fadeout=1.0)    
-    $ renpy.music.play("Purple_Motion_-_Charts_overdrive.mp3", channel="music", loop=True, fadein=1.0) 
+    $ renpy.music.stop(channel="music",fadeout=1.0)
+    $ renpy.music.play("Purple_Motion_-_Charts_overdrive.mp3", channel="music", loop=True, fadein=1.0)
     
     scene escritorioAgil
     
@@ -57,7 +57,7 @@ label mestreDoBoloScene:
         
     show mb7 at left
     with fastDissolve
-    MB "{cps=40}Assim que tiver arrumado suas coisas, basta vir até a nossa equipe para colocarmos a {b}{i}“mão na massa”{/b}{/i}{/cps}"
+    MB "{cps=40}Assim que tiver arrumado suas coisas, basta vir até a nossa equipe para colocarmos a {b}{i}“mão na massa”{/i}{/b}{/cps}"
     hide mb7
     
     $ mestreDoBolo = True

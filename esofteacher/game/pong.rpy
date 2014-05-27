@@ -235,7 +235,7 @@ label pong:
 
 
     if winner == "eileen":
-        "{cps=40}A equipe de Testes encontrou alguns {b}{i}defeitos{/b}{/i} no módulo!!!{/cps}"
+        "{cps=40}A equipe de Testes encontrou alguns {b}{i}defeitos{/i}{/b} no módulo!!!{/cps}"
 
     else:
         "{cps=40}Parabéns, o {i}{b}módulo{/b}{/i} desenvolvido passou em todos os testes de regressão!!!{/cps}"

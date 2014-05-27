@@ -80,7 +80,7 @@ label corrida1SceneMomento1:
         "Frases que capturam o que o usuário faz ou precisa fazer no sistema, escritas de modo informal.":
             show donoDoProd3 at right
             with fastDissolve
-            DP "{cps=40}Exatamente!!!"
+            DP "{cps=40}Exatamente!!!{/cps}"
             $ minutes += 5
             hide donoDoProd3
             jump historia_fim1
@@ -334,11 +334,11 @@ label momento3:
         hide mb10
         menu:
             with fastDissolve
-            "{i}{b}Não sei.{/i}{/b}":
+            "{i}{b}Não sei.{/b}{/i}":
                 jump sprint2_1
-            "{i}{b}Reunião de uma metodologia ágil.{/i}{/b}":
+            "{i}{b}Reunião de uma metodologia ágil.{/b}{/i}":
                 jump sprint2_2
-            "{i}{b}Unidade de tempo de desenvolvimento do projeto.{/i}{/b}":
+            "{i}{b}Unidade de tempo de desenvolvimento do projeto.{/b}{/i}":
                 jump sprint2_3
        
     label sprint3:
@@ -428,13 +428,13 @@ label momento4:
     #- pula para [historiasCliente.simples]
 
     label historiasClienteFull:
-        P "{cps=40}Temos três histórias:"
+        P "{cps=40}Temos três histórias:{/cps}"
         P "{cps=40}“Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento, sendo que apenas Nome e CPF são obrigatórios.”{/cps}"
         P "{cps=40}“Eu, como dono da empresa, quero encontrar meus clientes com base em qualquer campo, mas principalmente por Nome e CPF.”{/cps}"
         P "{cps=40}“Eu, como dono da empresa, quero ser avisado de quais clientes fazem aniversário no dia.”{/cps}"
         jump historiasClienteFim
 
-    label historiasClienteObrigatorios:
+    label historiasClienteObrigatorias:
         P "{cps=40}Temos duas histórias:{/cps}"
         P "{cps=40}“Eu, como dono da empresa, quero cadastrar clientes com Nome, CPF, telefone, endereço e data de nascimento, sendo que apenas Nome e CPF são obrigatórios.”{/cps}"
         P "{cps=40}“Eu, como dono da empresa, quero pesquisar meus clientes cadastrados.”{/cps}"
