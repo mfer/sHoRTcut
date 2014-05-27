@@ -121,14 +121,9 @@ label cascataScene:
             jump jad_quest
             
         label jad_quest:
+            jump pong
             
     
 #JAD 
 
 #Analista diz quais casos de uso foram ganhos
-
-
-
-
-
-    jump pong
