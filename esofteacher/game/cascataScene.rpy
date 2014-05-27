@@ -119,9 +119,8 @@ label cascataScene:
             
             $ minutes += 5
             jump jad_quest
-            
-        label jad_quest:
-            jump pong
+    label jad_quest:
+        jump pong
             
     
 #JAD 
