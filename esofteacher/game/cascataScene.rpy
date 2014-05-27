@@ -31,27 +31,27 @@ init python:
 label cascataScene:
     scene office
     
-    show analista_normal at left
+    show analista_normal at right
     with fastDissolve
     AR "{cps=40}Olá [nome].{w=2} Sei que você já conversou com o Gerente.{w=2} Eu sou a Analista de Requisitos.{/cps}"
     hide analista_normal
     
-    show analista_seria at left
+    show analista_seria at right
     with fastDissolve
     AR "{cps=40} O Supervisor pediu para te acompanhar nesse projeto, já que você foi contratado há pouco tempo.{/cps}"
     hide analista_seria
     
-    show analista_seria at left
+    show analista_seria at right
     with fastDissolve
     AR "{cps=40} Estamos indo para a padaria {b}{i}Et Part Deux{/i}{/b} agora para levantar o que precisam do primeiro módulo.{/cps}"
     hide analista_seria
     
-    show analista_normal at left
+    show analista_normal at right
     with fastDissolve
     AR "{cps=40}Você será o relator da nossa oficina de requisitos, ficará responsável por redigir a ata.{/cps}"
     hide analista_normal
     
-    show analista_brava at left
+    show analista_brava at right
     with fastDissolve
     AR "{cps=40}Essas oficinas são inspirdadas no JAD.{w=2} Você sabe o que é JAD?{/cps}"
     hide analista_brava
@@ -66,12 +66,12 @@ label cascataScene:
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)
             with fastDissolve
             
-            show analista_brava at left
+            show analista_brava at right
             with fastDissolve
             AR "{cps=40}Deve ser nervosismo…{/cps}"
             hide analista_brava
             
-            show analista_normal at left
+            show analista_normal at right
             with fastDissolve
             DP "{cps=40}JAD {/cps}"
             hide analista_normal
@@ -83,12 +83,12 @@ label cascataScene:
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)
             with fastDissolve
             
-            show analista_brava at left
+            show analista_brava at right
             with fastDissolve
             AR "{cps=40}Deve ser nervosismo…{/cps}"
             hide analista_brava
             
-            show analista_normal at left
+            show analista_normal at right
             with fastDissolve
             DP "{cps=40}JAD {/cps}"
             hide analista_normal
@@ -101,17 +101,17 @@ label cascataScene:
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)
             with fastDissolve
             
-            show analista_brava at left
+            show analista_brava at right
             with fastDissolve
             AR "{cps=40}Deve ser nervosismo…{/cps}"
             hide analista_brava
             
-            show analista_normal at left
+            show analista_normal at right
             with fastDissolve
             DP "{cps=40}JAD são reuniões com diversos grupos de participantes, um líder neutro e um processo estruturado.{/cps}"
             hide analista_normal
             
-            show analista_seria at left
+            show analista_seria at right
             with fastDissolve
             DP "{cps=40}Aplicáveis a diversos problemas: engenharia de requisitos, desenho de produto ou desenho de processos.{/cps}"
             hide analista_seria
