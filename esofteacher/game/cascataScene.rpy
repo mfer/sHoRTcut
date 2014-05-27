@@ -56,6 +56,55 @@ label cascataScene:
     AR "{cps=40}Essas oficinas são inspirdadas no JAD.{w=2} Você sabe o que é JAD?{/cps}"
     hide analista_brava
     
+    $ minutes += 10
+    
+    menu:
+        with fastDissolve
+
+        "Não sei."
+            $ strss = strss + 5
+            show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)
+            with fastDissolve
+            
+            show analista_brava at left
+            with fastDissolve
+            AR "{cps=40}Deve ser nervosismo…{/cps}"
+            hide analista_brava
+            
+            show analista_normal at left
+            with fastDissolve
+            DP "{cps=40}JAD {/cps}"
+            hide analista_normal
+            
+            $ minutes += 5
+            jump jad_quest
+        
+        "Não sei."
+            $ strss = strss + 5
+            show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)
+            with fastDissolve
+            
+            show analista_brava at left
+            with fastDissolve
+            AR "{cps=40}Deve ser nervosismo…{/cps}"
+            hide analista_brava
+            
+            show analista_normal at left
+            with fastDissolve
+            DP "{cps=40}JAD são reuniões com diversos grupos de participantes, um líder neutro e um processo estruturado.{/cps}"
+            hide analista_normal
+            
+            show analista_seria at left
+            with fastDissolve
+            DP "{cps=40}Aplicáveis a diversos problemas: engenharia de requisitos, desenho de produto ou desenho de processos.{/cps}"
+            hide analista_seria
+            
+            
+            $ minutes += 5
+            jump jad_quest
+            
+        label jad_quest:
+            
     
 #JAD 
 
