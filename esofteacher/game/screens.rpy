@@ -100,6 +100,24 @@ init -2:
         xminimum int(config.screen_width * 0.75)
         xmaximum int(config.screen_width * 0.75)
 
+    python:
+        try:
+            import pygame
+            import android
+            android.init()
+            android.map_key(android.KEYCODE_BACK, pygame.K_ESCAPE)
+        except ImportError:
+            android = None
+
+        class AndroidKbdShow():
+            def __call__(self):
+                if android:
+                    android.show_keyboard()
+
+        class AndroidKbdHide():
+            def __call__(self):
+                if android:
+                    android.hide_keyboard()
 
 ##############################################################################
 # Input
@@ -109,13 +127,13 @@ init -2:
 
 screen input:
 
-    window style "input_window":
-        has vbox
-
-        text prompt style "input_prompt"
-        input id "input" style "input_text"
+    window style "nvl_window":
+        text prompt style "input_prompt" xalign 0.5 yalign 0.3
+        input id "input" style "input_text" xalign 0.5 yalign 0.4
 
     use quick_menu
+    on "show" action AndroidKbdShow()
+    on "hide" action AndroidKbdHide()
 
 ##############################################################################
 # Nvl

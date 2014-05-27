@@ -34,7 +34,7 @@ label supervisorScene:
             show supervisor normal3 at right
             with fastDissolve
             P "{cps=40}Sim, eu me chamo...{/cps}"
-            $ nome = renpy.input("{b}{i}Por favor insira o seu nome:{/i}{/b}", "", length=20) or _("Jogador Tímido")
+            $ nome = renpy.input("{b}{i}Por favor digite o seu nome:{/i}{/b}", "", length=20) or _("Jogador Tímido")
             show supervisor smile at right
             with fastDissolve
             S "{cps=40}Muito prazer, {b}{color=ff0000}[nome]{/color}{/b}!\nSeja bem vindo! Não quero te assustar mas…{w=3} Temos muito trabalho por aqui. Vou explicar o que você vai fazer.{/cps}"

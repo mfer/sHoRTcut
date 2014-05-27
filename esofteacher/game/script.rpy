@@ -12,7 +12,7 @@ image bakery1 = "bakery1.png"
 define e = Character('ESOFteacher', color="#c8ffc8")
 define S = Character('Supervisor', color="#c8ffc8")
 
-define P = Character('Jogador', color="#c8ffc8")        
+define P = Character('Jogador', color="#c8ffc8")
 
 define MB = Character('Mestre do Bolo', color="#c8ffc8") #mestredobolo as mb
 define GR = Character ('Gerente', color="#c8ffc8") #define gerente as gr
@@ -30,7 +30,7 @@ label start:
     show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)     # Barra de stress e lv.
     
     #jump corrida1SceneMomento1
-    #jump supervisorScene
+    jump supervisorScene
     #jump mestreDoBoloScene
     #jump options
     jump pong
