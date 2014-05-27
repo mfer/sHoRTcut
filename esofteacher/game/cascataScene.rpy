@@ -1,11 +1,19 @@
 image padeiro0 = "padeideux0.png"
 image padeiro1 = "padeideux1.png"
 
-image analista0 = "analista0.png"
-image analista1 = "analista1.png"
+image analista_brava = "analista_brava.png"
+image analista_decepcionada = "analista_decepcionada.png"
+image analista_normal = "analista_normal.png"
+image analista_seria = "analista_seria.png"
+image analista_triste = "analista_triste.png"
 
-image atendente0 = "atendente0.png"
-image atendente1 = "atendente1.png"
+image atendente_alegre = "atendente_alegre.png"
+image atendente_brava = "atendente_brava.png"
+image atendente_desafio = "atendente_desafio.png"
+image atendente_normal = "atendente_normal.png"
+image atendente_seria = "atendente_seria.png"
+image atendente_timida = "atendente_timida.png"
+image atendente_triste = "atendente_triste.png"
 
 init python:
     contador = 0
@@ -23,15 +31,30 @@ init python:
 label cascataScene:
     scene office
     
-    show analista at left
+    show analista_normal at left
     with fastDissolve
     AR "{cps=40}Olá [nome].{w=2} Sei que você já conversou com o Gerente.{w=2} Eu sou a Analista de Requisitos.{/cps}"
-    hide analista
+    hide analista_normal
     
-    show analista at left
+    show analista_seria at left
     with fastDissolve
-    AR "{cps=40}{/cps}"
-    hide analista
+    AR "{cps=40} O Supervisor pediu para te acompanhar nesse projeto, já que você foi contratado há pouco tempo.{/cps}"
+    hide analista_seria
+    
+    show analista_seria at left
+    with fastDissolve
+    AR "{cps=40} Estamos indo para a padaria {b}{i}Et Part Deux{/i}{/b} agora para levantar o que precisam do primeiro módulo.{/cps}"
+    hide analista_seria
+    
+    show analista_normal at left
+    with fastDissolve
+    AR "{cps=40}Você será o relator da nossa oficina de requisitos, ficará responsável por redigir a ata.{/cps}"
+    hide analista_normal
+    
+    show analista_brava at left
+    with fastDissolve
+    AR "{cps=40}Essas oficinas são inspirdadas no JAD.{w=2} Você sabe o que é JAD?{/cps}"
+    hide analista_brava
     
     
 #JAD 
