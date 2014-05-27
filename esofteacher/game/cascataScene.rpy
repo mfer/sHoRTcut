@@ -61,7 +61,24 @@ label cascataScene:
     menu:
         with fastDissolve
 
-        "Não sei."
+        "Reuniões formatadas":
+            $ strss = strss + 5
+            show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)
+            with fastDissolve
+            
+            show analista_brava at left
+            with fastDissolve
+            AR "{cps=40}Deve ser nervosismo…{/cps}"
+            hide analista_brava
+            
+            show analista_normal at left
+            with fastDissolve
+            DP "{cps=40}JAD {/cps}"
+            hide analista_normal
+            
+            $ minutes += 5
+            jump jad_quest
+        "Jogo Aleatório Direcionado":
             $ strss = strss + 5
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)
             with fastDissolve
@@ -79,7 +96,7 @@ label cascataScene:
             $ minutes += 5
             jump jad_quest
         
-        "Não sei."
+        "Não sei.":
             $ strss = strss + 5
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)
             with fastDissolve
