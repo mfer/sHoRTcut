@@ -22,6 +22,11 @@ define DP = Character ('Dono do Produto', color="#c8ffc8")
 define CL = Character ('Confeiteiro da Mestre do Bolo', color="#c8ffc8")
 
 
+define AR = Character ('Analista de Requisitos', color="#c8ffc8")
+define PA = Character ('Padeiro da Et Part Deux', color="#c8ffc8")
+define AT = Character ('Atendente da Et Part Deux', color="#c8ffc8")
+
+
 # The game starts here.
 label start:    
     
