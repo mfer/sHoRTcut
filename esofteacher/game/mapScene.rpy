@@ -33,12 +33,13 @@ label mapScene0:
                 show black
                 with blinds
                 show screen clock
-                #jump 
+                jump cascataScene
             "Ágil - PadaOne":
                 show black 
                 with blinds
                 show screen clock
                 jump corrida1SceneMomento1
+    #The other two possibilities are not feasible.
 
 label mapScene1:
     
