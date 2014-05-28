@@ -89,11 +89,6 @@ label cascataScene:
             AR "{cps=40}Como assim! Totalmente Errado. Não faça isso com você mesmo.{/cps}"
             hide analista_brava
             
-            show analista_normal at right
-            with fastDissolve
-            AR "{cps=40}JAD {/cps}"
-            hide analista_normal
-            
             $ minutes += 5
             jump jad_answer
         
@@ -121,10 +116,11 @@ label cascataScene:
         AR "{cps=40}Aplicáveis a diversos problemas: engenharia de requisitos, desenho de produto ou desenho de processos.{/cps}"
         hide analista_seria
         
-    label jad_end:        
+    label jad_end:       
         jump pong
             
-    
+#TODO
 #JAD 
 
+#TODO
 #Analista diz quais casos de uso foram ganhos
