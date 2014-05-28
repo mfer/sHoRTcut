@@ -36,9 +36,10 @@ label start:
     
     #jump corrida1SceneMomento1
     jump supervisorScene
+    #jump cascataScene
     #jump mestreDoBoloScene
     #jump options
-    jump pong
+    #jump momento5
 
     label rSupervisorScene:
         $ variableProjectScreen = True

@@ -476,13 +476,16 @@ label momento4:
         
 label momento5:
     
-    $ renpy.music.stop(channel="music",fadeout=1.0)    
+    scene office
+    $ renpy.music.stop(channel="music",fadeout=1.0) 
+    $ renpy.music.play("A Journey Awaits.ogg", channel="music", loop=True, fadein=1.0)      
+
+    show donoDoProd6 at right
+    with fastDissolve
+    DP "{cps=40}Chegou a hora de implementarmos e testarmos o módulo da primeira entrega{/cps}"
+    hide donoDoProd6
+
+    jump pong
     
-    show black
-    with blinds
-    jump momento6
-    
-label momento6:
-    
-    $ renpy.music.stop(channel="music",fadeout=1.0)    
+
     

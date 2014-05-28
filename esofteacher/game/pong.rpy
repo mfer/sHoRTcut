@@ -235,13 +235,17 @@ label pong:
 
 
     if winner == "eileen":
-        "{cps=40}A equipe de Testes encontrou alguns {b}{i}defeitos{/i}{/b} no módulo!!!{/cps}"
+        show donoDoProd0 at right
+        with fastDissolve
+        "{cps=40}A equipe de Testes encontrou algumas {b}{i}falhas{/i}{/b} no módulo implementado!!!{/cps}"
+        hide donoDoProd0
 
     else:
+        show donoDoProd6 at right
+        with fastDissolve
         "{cps=40}Parabéns, o {i}{b}módulo{/b}{/i} desenvolvido passou em todos os testes de regressão!!!{/cps}"
+        hide donoDoProd6
 
-
-   # show eileen happy
-
+    jump mapScene1
    
     return
