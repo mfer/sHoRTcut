@@ -18,8 +18,8 @@
                 self.ball = Image("pong_ball.png")
                 self.player = Text(_("[nome]"), size=36)
                 self.showCount = Text(_(str(self.count)), size=36)
-                self.test = Text(_("Test Team"), size=36)
-                self.ctb = Text(_("Click to Begin"), size=36)
+                self.test = Text(_("Teste"), size=36)
+                self.ctb = Text(_("Clique para Começar"), size=36)
 
                 # The sizes of some of the images.
                 self.PADDLE_WIDTH = 10
@@ -166,7 +166,7 @@
                     cw, ch = ctb.get_size()
                     r.blit(ctb, (200 - cw / 2, 30))
                 else:
-                    self.ctb = Text(_("Development Team"), size=36)
+                    self.ctb = Text(_("Desenvolvimento"), size=36)
                     ctb = renpy.render(self.ctb, 800, 600, st, at)
                     cw, ch = ctb.get_size()
                     r.blit(ctb, (250 - cw / 2, 30))
