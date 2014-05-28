@@ -30,7 +30,8 @@ init python:
 #momento com a Analista de Requisitos dentro da empresa
 label cascataScene:
     scene office
-    
+    $ renpy.music.stop(channel="music",fadeout=1.0)     
+    $ renpy.music.play("Delusion.ogg", channel="music", loop=True, fadein=1.0)
     show analista_normal at right
     with fastDissolve
     AR "{cps=40}Olá [nome].{w=2} Sei que você já conversou com o Gerente.{w=2} Eu sou a Analista de Requisitos.{/cps}"
