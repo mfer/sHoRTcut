@@ -202,7 +202,8 @@
                 # Set the position of the player's paddle.
                 y = max(y, self.COURT_TOP)
                 y = min(y, self.COURT_BOTTOM)
-                self.playery = y
+                if not renpy.variant('touch') or pygame.mouse.get_pressed()[0]:
+                    self.playery = y
                 # If we have a winner, return him or her. Otherwise, ignore
                 # the current event.
                 if self.winner:
