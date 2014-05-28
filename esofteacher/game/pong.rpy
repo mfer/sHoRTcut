@@ -164,7 +164,7 @@
                 if self.stuck:
                     ctb = renpy.render(self.ctb, 800, 600, st, at)
                     cw, ch = ctb.get_size()
-                    r.blit(ctb, (200 - cw / 2, 30))
+                    r.blit(ctb, (250 - cw / 2, 30))
                 else:
                     self.ctb = Text(_("Desenvolvimento"), size=36)
                     ctb = renpy.render(self.ctb, 800, 600, st, at)
