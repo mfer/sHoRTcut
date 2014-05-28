@@ -80,7 +80,7 @@ label corrida1SceneMomento1:
         "Frases que capturam o que o usuário faz ou precisa fazer no sistema, escritas de modo informal.":
             show donoDoProd3 at right
             with fastDissolve
-            DP "{cps=40}Exatamente!!!{/cps}"
+            DP "{cps=40}Exatamente!{/cps}"
             $ minutes += 5
             hide donoDoProd3
             jump historia_fim1
@@ -120,7 +120,7 @@ label corrida1SceneMomento1:
         hide donoDoProd7
         show donoDoProd6 at right
         with fastDissolve
-        DP "{cps=40}Vamos descer que nosso taxi já deve estar chegando.{/cps}"
+        DP "{cps=40}Vamos descer que nosso táxi já deve estar chegando.{/cps}"
         hide donoDoProd6
         show black
         with blinds
@@ -244,7 +244,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
 
             show cliente5 at right
             with fastDissolve
-            CL "{cps=40}Hmm… Coloca só o Nome e o CPF. Nem sempre tenho as outras informações.{/cps}"
+            CL "{cps=40}Hum… Coloca só o Nome e o CPF. Nem sempre tenho as outras informações.{/cps}"
             hide cliente5
             $ minutes += 10
             $ flagOption6 = True
@@ -271,7 +271,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
 
         # DEIXAR NO FINAL
         label optionfim:
-            P "{cps=40}Ok, acho que esta informação é suficiente para definirmos a primeira entrega.{/cps}" 
+            P "{cps=40}O.k., acho que esta informação é suficiente para definirmos a primeira entrega.{/cps}" 
             show donoDoProd6 at right
             with fastDissolve
             DP "{cps=40}Obrigado pelas informações, caro Cliente.{/cps}"
@@ -463,7 +463,7 @@ label momento4:
         
         show donoDoProd7 at right
         with fastDissolve
-        DP "{cps=40}Ok.{w=2} Quais serão implementadas nessa primeira sprint?{/cps}" 
+        DP "{cps=40}O.k.{w=2} Quais serão implementadas nessa primeira sprint?{/cps}" 
         hide donoDoProd7
         show donoDoProd6 at right
         with fastDissolve

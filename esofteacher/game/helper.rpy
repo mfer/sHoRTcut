@@ -44,7 +44,7 @@ label helps:
             "Sim":
                 show sylvie giggle at left
                 with fastDissolve
-                h "{cps=40}Parabéns!!!{/cps}" 
+                h "{cps=40}Parabéns!{/cps}" 
             "Não":
                 show sylvie surprised at left
                 with dissolve
@@ -65,10 +65,10 @@ label helps:
         menu:
             with fastDissolve
             "Sim":
-                h "{cps=40}Até a próxima!!! =D{/cps}"
+                h "{cps=40}Até a próxima! =D{/cps}"
                 jump start
             "Não":
                 show sylvie giggle at left
                 with fastDissolve
-                h "{cps=40}Você será levado ao Menu Principal, até a próxima!!! =D{/cps}" 
+                h "{cps=40}Você será levado ao Menu Principal, até a próxima! =D{/cps}" 
     return

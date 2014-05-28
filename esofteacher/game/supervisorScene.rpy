@@ -138,7 +138,7 @@ label supervisorScene:
         "Tradicional":
             show supervisor pensive at right
             with fastDissolve
-            S "{cps=40}Hmm, ok. Não identifica-se com os ágeis...{/cps}"
+            S "{cps=40}Hum, o.k. Não identifica-se com os ágeis...{/cps}"
             show supervisor smile at right
             S "{cps=40}Então, você é {b}{i}lerdo{/i}{/b}?!{w=2} Brincadeira...{/cps}"
             with fastDissolve
@@ -158,7 +158,7 @@ label supervisorScene:
     S "{cps=40}Por outro lado, um clima de competição saudável emergiu entre a {b}{i}PadaTout{/i}{/b} e a {b}{i}PadaOne{/i}{/b}.{/cps}"
     show supervisor smile at right
     with fastDissolve
-    S "{cps=40}Esteja preparado!!! Você irá participar dos dois projetos...{/cps}"
+    S "{cps=40}Esteja preparado! Você irá participar dos dois projetos...{/cps}"
     show supervisor pensive at right
     with fastDissolve
     S "{cps=40}Peço que agora você decida com qual equipe começará.{w=5} Ah! {w=2}Estarei aqui para o que você precisar desde que não faça barulho enquanto come.{/cps}"

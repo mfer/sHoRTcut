@@ -27,7 +27,7 @@ label mestreDoBoloScene:
     
     show mb2 at left
     with fastDissolve
-    MB "{cps=40}Olá, {b}{i}[nome]!!!{/i}{/b}{w=2} Você é o novo contratado, não é?{/cps}"
+    MB "{cps=40}Olá, {b}{i}[nome]!{/i}{/b}{w=2} Você é o novo contratado, não é?{/cps}"
     hide mb2
     show mb4 at left
     with fastDissolve

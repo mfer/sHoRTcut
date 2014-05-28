@@ -54,7 +54,7 @@ label cascataScene:
     
     show analista_brava at right
     with fastDissolve
-    AR "{cps=40}Essas oficinas são inspirdadas no JAD.{w=2} Você sabe o que é JAD?{/cps}"
+    AR "{cps=40}Essas oficinas são inspiradas no JAD.{w=2} Você sabe o que é JAD?{/cps}"
     hide analista_brava
     
     $ minutes += 10

@@ -24,7 +24,7 @@ label gerenteScene:
     
     show gr2 at left
     with fastDissolve
-    GR "{cps=40}Seja bem vindo, {b}{i}[nome]!!!{/i}{/b}{w=2} Muito prazer, eu sou o Gerente{/cps}"
+    GR "{cps=40}Seja bem vindo, {b}{i}[nome]!{/i}{/b}{w=2} Muito prazer, eu sou o Gerente{/cps}"
     hide gr2
     show gr6 at left
     with fastDissolve
@@ -50,7 +50,7 @@ label gerenteScene:
     if not mestreDoBolo:
         show gr4 at left
         with fastDissolve
-        GR "{cps=40}Sem mais, peço que agora conheça o Líder da equipe Ágil: também conhecido por \"Sr. Rapindinho\"...{/cps}"
+        GR "{cps=40}Sem mais delongas, peço que agora conheça o Líder da equipe Ágil: também conhecido por \"Sr. Rapidinho\"...{/cps}"
         hide gr4 
     
         show black
