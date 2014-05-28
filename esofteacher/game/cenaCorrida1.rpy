@@ -482,7 +482,7 @@ label momento5:
 
     show donoDoProd6 at right
     with fastDissolve
-    DP "{cps=40}Chegou a hora de implementarmos e testarmos o módulo da primeira entrega{/cps}"
+    DP "{cps=40}Chegou a hora de implementarmos e testarmos o módulo da primeira entrega!{/cps}"
     hide donoDoProd6
 
     jump pong

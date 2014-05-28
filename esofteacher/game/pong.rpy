@@ -220,6 +220,7 @@ label pong:
     $ renpy.music.play("WaveAfterWave!v0_9.mp3", channel="music", loop=True, fadein=1.0)
    
     hide screen stressBar
+    hide screen clock
 
     # Put up the pong background, in the usual fashion.
     scene bg pong field
@@ -232,7 +233,6 @@ label pong:
     #scene 
 
     window show None
-
 
     if winner == "eileen":
         show donoDoProd0 at right
