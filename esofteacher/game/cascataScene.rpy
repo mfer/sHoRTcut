@@ -30,7 +30,8 @@ init python:
 #momento com a Analista de Requisitos dentro da empresa
 label cascataScene:
     scene office
-    
+    $ renpy.music.stop(channel="music",fadeout=1.0)     
+    $ renpy.music.play("Delusion.ogg", channel="music", loop=True, fadein=1.0)
     show analista_normal at right
     with fastDissolve
     AR "{cps=40}Olá [nome].{w=2} Sei que você já conversou com o Gerente.{w=2} Eu sou a Analista de Requisitos.{/cps}"
@@ -62,39 +63,34 @@ label cascataScene:
         with fastDissolve
 
         "Reuniões formatadas":
+            $ strss = strss - 5
+            show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)
+            with fastDissolve
+            
+            show analista_brava at right
+            with fastDissolve
+            AR "{cps=40}Isso mesmo!{/cps}"
+            hide analista_brava
+            
+            show analista_normal at right
+            with fastDissolve
+            AR "{cps=40}Modéstia à parte eu sou uma ótima condutora de JADs...{/cps}"
+            hide analista_normal
+            
+            $ minutes += 5
+            jump jad_end
+        "Jogos Aleatórios Direcionados":
             $ strss = strss + 5
             show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)
             with fastDissolve
             
             show analista_brava at right
             with fastDissolve
-            AR "{cps=40}Deve ser nervosismo…{/cps}"
+            AR "{cps=40}Como assim! Totalmente Errado. Não faça isso com você mesmo.{/cps}"
             hide analista_brava
             
-            show analista_normal at right
-            with fastDissolve
-            DP "{cps=40}JAD {/cps}"
-            hide analista_normal
-            
             $ minutes += 5
-            jump jad_quest
-        "Jogo Aleatório Direcionado":
-            $ strss = strss + 5
-            show screen stressBar(nome="[nome]",level=0,stress=strss,stressMax=strMax)
-            with fastDissolve
-            
-            show analista_brava at right
-            with fastDissolve
-            AR "{cps=40}Deve ser nervosismo…{/cps}"
-            hide analista_brava
-            
-            show analista_normal at right
-            with fastDissolve
-            DP "{cps=40}JAD {/cps}"
-            hide analista_normal
-            
-            $ minutes += 5
-            jump jad_quest
+            jump jad_answer
         
         "Não sei.":
             $ strss = strss + 5
@@ -103,26 +99,28 @@ label cascataScene:
             
             show analista_brava at right
             with fastDissolve
-            AR "{cps=40}Deve ser nervosismo…{/cps}"
+            AR "{cps=40}Não acredito! Deve ser nervosismo…{/cps}"
             hide analista_brava
             
-            show analista_normal at right
-            with fastDissolve
-            DP "{cps=40}JAD são reuniões com diversos grupos de participantes, um líder neutro e um processo estruturado.{/cps}"
-            hide analista_normal
-            
-            show analista_seria at right
-            with fastDissolve
-            DP "{cps=40}Aplicáveis a diversos problemas: engenharia de requisitos, desenho de produto ou desenho de processos.{/cps}"
-            hide analista_seria
-            
-            
             $ minutes += 5
-            jump jad_quest
-    label jad_quest:
+            jump jad_answer
+            
+    label jad_answer:
+        show analista_normal at right
+        with fastDissolve
+        AR "{cps=40}JAD são reuniões com diversos grupos de participantes, um líder neutro e um processo estruturado.{/cps}"
+        hide analista_normal
+        
+        show analista_seria at right
+        with fastDissolve
+        AR "{cps=40}Aplicáveis a diversos problemas: engenharia de requisitos, desenho de produto ou desenho de processos.{/cps}"
+        hide analista_seria
+        
+    label jad_end:       
         jump pong
             
-    
+#TODO
 #JAD 
 
+#TODO
 #Analista diz quais casos de uso foram ganhos
