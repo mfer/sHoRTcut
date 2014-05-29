@@ -20,6 +20,7 @@ image donoDoProd8 = "aoi8.png"
 
 
 init python:
+    pong_counter = 0
     contador = 0
     flagOption5 = False
     flagOption6 = False
@@ -484,6 +485,9 @@ label momento5:
     with fastDissolve
     DP "{cps=40}Chegou a hora de implementarmos e testarmos o módulo da primeira entrega!{/cps}"
     hide donoDoProd6
+
+    $ pong_counter = 3
+    $ print (pong_counter)
 
     jump pong
     

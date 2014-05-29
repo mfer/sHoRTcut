@@ -314,6 +314,11 @@ label cascataScene:
     with fastDissolve
     AR "{cps=40}Chegou a hora de implementarmos todos os módulos! A medida que for terminando o Desenvolvimento encaminhe para Teste.{/cps}"
     hide analista_normal
+
+
+    $ pong_counter = 80
+    $ print(pong_counter)
+
 #TODO
 #Aumentar a duração desse PONG
     jump pong

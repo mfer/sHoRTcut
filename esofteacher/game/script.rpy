@@ -7,6 +7,7 @@ image corredor = "corredor.png"
 image salaDeReuniao = "meeting_room.png"
 image bakery2 = "bakery2.png"
 image bakery1 = "bakery1.png"
+image construcao = "construcao.jpg"
 
 # Declare characters used by this game.
 define e = Character('ESOFteacher', color="#c8ffc8")
@@ -39,7 +40,7 @@ label start:
     #jump cascataScene
     #jump mestreDoBoloScene
     #jump options
-    #jump momento5
+    #jump mapScene1
 
     label rSupervisorScene:
         $ variableProjectScreen = True
