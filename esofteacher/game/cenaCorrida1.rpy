@@ -130,7 +130,7 @@ label corrida1SceneMomento1:
 
 label momento2: #Levantando requisitos no cliente - montando histórias
 
-    scene bakery2
+    scene bakery1
     $ renpy.music.stop(channel="music",fadeout=1.0)    
     $ renpy.music.play("School of Quirks.mp3", channel="music", loop=True, fadein=1.0)
 
@@ -160,7 +160,7 @@ label momento2: #Levantando requisitos no cliente - montando histórias
         
         show donoDoProd7
         with fastDissolve
-        DP "{cps=40}Então, meu caro [nome]. {w=2}Você quer perguntar algo?{/cps}"
+        DP "{cps=40}Então, [nome]. {w=2}Você quer perguntar algo?{/cps}"
         hide donoDoProd7
         
 
