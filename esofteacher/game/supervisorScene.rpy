@@ -142,7 +142,7 @@ label supervisorScene:
             show supervisor smile at right
             S "{cps=40}Então, você é {b}{i}lerdo{/i}{/b}?!{w=2} Brincadeira...{/cps}"
             with fastDissolve
-            S "{cps=40}A PadaTout está dedicando-se ao projeto para a padaria {b}{i}Et part deux{/i}{/b}.{/cps}"      
+            S "{cps=40}A PadaTout está dedicando-se ao projeto para a padaria {b}{i}Et Part Deux{/i}{/b}.{/cps}"      
             show supervisor normal3 at right
             with fastDissolve
             S "{cps=40}O cliente sabe exatamente o que ele quer.{w=2} Então não se preocupe com as mudanças.{/cps}"
