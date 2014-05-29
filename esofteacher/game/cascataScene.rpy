@@ -199,6 +199,9 @@ label cascataScene:
             $ conducoes[4][2] = False
             jump figurinha4                        
 
+        label conduction5:
+            $ conducoes[5][2] = False
+            jump figurinha5
 
     label figurinha0:
         show padeiro_esperto at right
@@ -211,7 +214,7 @@ label cascataScene:
     label figurinha1:
         show padeiro_esperto at right
         with fastDissolve
-        PA "{cps=40}Ainda Não teho o que Dizer mas logo terei...{/cps}"
+        PA "{cps=40}Ainda não tenho o que dizer mas logo terei...{/cps}"
         hide padeiro_esperto
         $ minutes += 10
         jump conductions
@@ -227,7 +230,7 @@ label cascataScene:
     label figurinha3:
         show padeiro_esperto at right
         with fastDissolve
-        PA "{cps=40}Ainda Não teho o que Dizer mas logo terei...{/cps}"
+        PA "{cps=40}Ainda Não tenho o que Dizer mas logo terei...{/cps}"
         hide padeiro_esperto
         $ minutes += 10
         jump conductions
@@ -235,7 +238,15 @@ label cascataScene:
     label figurinha4:
         show padeiro_esperto at right
         with fastDissolve
-        PA "{cps=40}Ainda Não teho o que Dizer mas logo terei...{/cps}"
+        PA "{cps=40}Ainda não tenho o que dizer mas logo terei...{/cps}"
+        hide padeiro_esperto
+        $ minutes += 10
+        jump conductions
+
+    label figurinha5:
+        show padeiro_esperto ar right
+        with fastDissolve
+        PA "{cps=40}Ainda não tenho o que dizer mas logo terei...{/cps}"
         hide padeiro_esperto
         $ minutes += 10
         jump conductions
@@ -243,7 +254,7 @@ label cascataScene:
     label conduction_end:
         show analista_normal at right
         with fastDissolve
-        AR "{cps=40}Bom. Por Hoje é só! {w=2} Vamos voltar para a Padasoft.{/cps}"
+        AR "{cps=40}Bom. Por hoje é só! {w=2} Vamos voltar para a Padasoft.{/cps}"
         hide analista_normal
 
 #TDOD
