@@ -174,7 +174,7 @@ label cascataScene:
 
         python:
             conducoes2 = [x[:-1] for x in conducoes if x[2]]
-            result = menu(conducoes2[:4] + [[u'{b}Não, tudo bem por mim agora.{/b}','conductionfim']])
+            result = menu(conducoes2[:4] + [[u'{b}Não, tudo bem por mim agora.{/b}','conduction_end']])
             contador += 1
             renpy.jump(result)
              
