@@ -298,7 +298,7 @@ init python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-alpha', the windows distribution will be in the
     ## directory 'mygame-alpha-win', in the 'mygame-alpha-win.zip' file.
-    build.directory_name = "esofteacher-prototype"
+    build.directory_name = "esofteacher-29-05"
 
     ## The name that's uses for executables - the program that users will run
     ## to start the game. For example, if this is 'mygame', then on Windows,
